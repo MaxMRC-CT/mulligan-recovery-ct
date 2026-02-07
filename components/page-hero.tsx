@@ -8,8 +8,8 @@ export function PageHero({ title, subtitle }: PageHeroProps) {
     <section className="section pb-10 pt-16">
       <div className="container">
         <p className="text-xs uppercase tracking-[0.14em] text-primary-dark">Mulligan Recovery Centers of CT</p>
-        <h1 className="mt-3 max-w-3xl text-3xl font-bold leading-tight text-neutral-900 md:text-5xl">{title}</h1>
-        <p className="mt-4 max-w-2xl text-base text-neutral-700 md:text-lg">{subtitle}</p>
+        <h1 className="mt-3 max-w-3xl text-3xl font-bold leading-tight text-white md:text-5xl">{title}</h1>
+        <p className="mt-4 max-w-2xl text-base text-neutral-200 md:text-lg">{subtitle}</p>
       </div>
     </section>
   );

@@ -29,8 +29,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #ffffff;
-  color: var(--ink);
+  background: #273140;
+  color: #f4f6f8;
   font-family: "Atkinson Hyperlegible", "Inter", "Segoe UI", sans-serif;
 }
 

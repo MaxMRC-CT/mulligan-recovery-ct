@@ -57,25 +57,25 @@ export function SiteHeader() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-[#3b4657] bg-[#263241]/95 text-neutral-100 backdrop-blur">
       <div className="container py-3">
         <div className="flex min-h-16 items-center justify-between gap-3">
           <Link href="/" className="focus-ring flex items-center gap-3 rounded-lg">
-            <Image src="/logo.png" alt="Mulligan Recovery Centers of CT" width={40} height={40} priority />
+            <Image src="/logo-circle.png" alt="Mulligan Recovery Centers of CT" width={40} height={40} priority />
             <div>
               <p className="hidden text-[11px] uppercase tracking-[0.14em] text-primary-dark sm:block">Mulligan Recovery Centers of CT</p>
               <p className="text-[11px] uppercase tracking-[0.14em] text-primary-dark sm:hidden">Mulligan Recovery</p>
-              <p className="text-sm font-semibold text-ink">ASAM Level 3.1 Residential</p>
+              <p className="text-sm font-semibold text-neutral-200">Real People, Real Recovery, Real Simple.</p>
             </div>
           </Link>
 
-          <a href="tel:+12035550173" className="focus-ring rounded-lg border border-line px-2.5 py-2 text-xs font-semibold text-primary-dark lg:hidden">
+          <a href="tel:+12035550173" className="focus-ring rounded-lg border border-[#48566c] px-2.5 py-2 text-xs font-semibold text-primary lg:hidden">
             Call (203) 555-0173
           </a>
 
           <button
             type="button"
-            className="focus-ring rounded-lg border border-line px-3 py-2 text-sm font-semibold text-neutral-700 lg:hidden"
+            className="focus-ring rounded-lg border border-[#48566c] px-3 py-2 text-sm font-semibold text-neutral-100 lg:hidden"
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
@@ -84,7 +84,7 @@ export function SiteHeader() {
           </button>
 
           <nav aria-label="Primary Navigation" className="hidden lg:block">
-            <ul className="flex items-center gap-5 text-sm font-medium text-neutral-700">
+            <ul className="flex items-center gap-5 text-sm font-medium text-neutral-200">
               {primaryItems.map((item) => {
                 const active = isPathActive(pathname, item.href);
 
@@ -93,8 +93,8 @@ export function SiteHeader() {
                     <Link
                       href={item.href}
                       className={cn(
-                        "focus-ring rounded-md px-1.5 py-1 hover:text-primary-dark",
-                        active && "text-primary-dark underline decoration-2 underline-offset-8"
+                        "focus-ring rounded-md px-1.5 py-1 hover:text-primary",
+                        active && "text-primary underline decoration-2 underline-offset-8"
                       )}
                     >
                       {item.label}
@@ -113,8 +113,8 @@ export function SiteHeader() {
                   <button
                     type="button"
                     className={cn(
-                      "focus-ring rounded-md px-1.5 py-1 hover:text-primary-dark",
-                      resourcesActive && "text-primary-dark underline decoration-2 underline-offset-8"
+                      "focus-ring rounded-md px-1.5 py-1 hover:text-primary",
+                      resourcesActive && "text-primary underline decoration-2 underline-offset-8"
                     )}
                     aria-haspopup="menu"
                     aria-expanded={resourcesOpen}
@@ -128,7 +128,7 @@ export function SiteHeader() {
                     <ul
                       id="resources-menu"
                       role="menu"
-                      className="absolute left-0 top-9 z-50 min-w-56 rounded-xl border border-line bg-white p-2 shadow-card"
+                      className="absolute left-0 top-9 z-50 min-w-56 rounded-xl border border-[#48566c] bg-[#2c394a] p-2 shadow-card"
                     >
                       {resourcesItems.map((item) => (
                         <li key={item.href} role="none">
@@ -136,8 +136,8 @@ export function SiteHeader() {
                             href={item.href}
                             role="menuitem"
                             className={cn(
-                              "focus-ring block rounded-lg px-3 py-2 text-sm text-neutral-700 hover:bg-primary-soft hover:text-primary-dark",
-                              isPathActive(pathname, item.href) && "bg-primary-soft text-primary-dark"
+                              "focus-ring block rounded-lg px-3 py-2 text-sm text-neutral-100 hover:bg-[#36465d] hover:text-primary",
+                              isPathActive(pathname, item.href) && "bg-[#36465d] text-primary"
                             )}
                           >
                             {item.label}
@@ -157,7 +157,7 @@ export function SiteHeader() {
         </div>
 
         {mobileMenuOpen ? (
-          <nav id="mobile-menu" aria-label="Mobile Navigation" className="mt-3 rounded-2xl border border-line bg-white p-4 lg:hidden">
+          <nav id="mobile-menu" aria-label="Mobile Navigation" className="mt-3 rounded-2xl border border-[#48566c] bg-[#2c394a] p-4 lg:hidden">
             <ul className="space-y-2">
               {primaryItems.map((item) => {
                 const active = isPathActive(pathname, item.href);
@@ -167,8 +167,8 @@ export function SiteHeader() {
                     <Link
                       href={item.href}
                       className={cn(
-                        "focus-ring block rounded-lg px-3 py-2 text-sm font-medium text-neutral-700",
-                        active && "bg-primary-soft text-primary-dark"
+                        "focus-ring block rounded-lg px-3 py-2 text-sm font-medium text-neutral-100",
+                        active && "bg-[#36465d] text-primary"
                       )}
                     >
                       {item.label}
@@ -181,8 +181,8 @@ export function SiteHeader() {
                 <button
                   type="button"
                   className={cn(
-                    "focus-ring flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm font-medium text-neutral-700",
-                    resourcesActive && "bg-primary-soft text-primary-dark"
+                    "focus-ring flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm font-medium text-neutral-100",
+                    resourcesActive && "bg-[#36465d] text-primary"
                   )}
                   aria-expanded={mobileResourcesOpen}
                   aria-controls="mobile-resources"
@@ -199,8 +199,8 @@ export function SiteHeader() {
                         <Link
                           href={item.href}
                           className={cn(
-                            "focus-ring block rounded-lg px-3 py-2 text-sm text-neutral-700",
-                            isPathActive(pathname, item.href) && "bg-primary-soft text-primary-dark"
+                            "focus-ring block rounded-lg px-3 py-2 text-sm text-neutral-100",
+                            isPathActive(pathname, item.href) && "bg-[#36465d] text-primary"
                           )}
                         >
                           {item.label}
@@ -220,6 +220,7 @@ export function SiteHeader() {
           </nav>
         ) : null}
       </div>
+      <div className="h-1 w-full bg-primary" />
     </header>
   );
 }
