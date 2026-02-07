@@ -40,9 +40,9 @@ export default function ResourcePostPage({ params }: Params) {
   return (
     <section className="section pt-16">
       <article className="container rounded-2xl border border-line bg-white p-8 shadow-card">
-        <p className="text-xs uppercase tracking-[0.1em] text-brand-dark">{post.date}</p>
-        <h1 className="mt-2 text-3xl font-bold text-[#153947] md:text-4xl">{post.title}</h1>
-        <p className="mt-2 text-sm text-[#4f6f7d]">By {post.author}</p>
+        <p className="text-xs uppercase tracking-[0.1em] text-primary-dark">{post.date}</p>
+        <h1 className="mt-2 text-3xl font-bold text-neutral-900 md:text-4xl">{post.title}</h1>
+        <p className="mt-2 text-sm text-neutral-700">By {post.author}</p>
         <div className="prose-md mt-8">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
         </div>

@@ -18,10 +18,10 @@ export default function ContactPage() {
 
           <div className="space-y-5">
             <div className="rounded-2xl border border-line bg-white p-6 shadow-card">
-              <h2 className="text-xl font-semibold text-[#18414f]">Location</h2>
-              <p className="mt-2 text-sm text-[#355666]">123 Recovery Way, New Haven, CT 06510</p>
-              <p className="mt-2 text-sm text-[#355666]">Admissions phone: (203) 555-0173</p>
-              <p className="mt-1 text-sm text-[#355666]">Referral partners: referrals@mulliganrecoveryct.org</p>
+              <h2 className="text-xl font-semibold text-neutral-900">Location</h2>
+              <p className="mt-2 text-sm text-neutral-700">123 Recovery Way, New Haven, CT 06510</p>
+              <p className="mt-2 text-sm text-neutral-700">Admissions phone: (203) 555-0173</p>
+              <p className="mt-1 text-sm text-neutral-700">Referral partners: referrals@mulliganrecoveryct.org</p>
             </div>
             <div className="overflow-hidden rounded-2xl border border-line bg-white shadow-card">
               <iframe

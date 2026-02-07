@@ -8,6 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/about",
     "/programs",
     "/admissions",
+    "/faq",
+    "/crisis-support",
     "/for-professionals",
     "/insurance-payment",
     "/families",

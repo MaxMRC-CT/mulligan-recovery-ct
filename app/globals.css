@@ -3,22 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --primary: #2f7d8f;
-  --primary-dark: #1f5e6e;
-  --primary-soft: #e8f5f8;
-  --secondary: #5f9e8e;
-  --secondary-dark: #457367;
-  --secondary-soft: #eaf6f2;
-  --surface: #f6fbfb;
-  --accent: #7aa9b6;
-  --accent-soft: #ecf5f8;
-  --neutral-50: #f7fafb;
-  --neutral-100: #edf3f5;
-  --neutral-200: #dbe8ec;
-  --neutral-700: #355666;
-  --neutral-900: #163843;
-  --ink: #163843;
-  --line: #d9e7eb;
+  --primary: #d67c2d;
+  --primary-dark: #b9651f;
+  --primary-soft: #fdf3ea;
+  --secondary: #242424;
+  --secondary-dark: #111111;
+  --secondary-soft: #f5f5f5;
+  --surface: #ffffff;
+  --accent: #d67c2d;
+  --accent-soft: #fdf3ea;
+  --neutral-50: #fafafa;
+  --neutral-100: #f4f4f4;
+  --neutral-200: #e6e6e6;
+  --neutral-700: #3f3f3f;
+  --neutral-900: #111111;
+  --ink: #111111;
+  --line: #e8e8e8;
 }
 
 * {
@@ -29,7 +29,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle at top right, #eef8f9 0%, #f9fcfc 45%, #ffffff 100%);
+  background: #ffffff;
   color: var(--ink);
   font-family: "Atkinson Hyperlegible", "Inter", "Segoe UI", sans-serif;
 }
@@ -55,17 +55,17 @@ a {
 }
 
 .prose-md {
-  color: #244a57;
+  color: var(--neutral-700);
   line-height: 1.7;
 }
 
 .prose-md h2,
 .prose-md h3 {
-  color: #103a48;
+  color: var(--neutral-900);
 }
 
 .focus-ring:focus-visible {
-  outline: 3px solid #73b3c1;
+  outline: 3px solid #d67c2d;
   outline-offset: 2px;
 }
 

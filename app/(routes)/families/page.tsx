@@ -9,37 +9,37 @@ export default function FamiliesPage() {
   return (
     <>
       <PageHero
-        title="Family and support network guidance"
-        subtitle="Families are often central to recovery success. We help establish healthy communication, boundaries, and realistic expectations."
+        title="For families"
+        subtitle="If you are not sure what level of care makes sense, that is normal. We will help you think it through."
       />
       <section className="section pt-0">
         <div className="container grid gap-6 md:grid-cols-3">
           {[
             {
-              title: "Communication plans",
-              text: "With resident consent, we schedule structured updates so loved ones stay informed without disrupting care."
+              title: "Clear communication",
+              text: "With consent, we set simple update plans so you know what to expect."
             },
             {
-              title: "Education sessions",
-              text: "Families learn about recovery stages, relapse warning signs, and practical support approaches."
+              title: "Practical guidance",
+              text: "We explain next steps in plain language and answer questions directly."
             },
             {
               title: "Transition planning",
-              text: "We align on housing, follow-up care, and accountability before discharge."
+              text: "Before discharge, we align on follow-up care and support at home."
             }
           ].map((item) => (
             <article key={item.title} className="rounded-2xl border border-line bg-white p-6 shadow-card">
-              <h2 className="text-lg font-semibold text-[#18414f]">{item.title}</h2>
-              <p className="mt-2 text-sm text-[#365866]">{item.text}</p>
+              <h2 className="text-lg font-semibold text-neutral-900">{item.title}</h2>
+              <p className="mt-2 text-sm text-neutral-700">{item.text}</p>
             </article>
           ))}
         </div>
       </section>
       <CtaSection
-        heading="Looking for support as a family member?"
-        body="Reach out for guidance on referral readiness and what to expect during residential treatment."
+        heading="You do not need to figure this out alone"
+        body="Talk with our team about what support is needed right now and what comes next."
         primaryHref="/contact"
-        primaryLabel="Contact Our Team"
+        primaryLabel="Talk to someone today"
       />
     </>
   );

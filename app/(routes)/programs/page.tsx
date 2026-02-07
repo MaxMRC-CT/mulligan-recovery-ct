@@ -1,6 +1,5 @@
 import { CtaSection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
-import { ReferralPathways } from "@/components/sections/referral-pathways";
 
 export const metadata = {
   title: "Programs"
@@ -24,7 +23,7 @@ export default function ProgramsPage() {
             "Relapse prevention and return-to-work/readiness planning"
           ].map((item) => (
             <div key={item} className="rounded-2xl border border-line bg-white p-6 shadow-card">
-              <p className="font-medium text-[#244655]">{item}</p>
+              <p className="font-medium text-neutral-700">{item}</p>
             </div>
           ))}
         </div>
@@ -63,12 +62,11 @@ export default function ProgramsPage() {
           </article>
         </div>
       </section>
-      <ReferralPathways />
       <CtaSection
-        heading="Need a placement decision quickly?"
-        body="We prioritize efficient referral coordination and clear next-step communication with providers and families."
+        heading="Need help deciding if this level of care fits?"
+        body="Our team can review needs and recommend the clearest next step."
         primaryHref="/admissions"
-        primaryLabel="See Admissions Process"
+        primaryLabel="See if Mulligan is right for you"
       />
     </>
   );

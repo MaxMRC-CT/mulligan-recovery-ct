@@ -55,8 +55,8 @@ export default function AdmissionsPage() {
         <div className="container grid gap-5 md:grid-cols-2">
           {steps.map((step) => (
             <article key={step.title} className="rounded-2xl border border-line bg-white p-6 shadow-card">
-              <h2 className="text-xl font-semibold text-[#18414f]">{step.title}</h2>
-              <p className="mt-3 text-[#345867]">{step.body}</p>
+              <h2 className="text-xl font-semibold text-neutral-900">{step.title}</h2>
+              <p className="mt-3 text-neutral-700">{step.body}</p>
             </article>
           ))}
         </div>
@@ -86,10 +86,10 @@ export default function AdmissionsPage() {
         </div>
       </section>
       <CtaSection
-        heading="Ready to begin the first step?"
+        heading="Ready for a clear next step?"
         body="Use our contact page to request an admissions callback. Please avoid including private medical details in web messages."
         primaryHref="/contact"
-        primaryLabel="Request Callback"
+        primaryLabel="Talk to someone today"
       />
     </>
   );

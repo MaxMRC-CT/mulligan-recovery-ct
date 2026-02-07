@@ -1,5 +1,4 @@
 import { CtaSection } from "@/components/cta-section";
-import { LaunchReadiness } from "@/components/sections/launch-readiness";
 import { PageHero } from "@/components/page-hero";
 import { FaqAccordion } from "@/components/ui/faq-accordion";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -31,7 +30,7 @@ export default function ForProfessionalsPage() {
     <>
       <PageHero
         title="For professionals and referral partners"
-        subtitle="Referral pathways for hospitals, outpatient providers, courts, and community agencies seeking ASAM 3.1 residential placement in Connecticut."
+        subtitle="Mulligan provides ASAM-aligned low-intensity residential care for people who need structure without inpatient acuity."
       />
 
       <section className="section pt-0">
@@ -39,19 +38,19 @@ export default function ForProfessionalsPage() {
           <article className="card">
             <h2 className="text-lg font-semibold text-neutral-900">1. Send Referral Request</h2>
             <p className="mt-3 text-neutral-700">
-              Submit a general referral request and include callback details for the responsible team member.
+              Share the referral summary and best callback contact.
             </p>
           </article>
           <article className="card">
             <h2 className="text-lg font-semibold text-neutral-900">2. Clinical and Payer Review</h2>
             <p className="mt-3 text-neutral-700">
-              Our admissions team reviews ASAM fit and coverage pathways, then confirms next steps.
+              We review ASAM fit, payer needs, and practical timing.
             </p>
           </article>
           <article className="card">
             <h2 className="text-lg font-semibold text-neutral-900">3. Transition and Intake</h2>
             <p className="mt-3 text-neutral-700">
-              Once accepted, we coordinate intake timing and transition communication with your team.
+              We confirm intake timing and transition communication.
             </p>
           </article>
         </div>
@@ -62,7 +61,7 @@ export default function ForProfessionalsPage() {
           <SectionHeading
             eyebrow="Referral Pack"
             title="Suggested documentation checklist"
-            subtitle="Use this list to reduce intake delays. Final intake requirements may vary by payer and clinical context."
+            subtitle="Use this list to reduce delays. Final requirements may vary by payer."
           />
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {[
@@ -82,15 +81,13 @@ export default function ForProfessionalsPage() {
         </div>
       </section>
 
-      <LaunchReadiness />
-
       <CtaSection
         heading="Coordinate a referral now"
         body="Use the admissions contact route for placement coordination. Avoid submitting PHI beyond minimum necessary details in unsecured channels."
         primaryHref="/contact"
-        primaryLabel="Contact Admissions"
+        primaryLabel="Talk to someone today"
         secondaryHref="/admissions"
-        secondaryLabel="View Admissions Steps"
+        secondaryLabel="See if Mulligan is right for you"
       />
     </>
   );

@@ -1,82 +1,75 @@
 import Link from "next/link";
 import { CtaSection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
-import { ReferralPathways } from "@/components/sections/referral-pathways";
-import { TrustSignals } from "@/components/sections/trust-signals";
-
-const highlights = [
-  {
-    title: "Structured Daily Support",
-    body: "Residents receive routine-focused care with counseling, peer support, and practical life-stability planning."
-  },
-  {
-    title: "Person-Centered Admissions",
-    body: "We begin with a brief screening and coordinate next steps quickly with your referral source or care team."
-  },
-  {
-    title: "Family-Informed Care",
-    body: "With consent, we involve trusted supports in treatment planning and transition preparation."
-  }
-];
+import { StatsCarousel } from "@/components/sections/stats-carousel";
 
 export default function HomePage() {
   return (
     <>
       <PageHero
-        title="Recovery support designed for stability, dignity, and long-term growth"
-        subtitle="Mulligan Recovery Centers of CT provides ASAM Level 3.1 low-intensity residential treatment for adults who need structured support in a safe, sober environment."
+        title="Real people. Real recovery. Kept simple."
+        subtitle="Mulligan Recovery Centers provides low-intensity residential treatment in Connecticut for people who want structure, dignity, and a clear path forward."
       />
 
       <section className="section pt-0">
-        <div className="container grid gap-5 md:grid-cols-3">
-          {highlights.map((item) => (
-            <article key={item.title} className="rounded-2xl border border-line bg-white p-6 shadow-card">
-              <h2 className="text-xl font-semibold text-[#18414f]">{item.title}</h2>
-              <p className="mt-3 text-sm text-[#365866]">{item.body}</p>
-            </article>
-          ))}
+        <div className="container rounded-2xl border border-line bg-neutral-50 p-8">
+          <h2 className="section-heading">What we do</h2>
+          <p className="section-subheading">
+            We help adults who need more support than outpatient care, but not the disruption of high-intensity
+            inpatient treatment.
+          </p>
+          <p className="mt-3 max-w-3xl text-neutral-700">
+            Low-intensity residential care means you live on site, attend scheduled groups and sessions, and build
+            daily structure without hospital-level intensity.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <Link href="/contact" className="btn-primary">
+              Talk to someone today
+            </Link>
+            <Link href="/admissions" className="btn-secondary">
+              See if Mulligan is right for you
+            </Link>
+          </div>
         </div>
       </section>
 
-      <TrustSignals />
+      <StatsCarousel />
 
       <section className="section bg-white">
-        <div className="container grid gap-10 md:grid-cols-2 md:items-center">
+        <div className="container grid gap-8 md:grid-cols-2 md:items-start">
           <div>
-            <h2 className="text-3xl font-bold text-[#153947]">Who we serve</h2>
-            <p className="mt-4 text-[#315260]">
-              Our 3.1 program is appropriate for adults who can benefit from a monitored residential setting while
-              continuing to build independent recovery skills. We coordinate with outpatient providers, probation,
-              hospitals, and community agencies throughout Connecticut.
+            <h2 className="section-heading">Who we serve</h2>
+            <ul className="mt-4 space-y-2 text-neutral-700">
+              <li>Individuals seeking a stable next step in recovery</li>
+              <li>Families looking for clarity and honesty</li>
+              <li>Professionals referring patients who need structure, not acuity</li>
+            </ul>
+          </div>
+          <div className="card">
+            <h3 className="text-xl font-semibold text-neutral-900">Connecticut roots. New Haven focus.</h3>
+            <p className="mt-3 text-neutral-700">
+              Built by people who understand recovery personally and professionally. We keep next steps clear and
+              practical.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="/programs" className="focus-ring rounded-xl bg-brand px-5 py-3 text-sm font-semibold text-white hover:bg-brand-dark">
-                Explore Program Details
+              <Link href="/contact" className="btn-primary">
+                Talk to someone today
               </Link>
-              <Link href="/admissions" className="focus-ring rounded-xl border border-brand px-5 py-3 text-sm font-semibold text-brand-dark hover:bg-brand-soft">
-                View Admissions Steps
+              <Link href="/admissions" className="btn-secondary">
+                See if Mulligan is right for you
               </Link>
             </div>
           </div>
-          <div className="rounded-2xl border border-line bg-accent-soft p-8">
-            <h3 className="text-xl font-semibold text-[#18414f]">Need immediate support?</h3>
-            <p className="mt-3 text-[#315260]">
-              If someone is in danger, call 911. For urgent emotional distress, call or text 988. Admissions requests
-              are reviewed as quickly as possible during business hours.
-            </p>
-          </div>
         </div>
       </section>
 
-      <ReferralPathways />
-
       <CtaSection
-        heading="Start a confidential admissions conversation"
+        heading="You do not have to figure this out alone"
         body="Share only basic contact details. Do not submit diagnosis details, medications, or other private medical information through online forms."
         primaryHref="/contact"
-        primaryLabel="Contact Admissions"
-        secondaryHref="/insurance-payment"
-        secondaryLabel="Review Insurance Options"
+        primaryLabel="Talk to someone today"
+        secondaryHref="/admissions"
+        secondaryLabel="See if Mulligan is right for you"
       />
     </>
   );

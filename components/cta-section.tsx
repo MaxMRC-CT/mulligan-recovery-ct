@@ -19,21 +19,15 @@ export function CtaSection({
 }: CtaSectionProps) {
   return (
     <section className="section">
-      <div className="container rounded-2xl border border-line bg-brand-soft p-8 shadow-card md:p-12">
-        <h2 className="text-2xl font-bold text-brand-dark md:text-3xl">{heading}</h2>
-        <p className="mt-3 max-w-3xl text-[#2e5361]">{body}</p>
+      <div className="container rounded-2xl border border-line bg-neutral-50 p-8 shadow-card md:p-12">
+        <h2 className="text-2xl font-bold text-neutral-900 md:text-3xl">{heading}</h2>
+        <p className="mt-3 max-w-3xl text-neutral-700">{body}</p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link
-            href={primaryHref}
-            className="focus-ring rounded-xl bg-brand px-5 py-3 text-sm font-semibold text-white transition hover:bg-brand-dark"
-          >
+          <Link href={primaryHref} className="btn-primary">
             {primaryLabel}
           </Link>
           {secondaryHref && secondaryLabel ? (
-            <Link
-              href={secondaryHref}
-              className="focus-ring rounded-xl border border-brand px-5 py-3 text-sm font-semibold text-brand-dark hover:bg-white"
-            >
+            <Link href={secondaryHref} className="btn-secondary">
               {secondaryLabel}
             </Link>
           ) : null}

@@ -2,7 +2,11 @@ import { DesignSystemShowcase } from "@/components/design-system-showcase";
 import { PageHero } from "@/components/page-hero";
 
 export const metadata = {
-  title: "Design System"
+  title: "Design System",
+  robots: {
+    index: false,
+    follow: false
+  }
 };
 
 export default function DesignSystemPage() {
