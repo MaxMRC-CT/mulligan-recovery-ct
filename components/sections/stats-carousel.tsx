@@ -9,17 +9,9 @@ function StatCard({ item }: { item: StatItem }) {
   return (
     <article className="card h-full">
       <Image src="/logo-circle.png" alt="" width={28} height={28} className="h-7 w-7 rounded-full" aria-hidden />
-      <p className="text-xs uppercase tracking-[0.08em] text-primary-dark">{item.label}</p>
       <p className="mt-3 text-3xl font-bold text-neutral-900">{item.value}</p>
+      <p className="mt-2 text-base font-semibold text-neutral-900">{item.label}</p>
       <p className="mt-2 text-sm text-neutral-700">{item.subtext}</p>
-      <a
-        href={item.source.link}
-        target="_blank"
-        rel="noreferrer"
-        className="focus-ring mt-4 inline-block rounded text-xs font-semibold text-primary-dark underline"
-      >
-        Source: {item.source.name}
-      </a>
     </article>
   );
 }
@@ -60,7 +52,7 @@ export function StatsCarousel() {
       <div className="container">
         <h2 className="section-heading">Connecticut &amp; New Haven Overdose Context</h2>
         <p className="section-subheading">
-          A calm snapshot of local trends to support informed decisions without fear-based messaging.
+          A simple snapshot to help families and professionals understand local need.
         </p>
 
         <div className="mt-8 hidden gap-5 md:grid md:grid-cols-2 xl:grid-cols-5">
