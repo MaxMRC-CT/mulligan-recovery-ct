@@ -1,5 +1,7 @@
 import { CtaSection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
+import { FaqAccordion } from "@/components/ui/faq-accordion";
+import { SectionHeading } from "@/components/ui/section-heading";
 
 export const metadata = {
   title: "Admissions"
@@ -24,6 +26,24 @@ const steps = [
   }
 ];
 
+const admissionsFaq = [
+  {
+    question: "How quickly do you respond to new inquiries?",
+    answer:
+      "Most admissions requests are triaged the same business day. Complex referrals may require additional documentation before final placement."
+  },
+  {
+    question: "Can providers submit referrals directly?",
+    answer:
+      "Yes. Providers can call or use the contact pathway and include only minimum necessary referral context for initial coordination."
+  },
+  {
+    question: "What should families prepare before intake?",
+    answer:
+      "Primary contact information, current payer details, and a brief summary of the support need. Do not submit private medical details through general web forms."
+  }
+];
+
 export default function AdmissionsPage() {
   return (
     <>
@@ -39,6 +59,30 @@ export default function AdmissionsPage() {
               <p className="mt-3 text-[#345867]">{step.body}</p>
             </article>
           ))}
+        </div>
+      </section>
+      <section className="section bg-white">
+        <div className="container">
+          <SectionHeading
+            eyebrow="Admissions Readiness"
+            title="What helps us move quickly"
+            subtitle="Clean referral details and complete payer information reduce preventable delays."
+          />
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
+            <article className="card">
+              <h3 className="text-lg font-semibold text-neutral-900">Initial Triage</h3>
+              <p className="mt-3 text-neutral-700">General inquiry review, appropriateness screening, and first callback planning.</p>
+            </article>
+            <article className="card">
+              <h3 className="text-lg font-semibold text-neutral-900">Clinical Fit Check</h3>
+              <p className="mt-3 text-neutral-700">ASAM 3.1 alignment review with referral source and current support context.</p>
+            </article>
+            <article className="card">
+              <h3 className="text-lg font-semibold text-neutral-900">Coverage and Intake Plan</h3>
+              <p className="mt-3 text-neutral-700">Benefits verification, intake timing, and orientation logistics confirmation.</p>
+            </article>
+          </div>
+          <FaqAccordion items={admissionsFaq} className="mt-8" />
         </div>
       </section>
       <CtaSection

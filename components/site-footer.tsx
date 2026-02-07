@@ -3,6 +3,7 @@ import Link from "next/link";
 const quickLinks = [
   { href: "/programs", label: "Programs" },
   { href: "/admissions", label: "Admissions" },
+  { href: "/for-professionals", label: "For Professionals" },
   { href: "/insurance-payment", label: "Insurance & Payment" },
   { href: "/resources", label: "Resources" },
   { href: "/privacy-policy", label: "Privacy Policy" },

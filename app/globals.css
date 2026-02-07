@@ -3,13 +3,21 @@
 @tailwind utilities;
 
 :root {
+  --primary: #2f7d8f;
+  --primary-dark: #1f5e6e;
+  --primary-soft: #e8f5f8;
+  --secondary: #5f9e8e;
+  --secondary-dark: #457367;
+  --secondary-soft: #eaf6f2;
   --surface: #f6fbfb;
+  --accent: #7aa9b6;
+  --accent-soft: #ecf5f8;
+  --neutral-50: #f7fafb;
+  --neutral-100: #edf3f5;
+  --neutral-200: #dbe8ec;
+  --neutral-700: #355666;
+  --neutral-900: #163843;
   --ink: #163843;
-  --brand: #2f7d8f;
-  --brand-dark: #1f5e6e;
-  --brand-soft: #e8f5f8;
-  --accent: #5f9e8e;
-  --accent-soft: #eaf6f2;
   --line: #d9e7eb;
 }
 
@@ -23,7 +31,7 @@ body {
   padding: 0;
   background: radial-gradient(circle at top right, #eef8f9 0%, #f9fcfc 45%, #ffffff 100%);
   color: var(--ink);
-  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-family: "Atkinson Hyperlegible", "Inter", "Segoe UI", sans-serif;
 }
 
 a {
@@ -37,7 +45,13 @@ a {
 }
 
 .section {
-  padding: 4rem 0;
+  padding: 4.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 5.5rem 0;
+  }
 }
 
 .prose-md {
@@ -53,4 +67,46 @@ a {
 .focus-ring:focus-visible {
   outline: 3px solid #73b3c1;
   outline-offset: 2px;
+}
+
+.rhythm > * + * {
+  margin-top: 1.25rem;
+}
+
+.form-stack > * + * {
+  margin-top: 1rem;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-dark focus:ring-primary;
+  }
+
+  .btn-secondary {
+    @apply btn border border-primary text-primary-dark hover:bg-primary-soft focus:ring-primary;
+  }
+
+  .btn-ghost {
+    @apply btn text-neutral-700 hover:bg-neutral-100 focus:ring-primary;
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-700 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-20;
+  }
+
+  .card {
+    @apply rounded-2xl border border-line bg-white p-6 shadow-card;
+  }
+
+  .section-heading {
+    @apply text-2xl font-bold text-neutral-900 md:text-3xl;
+  }
+
+  .section-subheading {
+    @apply mt-3 max-w-2xl text-neutral-700;
+  }
 }

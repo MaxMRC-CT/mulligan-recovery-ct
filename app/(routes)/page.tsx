@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { CtaSection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
+import { ReferralPathways } from "@/components/sections/referral-pathways";
+import { TrustSignals } from "@/components/sections/trust-signals";
 
 const highlights = [
   {
@@ -36,6 +38,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <TrustSignals />
+
       <section className="section bg-white">
         <div className="container grid gap-10 md:grid-cols-2 md:items-center">
           <div>
@@ -63,6 +67,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <ReferralPathways />
 
       <CtaSection
         heading="Start a confidential admissions conversation"

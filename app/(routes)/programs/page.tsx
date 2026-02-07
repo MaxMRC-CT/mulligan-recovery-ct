@@ -1,5 +1,6 @@
 import { CtaSection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
+import { ReferralPathways } from "@/components/sections/referral-pathways";
 
 export const metadata = {
   title: "Programs"
@@ -40,6 +41,29 @@ export default function ProgramsPage() {
           </p>
         </div>
       </section>
+      <section className="section pt-0">
+        <div className="container grid gap-5 md:grid-cols-3">
+          <article className="card">
+            <h2 className="text-lg font-semibold text-neutral-900">Length of Stay Planning</h2>
+            <p className="mt-3 text-neutral-700">
+              Duration is individualized based on engagement, stability goals, and referral-team coordination.
+            </p>
+          </article>
+          <article className="card">
+            <h2 className="text-lg font-semibold text-neutral-900">Continuing Care Handoff</h2>
+            <p className="mt-3 text-neutral-700">
+              Discharge plans include outpatient linkage, support meetings, and accountable follow-up recommendations.
+            </p>
+          </article>
+          <article className="card">
+            <h2 className="text-lg font-semibold text-neutral-900">Referral Communication</h2>
+            <p className="mt-3 text-neutral-700">
+              With consent and applicable releases, care updates can be coordinated with external providers.
+            </p>
+          </article>
+        </div>
+      </section>
+      <ReferralPathways />
       <CtaSection
         heading="Need a placement decision quickly?"
         body="We prioritize efficient referral coordination and clear next-step communication with providers and families."

@@ -7,6 +7,7 @@ const navItems = [
   { href: "/admissions", label: "Admissions" },
   { href: "/insurance-payment", label: "Insurance & Payment" },
   { href: "/families", label: "Families" },
+  { href: "/for-professionals", label: "For Professionals" },
   { href: "/resources", label: "Resources" },
   { href: "/careers", label: "Careers" },
   { href: "/contact", label: "Contact" }
