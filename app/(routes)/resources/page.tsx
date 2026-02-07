@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
+import { ContentImage } from "@/components/ui/content-image";
 import { getAllPosts } from "@/lib/blog";
 
 export const metadata = {
@@ -15,6 +16,35 @@ export default function ResourcesPage() {
         title="Resources"
         subtitle="Practical education for residents, families, and referral partners navigating treatment and recovery planning."
       />
+      <section className="section pt-0">
+        <div className="container">
+          <ContentImage
+            src="/images/resources/hero.svg"
+            alt="A quiet reading and counseling space with soft natural light"
+            ratio="hero"
+            caption="Clear information helps people make calmer decisions."
+          />
+        </div>
+      </section>
+      <section className="section pt-0">
+        <div className="container grid gap-5 md:grid-cols-3">
+          <ContentImage
+            src="/images/resources/families.svg"
+            alt="Family members having a supportive conversation in a living room"
+            caption="Guidance for families during uncertain moments."
+          />
+          <ContentImage
+            src="/images/resources/professionals.svg"
+            alt="A case manager and clinician reviewing referral notes together"
+            caption="Direct resources for referral partners."
+          />
+          <ContentImage
+            src="/images/resources/blog.svg"
+            alt="A notebook and laptop on a table in a calm workspace"
+            caption="Plain-language articles for real-world recovery planning."
+          />
+        </div>
+      </section>
       <section className="section pt-0">
         <div className="container grid gap-5">
           {posts.map((post) => (

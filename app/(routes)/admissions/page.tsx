@@ -1,5 +1,6 @@
 import { CtaSection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
+import { ContentImage } from "@/components/ui/content-image";
 import { FaqAccordion } from "@/components/ui/faq-accordion";
 import { SectionHeading } from "@/components/ui/section-heading";
 
@@ -52,6 +53,16 @@ export default function AdmissionsPage() {
         subtitle="Our process is designed to be straightforward, transparent, and respectful for residents, families, and referral partners."
       />
       <section className="section pt-0">
+        <div className="container">
+          <ContentImage
+            src="/images/admissions/hero.svg"
+            alt="A calm intake conversation at a table between staff and an adult seeking care"
+            ratio="hero"
+            caption="Admissions starts with a simple conversation and clear next steps."
+          />
+        </div>
+      </section>
+      <section className="section pt-0">
         <div className="container grid gap-5 md:grid-cols-2">
           {steps.map((step) => (
             <article key={step.title} className="rounded-2xl border border-line bg-white p-6 shadow-card">
@@ -83,6 +94,20 @@ export default function AdmissionsPage() {
             </article>
           </div>
           <FaqAccordion items={admissionsFaq} className="mt-8" />
+        </div>
+      </section>
+      <section className="section pt-0">
+        <div className="container grid gap-5 md:grid-cols-2">
+          <ContentImage
+            src="/images/admissions/process.svg"
+            alt="Care coordinator reviewing referral notes in a quiet office"
+            caption="Clear coordination helps reduce delays."
+          />
+          <ContentImage
+            src="/images/admissions/welcome.svg"
+            alt="A welcoming residential entrance and common area"
+            caption="A stable environment supports a safer start."
+          />
         </div>
       </section>
       <CtaSection

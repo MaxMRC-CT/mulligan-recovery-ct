@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CtaSection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
 import { StatsCarousel } from "@/components/sections/stats-carousel";
+import { ContentImage } from "@/components/ui/content-image";
 
 export default function HomePage() {
   return (
@@ -10,6 +11,17 @@ export default function HomePage() {
         title="Real people. Real recovery. Kept simple."
         subtitle="Mulligan Recovery Centers provides low-intensity residential treatment in Connecticut for people who want structure, dignity, and a clear path forward."
       />
+
+      <section className="section pt-0">
+        <div className="container">
+          <ContentImage
+            src="/images/home/hero.svg"
+            alt="A calm residential setting with natural light and welcoming shared space"
+            ratio="hero"
+            caption="A calm environment can make difficult decisions feel more manageable."
+          />
+        </div>
+      </section>
 
       <section className="section pt-0">
         <div className="container rounded-2xl border border-line bg-neutral-50 p-8">
@@ -60,6 +72,26 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="section pt-0">
+        <div className="container grid gap-5 md:grid-cols-3">
+          <ContentImage
+            src="/images/home/support-connection.svg"
+            alt="Two adults in a supportive one-on-one conversation"
+            caption="Connection and trust support steady progress."
+          />
+          <ContentImage
+            src="/images/home/support-environment.svg"
+            alt="A quiet, well-lit common room in a residential care environment"
+            caption="Calm spaces help people focus on recovery."
+          />
+          <ContentImage
+            src="/images/home/support-professional.svg"
+            alt="A counselor meeting with an adult client in a neutral office"
+            caption="Professional guidance with clear next steps."
+          />
         </div>
       </section>
 

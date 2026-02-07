@@ -1,5 +1,6 @@
 import { CtaSection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
+import { ContentImage } from "@/components/ui/content-image";
 import { FaqAccordion } from "@/components/ui/faq-accordion";
 import { SectionHeading } from "@/components/ui/section-heading";
 
@@ -32,6 +33,16 @@ export default function ForProfessionalsPage() {
         title="For professionals and referral partners"
         subtitle="Mulligan provides ASAM-aligned low-intensity residential care for people who need structure without inpatient acuity."
       />
+      <section className="section pt-0">
+        <div className="container">
+          <ContentImage
+            src="/images/resources/professionals.svg"
+            alt="Two healthcare professionals discussing a referral in a neutral office"
+            ratio="hero"
+            caption="Efficient referral coordination with clear communication."
+          />
+        </div>
+      </section>
 
       <section className="section pt-0">
         <div className="container grid gap-5 md:grid-cols-3">

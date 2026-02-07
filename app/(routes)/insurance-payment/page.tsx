@@ -1,6 +1,7 @@
 import { CtaSection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
 import { PayerClarity } from "@/components/sections/payer-clarity";
+import { ContentImage } from "@/components/ui/content-image";
 
 export const metadata = {
   title: "Insurance and Payment"
@@ -13,6 +14,16 @@ export default function InsurancePaymentPage() {
         title="Insurance and payment options"
         subtitle="We work to make coverage and financial expectations clear before admission whenever possible."
       />
+      <section className="section pt-0">
+        <div className="container">
+          <ContentImage
+            src="/images/insurance-payment/hero.svg"
+            alt="Two adults reviewing paperwork together in a calm office setting"
+            ratio="hero"
+            caption="Clear financial conversations can reduce stress and support better decisions."
+          />
+        </div>
+      </section>
       <section className="section pt-0">
         <div className="container prose-md rounded-2xl border border-line bg-white p-8 shadow-card">
           <h2>Coverage verification</h2>
@@ -33,6 +44,20 @@ export default function InsurancePaymentPage() {
         </div>
       </section>
       <PayerClarity />
+      <section className="section pt-0">
+        <div className="container grid gap-5 md:grid-cols-2">
+          <ContentImage
+            src="/images/insurance-payment/review.svg"
+            alt="Insurance specialist reviewing benefits details on a laptop"
+            caption="Benefit reviews are handled with practical, plain-language guidance."
+          />
+          <ContentImage
+            src="/images/insurance-payment/consultation.svg"
+            alt="A supportive consultation between an admissions team member and family member"
+            caption="Families and referral partners receive clear explanations of options."
+          />
+        </div>
+      </section>
       <section className="section bg-white">
         <div className="container rounded-2xl border border-line bg-neutral-50 p-8">
           <h2 className="text-2xl font-bold text-neutral-900">Payers commonly reviewed (placeholder)</h2>

@@ -1,5 +1,6 @@
 import { CtaSection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
+import { ContentImage } from "@/components/ui/content-image";
 
 export const metadata = {
   title: "Programs"
@@ -12,6 +13,16 @@ export default function ProgramsPage() {
         title="ASAM Level 3.1: Low-Intensity Residential"
         subtitle="A supportive residential environment for adults who need structure, recovery coaching, and coordinated care while strengthening independence."
       />
+      <section className="section pt-0">
+        <div className="container">
+          <ContentImage
+            src="/images/programs/hero.svg"
+            alt="A warm, structured residential treatment setting with shared seating"
+            ratio="hero"
+            caption="Structured support in a calm and respectful environment."
+          />
+        </div>
+      </section>
       <section className="section pt-0">
         <div className="container grid gap-5 md:grid-cols-2">
           {[
@@ -26,6 +37,20 @@ export default function ProgramsPage() {
               <p className="font-medium text-neutral-700">{item}</p>
             </div>
           ))}
+        </div>
+      </section>
+      <section className="section pt-0">
+        <div className="container grid gap-5 md:grid-cols-2">
+          <ContentImage
+            src="/images/programs/daily-structure.svg"
+            alt="A small group session in a bright room with adults listening and participating"
+            caption="Daily structure helps people rebuild routines without overwhelm."
+          />
+          <ContentImage
+            src="/images/programs/group-room.svg"
+            alt="A calm group room prepared for counseling and recovery discussion"
+            caption="Shared spaces support accountability and connection."
+          />
         </div>
       </section>
       <section className="section bg-white">

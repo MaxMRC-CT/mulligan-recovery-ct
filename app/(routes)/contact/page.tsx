@@ -1,5 +1,6 @@
 import { PageHero } from "@/components/page-hero";
 import { ContactForm } from "@/components/contact-form";
+import { ContentImage } from "@/components/ui/content-image";
 
 export const metadata = {
   title: "Contact"
@@ -12,6 +13,16 @@ export default function ContactPage() {
         title="Contact admissions"
         subtitle="Complete this short form and our team will follow up. For your privacy, do not include diagnosis, medications, or detailed treatment history."
       />
+      <section className="section pt-0">
+        <div className="container">
+          <ContentImage
+            src="/images/contact/hero.svg"
+            alt="A calm front desk and consultation area in a treatment center"
+            ratio="hero"
+            caption="A clear contact path can make the first step easier."
+          />
+        </div>
+      </section>
       <section className="section pt-0">
         <div className="container grid gap-8 lg:grid-cols-2">
           <ContactForm />
@@ -32,6 +43,11 @@ export default function ContactPage() {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
+            <ContentImage
+              src="/images/contact/conversation.svg"
+              alt="A supportive intake conversation at a table with notepad and coffee"
+              caption="You can start with a simple call or message."
+            />
           </div>
         </div>
       </section>

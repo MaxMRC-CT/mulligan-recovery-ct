@@ -1,5 +1,6 @@
 import { CtaSection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
+import { ContentImage } from "@/components/ui/content-image";
 
 export const metadata = {
   title: "Families"
@@ -12,6 +13,16 @@ export default function FamiliesPage() {
         title="For families"
         subtitle="If you are not sure what level of care makes sense, that is normal. We will help you think it through."
       />
+      <section className="section pt-0">
+        <div className="container">
+          <ContentImage
+            src="/images/resources/families.svg"
+            alt="A family member and counselor talking calmly in a private room"
+            ratio="hero"
+            caption="Support starts with clear conversation and practical next steps."
+          />
+        </div>
+      </section>
       <section className="section pt-0">
         <div className="container grid gap-6 md:grid-cols-3">
           {[
