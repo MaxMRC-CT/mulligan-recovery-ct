@@ -4,11 +4,12 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { StatItem } from "@/lib/stats";
 import { stats } from "@/lib/stats";
 
-function StatCard({ item, animateIn, delayMs }: { item: StatItem; animateIn: boolean; delayMs: number }) {
+function StatCard({ item, index }: { item: StatItem; index: number }) {
   return (
     <article
-      className={`card h-full transition-all duration-700 ease-out ${animateIn ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
-      style={{ transitionDelay: `${delayMs}ms` }}
+      data-stat-card
+      data-index={index}
+      className="card h-full opacity-0 md:translate-y-6"
     >
       <p className="mt-3 text-3xl font-bold text-neutral-900">{item.value}</p>
       <p className="mt-2 text-base font-semibold text-neutral-900">{item.label}</p>
@@ -23,7 +24,6 @@ export function StatsCarousel() {
   const cardRefs = useRef<Array<HTMLDivElement | null>>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [sourcesOpen, setSourcesOpen] = useState(false);
-  const [isInView, setIsInView] = useState(false);
 
   const sources = useMemo(() => {
     return stats.map((item) => ({ id: item.id, label: item.label, source: item.source }));
@@ -35,11 +35,42 @@ export function StatsCarousel() {
       return;
     }
 
+    const desktopCards = Array.from(section.querySelectorAll<HTMLElement>("[data-stat-card]"));
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let hasAnimated = false;
+
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
-            setIsInView(true);
+            if (hasAnimated) {
+              observer.disconnect();
+              return;
+            }
+
+            hasAnimated = true;
+
+            desktopCards.forEach((card, index) => {
+              if (prefersReducedMotion) {
+                card.style.opacity = "1";
+                card.style.transform = "translateY(0)";
+                return;
+              }
+
+              card.animate(
+                [
+                  { opacity: 0, transform: "translateY(24px)" },
+                  { opacity: 1, transform: "translateY(0)" }
+                ],
+                {
+                  duration: 700,
+                  delay: index * 130,
+                  easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+                  fill: "forwards"
+                }
+              );
+            });
+
             observer.disconnect();
           }
         }
@@ -82,7 +113,7 @@ export function StatsCarousel() {
 
         <div className="mt-8 hidden gap-6 md:grid md:grid-cols-3">
           {stats.map((item, index) => (
-            <StatCard key={item.id} item={item} animateIn={isInView} delayMs={index * 120} />
+            <StatCard key={item.id} item={item} index={index} />
           ))}
         </div>
 
@@ -100,7 +131,11 @@ export function StatsCarousel() {
               }}
               className="w-[85%] shrink-0 snap-center"
             >
-              <StatCard item={item} animateIn={true} delayMs={0} />
+              <article className="card h-full">
+                <p className="mt-3 text-3xl font-bold text-neutral-900">{item.value}</p>
+                <p className="mt-2 text-base font-semibold text-neutral-900">{item.label}</p>
+                <p className="mt-2 text-sm text-neutral-700">{item.subtext}</p>
+              </article>
             </div>
           ))}
         </div>
