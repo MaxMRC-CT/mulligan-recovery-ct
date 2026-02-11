@@ -1,35 +1,57 @@
 import Link from "next/link";
 import Image from "next/image";
 import { CtaSection } from "@/components/cta-section";
-import { PageHero } from "@/components/page-hero";
 import { StatsCarousel } from "@/components/sections/stats-carousel";
 import { ContentImage } from "@/components/ui/content-image";
 
 export default function HomePage() {
   return (
     <>
-      <PageHero
-        title="Real people. Real recovery. Kept simple."
-        subtitle="Mulligan Recovery Centers provides low-intensity residential treatment in Connecticut for people who want structure, dignity, and a clear path forward."
-      />
-
-      <section className="section pt-0">
-        <div className="container">
-          <figure className="space-y-2">
-            <div className="relative aspect-[16/8] overflow-hidden bg-neutral-100 md:-mx-8 md:aspect-[16/6] lg:-mx-14">
-              <Image
-                src="/images/home/hero.jpg"
-                alt="A calm residential setting with natural light and welcoming shared space"
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, 92vw"
-                className="object-cover object-center"
-              />
+      <section className="relative min-h-[calc(100svh-90px)] overflow-hidden">
+        <Image
+          src="/images/home/hero.jpg"
+          alt="A calm residential setting with natural light and welcoming shared space"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-black/45" />
+        <div className="container relative flex min-h-[calc(100svh-90px)] items-center py-12">
+          <div className="max-w-4xl">
+            <h1 className="text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
+              <span className="block text-white">Real People.</span>
+              <span className="mt-3 block text-white">Real Recovery.</span>
+              <span className="mt-3 block text-primary">
+                Real{" "}
+                <span className="relative inline-block">
+                  Simple
+                  <svg
+                    viewBox="0 0 260 62"
+                    className="pointer-events-none absolute -bottom-5 left-0 h-7 w-[105%]"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M6 44 C 70 16, 170 20, 252 40"
+                      fill="none"
+                      stroke="#f28f42"
+                      strokeWidth="9"
+                      strokeLinecap="round"
+                    />
+                  </svg>
+                </span>
+                .
+              </span>
+            </h1>
+            <div className="mt-10 flex flex-wrap gap-3">
+              <Link href="/contact" className="btn-primary">
+                Talk to someone today
+              </Link>
+              <Link href="/admissions" className="btn-secondary bg-white/90">
+                See if Mulligan is right for you
+              </Link>
             </div>
-            <figcaption className="text-sm text-neutral-700 md:pl-8">
-              A calm environment can make difficult decisions feel more manageable.
-            </figcaption>
-          </figure>
+          </div>
         </div>
       </section>
 
