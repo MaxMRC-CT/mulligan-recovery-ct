@@ -27,19 +27,19 @@ export default function HomePage() {
                 <span className="relative inline-block">
                   Simple
                   <svg
-                    viewBox="0 0 420 84"
-                    className="pointer-events-none absolute -bottom-7 -left-3 h-10 w-[125%]"
+                    viewBox="0 0 600 96"
+                    className="pointer-events-none absolute -bottom-7 -left-[22%] h-10 w-[150%]"
                     aria-hidden="true"
                   >
                     <path
-                      d="M10 56 C 95 24, 290 22, 410 56"
+                      d="M6 60 C 170 14, 430 14, 594 60"
                       fill="none"
                       stroke="#f28f42"
                       strokeWidth="12"
                       strokeLinecap="round"
                     />
                     <path
-                      d="M14 63 C 110 38, 292 38, 404 62"
+                      d="M12 72 C 185 32, 422 32, 588 70"
                       fill="none"
                       stroke="#f28f42"
                       strokeWidth="4"
