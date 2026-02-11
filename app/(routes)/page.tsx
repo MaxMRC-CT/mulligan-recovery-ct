@@ -28,7 +28,7 @@ export default function HomePage() {
                   Simple
                   <svg
                     viewBox="0 0 420 84"
-                    className="pointer-events-none absolute -bottom-7 -left-1 h-10 w-[108%]"
+                    className="pointer-events-none absolute -bottom-7 -left-3 h-10 w-[125%]"
                     aria-hidden="true"
                   >
                     <path
