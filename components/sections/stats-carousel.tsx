@@ -1,12 +1,15 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { StatItem } from "@/lib/stats";
 import { stats } from "@/lib/stats";
 
-function StatCard({ item }: { item: StatItem }) {
+function StatCard({ item, animateIn, delayMs }: { item: StatItem; animateIn: boolean; delayMs: number }) {
   return (
-    <article className="card h-full">
+    <article
+      className={`card h-full transition-all duration-700 ease-out ${animateIn ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
+      style={{ transitionDelay: `${delayMs}ms` }}
+    >
       <p className="mt-3 text-3xl font-bold text-neutral-900">{item.value}</p>
       <p className="mt-2 text-base font-semibold text-neutral-900">{item.label}</p>
       <p className="mt-2 text-sm text-neutral-700">{item.subtext}</p>
@@ -16,12 +19,36 @@ function StatCard({ item }: { item: StatItem }) {
 
 export function StatsCarousel() {
   const mobileContainerRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
   const cardRefs = useRef<Array<HTMLDivElement | null>>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [sourcesOpen, setSourcesOpen] = useState(false);
+  const [isInView, setIsInView] = useState(false);
 
   const sources = useMemo(() => {
     return stats.map((item) => ({ id: item.id, label: item.label, source: item.source }));
+  }, []);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+            observer.disconnect();
+          }
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(section);
+    return () => observer.disconnect();
   }, []);
 
   function scrollToStat(index: number) {
@@ -46,16 +73,16 @@ export function StatsCarousel() {
   }
 
   return (
-    <section className="section bg-white">
+    <section ref={sectionRef} className="section bg-white">
       <div className="container">
         <h2 className="section-heading">Connecticut &amp; New Haven Overdose Context</h2>
         <p className="section-subheading">
           A simple snapshot to help families and professionals understand local need.
         </p>
 
-        <div className="mt-8 hidden gap-5 md:grid md:grid-cols-2 xl:grid-cols-5">
-          {stats.map((item) => (
-            <StatCard key={item.id} item={item} />
+        <div className="mt-8 hidden gap-6 md:grid md:grid-cols-3">
+          {stats.map((item, index) => (
+            <StatCard key={item.id} item={item} animateIn={isInView} delayMs={index * 120} />
           ))}
         </div>
 
@@ -73,7 +100,7 @@ export function StatsCarousel() {
               }}
               className="w-[85%] shrink-0 snap-center"
             >
-              <StatCard item={item} />
+              <StatCard item={item} animateIn={true} delayMs={0} />
             </div>
           ))}
         </div>
