@@ -4,14 +4,98 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { StatItem } from "@/lib/stats";
 import { stats } from "@/lib/stats";
 
-function StatCard({ item, index }: { item: StatItem; index: number }) {
+type ParsedValue = {
+  hasNumber: boolean;
+  prefix: string;
+  suffix: string;
+  target: number;
+  decimals: number;
+};
+
+function parseStatValue(raw: string): ParsedValue {
+  const match = raw.match(/-?\d[\d,]*(?:\.\d+)?/);
+  if (!match || match.index === undefined) {
+    return { hasNumber: false, prefix: "", suffix: "", target: 0, decimals: 0 };
+  }
+
+  const numberChunk = match[0];
+  const target = Number(numberChunk.replace(/,/g, ""));
+  const decimalPart = numberChunk.split(".")[1];
+
+  return {
+    hasNumber: true,
+    prefix: raw.slice(0, match.index),
+    suffix: raw.slice(match.index + numberChunk.length),
+    target,
+    decimals: decimalPart ? decimalPart.length : 0
+  };
+}
+
+function formatValue(value: number, decimals: number) {
+  return new Intl.NumberFormat("en-US", {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals
+  }).format(value);
+}
+
+function CountUpValue({ rawValue, triggerKey }: { rawValue: string; triggerKey: number }) {
+  const parsed = useMemo(() => parseStatValue(rawValue), [rawValue]);
+  const [displayValue, setDisplayValue] = useState(rawValue);
+
+  useEffect(() => {
+    if (!parsed.hasNumber) {
+      setDisplayValue(rawValue);
+      return;
+    }
+
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (prefersReducedMotion) {
+      setDisplayValue(`${parsed.prefix}${formatValue(parsed.target, parsed.decimals)}${parsed.suffix}`);
+      return;
+    }
+
+    const duration = 1300;
+    const start = performance.now();
+    let frame = 0;
+
+    function tick(now: number) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = parsed.target * eased;
+
+      setDisplayValue(`${parsed.prefix}${formatValue(current, parsed.decimals)}${parsed.suffix}`);
+
+      if (progress < 1) {
+        frame = requestAnimationFrame(tick);
+      }
+    }
+
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
+  }, [parsed, rawValue, triggerKey]);
+
+  return <>{displayValue}</>;
+}
+
+function DesktopStatCard({ item, index, triggerKey }: { item: StatItem; index: number; triggerKey: number }) {
   return (
-    <article
-      data-stat-card
-      data-index={index}
-      className="card h-full opacity-0 md:translate-y-6"
-    >
-      <p className="mt-3 text-3xl font-bold text-neutral-900">{item.value}</p>
+    <article data-stat-card data-index={index} className="card h-full opacity-0 [transform:translateY(36px)_scale(0.96)] [filter:blur(4px)]">
+      <p className="mt-3 text-3xl font-bold text-neutral-900">
+        <CountUpValue rawValue={item.value} triggerKey={triggerKey} />
+      </p>
+      <p className="mt-2 text-base font-semibold text-neutral-900">{item.label}</p>
+      <p className="mt-2 text-sm text-neutral-700">{item.subtext}</p>
+    </article>
+  );
+}
+
+function MobileStatCard({ item, triggerKey }: { item: StatItem; triggerKey: number }) {
+  return (
+    <article className="card h-full">
+      <p className="mt-3 text-3xl font-bold text-neutral-900">
+        <CountUpValue rawValue={item.value} triggerKey={triggerKey} />
+      </p>
       <p className="mt-2 text-base font-semibold text-neutral-900">{item.label}</p>
       <p className="mt-2 text-sm text-neutral-700">{item.subtext}</p>
     </article>
@@ -24,6 +108,7 @@ export function StatsCarousel() {
   const cardRefs = useRef<Array<HTMLDivElement | null>>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [sourcesOpen, setSourcesOpen] = useState(false);
+  const [animationCycle, setAnimationCycle] = useState(0);
 
   const sources = useMemo(() => {
     return stats.map((item) => ({ id: item.id, label: item.label, source: item.source }));
@@ -37,45 +122,59 @@ export function StatsCarousel() {
 
     const desktopCards = Array.from(section.querySelectorAll<HTMLElement>("[data-stat-card]"));
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    let hasAnimated = false;
+
+    function resetCards() {
+      if (prefersReducedMotion) {
+        desktopCards.forEach((card) => {
+          card.style.opacity = "1";
+          card.style.transform = "translateY(0) scale(1)";
+          card.style.filter = "none";
+        });
+        return;
+      }
+
+      desktopCards.forEach((card) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(36px) scale(0.96)";
+        card.style.filter = "blur(4px)";
+      });
+    }
+
+    resetCards();
 
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
-            if (hasAnimated) {
-              observer.disconnect();
-              return;
-            }
-
-            hasAnimated = true;
+            setAnimationCycle((prev) => prev + 1);
 
             desktopCards.forEach((card, index) => {
               if (prefersReducedMotion) {
                 card.style.opacity = "1";
-                card.style.transform = "translateY(0)";
+                card.style.transform = "translateY(0) scale(1)";
+                card.style.filter = "none";
                 return;
               }
 
               card.animate(
                 [
-                  { opacity: 0, transform: "translateY(24px)" },
-                  { opacity: 1, transform: "translateY(0)" }
+                  { opacity: 0, transform: "translateY(36px) scale(0.96)", filter: "blur(4px)" },
+                  { opacity: 1, transform: "translateY(0) scale(1)", filter: "blur(0px)" }
                 ],
                 {
-                  duration: 700,
-                  delay: index * 130,
-                  easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+                  duration: 900,
+                  delay: index * 140,
+                  easing: "cubic-bezier(0.16, 1, 0.3, 1)",
                   fill: "forwards"
                 }
               );
             });
-
-            observer.disconnect();
+          } else {
+            resetCards();
           }
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.25 }
     );
 
     observer.observe(section);
@@ -107,13 +206,11 @@ export function StatsCarousel() {
     <section ref={sectionRef} className="section bg-white">
       <div className="container">
         <h2 className="section-heading">Connecticut &amp; New Haven Overdose Context</h2>
-        <p className="section-subheading">
-          A simple snapshot to help families and professionals understand local need.
-        </p>
+        <p className="section-subheading">A simple snapshot to help families and professionals understand local need.</p>
 
         <div className="mt-8 hidden gap-6 md:grid md:grid-cols-3">
           {stats.map((item, index) => (
-            <StatCard key={item.id} item={item} index={index} />
+            <DesktopStatCard key={item.id} item={item} index={index} triggerKey={animationCycle} />
           ))}
         </div>
 
@@ -131,11 +228,7 @@ export function StatsCarousel() {
               }}
               className="w-[85%] shrink-0 snap-center"
             >
-              <article className="card h-full">
-                <p className="mt-3 text-3xl font-bold text-neutral-900">{item.value}</p>
-                <p className="mt-2 text-base font-semibold text-neutral-900">{item.label}</p>
-                <p className="mt-2 text-sm text-neutral-700">{item.subtext}</p>
-              </article>
+              <MobileStatCard item={item} triggerKey={animationCycle} />
             </div>
           ))}
         </div>
@@ -147,11 +240,7 @@ export function StatsCarousel() {
               type="button"
               aria-label={`Go to stat ${index + 1}`}
               onClick={() => scrollToStat(index)}
-              className={
-                index === activeIndex
-                  ? "h-2.5 w-2.5 rounded-full bg-primary"
-                  : "h-2.5 w-2.5 rounded-full bg-neutral-200"
-              }
+              className={index === activeIndex ? "h-2.5 w-2.5 rounded-full bg-primary" : "h-2.5 w-2.5 rounded-full bg-neutral-200"}
             />
           ))}
         </div>
