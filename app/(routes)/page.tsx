@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CtaSection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
 import { StatsCarousel } from "@/components/sections/stats-carousel";
@@ -14,12 +15,21 @@ export default function HomePage() {
 
       <section className="section pt-0">
         <div className="container">
-          <ContentImage
-            src="/images/home/hero.jpg"
-            alt="A calm residential setting with natural light and welcoming shared space"
-            ratio="hero"
-            caption="A calm environment can make difficult decisions feel more manageable."
-          />
+          <figure className="space-y-2">
+            <div className="relative aspect-[16/8] overflow-hidden bg-neutral-100 md:-mx-8 md:aspect-[16/6] lg:-mx-14">
+              <Image
+                src="/images/home/hero.jpg"
+                alt="A calm residential setting with natural light and welcoming shared space"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 92vw"
+                className="object-cover object-center"
+              />
+            </div>
+            <figcaption className="text-sm text-neutral-700 md:pl-8">
+              A calm environment can make difficult decisions feel more manageable.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
