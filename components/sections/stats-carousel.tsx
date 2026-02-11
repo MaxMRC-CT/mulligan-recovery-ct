@@ -1,14 +1,12 @@
 "use client";
 
 import { useMemo, useRef, useState } from "react";
-import Image from "next/image";
 import type { StatItem } from "@/lib/stats";
 import { stats } from "@/lib/stats";
 
 function StatCard({ item }: { item: StatItem }) {
   return (
     <article className="card h-full">
-      <Image src="/logo-circle.png" alt="" width={28} height={28} className="h-7 w-7 rounded-full" aria-hidden />
       <p className="mt-3 text-3xl font-bold text-neutral-900">{item.value}</p>
       <p className="mt-2 text-base font-semibold text-neutral-900">{item.label}</p>
       <p className="mt-2 text-sm text-neutral-700">{item.subtext}</p>
