@@ -19,7 +19,7 @@ export default function ResourcesPage() {
       <section className="section pt-0">
         <div className="container">
           <ContentImage
-            src="/images/resources/hero.svg"
+            src="/images/resources/hero.jpg"
             alt="A quiet reading and counseling space with soft natural light"
             ratio="hero"
             caption="Clear information helps people make calmer decisions."
@@ -29,17 +29,17 @@ export default function ResourcesPage() {
       <section className="section pt-0">
         <div className="container grid gap-5 md:grid-cols-3">
           <ContentImage
-            src="/images/resources/families.svg"
+            src="/images/resources/families.jpg"
             alt="Family members having a supportive conversation in a living room"
             caption="Guidance for families during uncertain moments."
           />
           <ContentImage
-            src="/images/resources/professionals.svg"
+            src="/images/resources/professionals.jpg"
             alt="A case manager and clinician reviewing referral notes together"
             caption="Direct resources for referral partners."
           />
           <ContentImage
-            src="/images/resources/blog.svg"
+            src="/images/resources/blog.jpg"
             alt="A notebook and laptop on a table in a calm workspace"
             caption="Plain-language articles for real-world recovery planning."
           />

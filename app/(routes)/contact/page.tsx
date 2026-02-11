@@ -16,7 +16,7 @@ export default function ContactPage() {
       <section className="section pt-0">
         <div className="container">
           <ContentImage
-            src="/images/contact/hero.svg"
+            src="/images/contact/hero.jpg"
             alt="A calm front desk and consultation area in a treatment center"
             ratio="hero"
             caption="A clear contact path can make the first step easier."
@@ -44,7 +44,7 @@ export default function ContactPage() {
               />
             </div>
             <ContentImage
-              src="/images/contact/conversation.svg"
+              src="/images/contact/conversation.jpg"
               alt="A supportive intake conversation at a table with notepad and coffee"
               caption="You can start with a simple call or message."
             />

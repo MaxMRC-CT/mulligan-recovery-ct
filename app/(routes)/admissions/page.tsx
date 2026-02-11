@@ -55,7 +55,7 @@ export default function AdmissionsPage() {
       <section className="section pt-0">
         <div className="container">
           <ContentImage
-            src="/images/admissions/hero.svg"
+            src="/images/admissions/hero.jpg"
             alt="A calm intake conversation at a table between staff and an adult seeking care"
             ratio="hero"
             caption="Admissions starts with a simple conversation and clear next steps."
@@ -99,12 +99,12 @@ export default function AdmissionsPage() {
       <section className="section pt-0">
         <div className="container grid gap-5 md:grid-cols-2">
           <ContentImage
-            src="/images/admissions/process.svg"
+            src="/images/admissions/process.jpg"
             alt="Care coordinator reviewing referral notes in a quiet office"
             caption="Clear coordination helps reduce delays."
           />
           <ContentImage
-            src="/images/admissions/welcome.svg"
+            src="/images/admissions/welcome.jpg"
             alt="A welcoming residential entrance and common area"
             caption="A stable environment supports a safer start."
           />

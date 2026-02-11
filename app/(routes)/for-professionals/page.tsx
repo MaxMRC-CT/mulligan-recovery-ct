@@ -36,7 +36,7 @@ export default function ForProfessionalsPage() {
       <section className="section pt-0">
         <div className="container">
           <ContentImage
-            src="/images/resources/professionals.svg"
+            src="/images/resources/professionals.jpg"
             alt="Two healthcare professionals discussing a referral in a neutral office"
             ratio="hero"
             caption="Efficient referral coordination with clear communication."

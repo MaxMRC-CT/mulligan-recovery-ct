@@ -16,7 +16,7 @@ export default function FamiliesPage() {
       <section className="section pt-0">
         <div className="container">
           <ContentImage
-            src="/images/resources/families.svg"
+            src="/images/resources/families.jpg"
             alt="A family member and counselor talking calmly in a private room"
             ratio="hero"
             caption="Support starts with clear conversation and practical next steps."

@@ -17,7 +17,7 @@ export default function InsurancePaymentPage() {
       <section className="section pt-0">
         <div className="container">
           <ContentImage
-            src="/images/insurance-payment/hero.svg"
+            src="/images/insurance-payment/hero.jpg"
             alt="Two adults reviewing paperwork together in a calm office setting"
             ratio="hero"
             caption="Clear financial conversations can reduce stress and support better decisions."
@@ -47,12 +47,12 @@ export default function InsurancePaymentPage() {
       <section className="section pt-0">
         <div className="container grid gap-5 md:grid-cols-2">
           <ContentImage
-            src="/images/insurance-payment/review.svg"
+            src="/images/insurance-payment/review.jpg"
             alt="Insurance specialist reviewing benefits details on a laptop"
             caption="Benefit reviews are handled with practical, plain-language guidance."
           />
           <ContentImage
-            src="/images/insurance-payment/consultation.svg"
+            src="/images/insurance-payment/consultation.jpg"
             alt="A supportive consultation between an admissions team member and family member"
             caption="Families and referral partners receive clear explanations of options."
           />

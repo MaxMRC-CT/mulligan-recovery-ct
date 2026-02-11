@@ -16,7 +16,7 @@ export default function AboutPage() {
       <section className="section pt-0">
         <div className="container">
           <ContentImage
-            src="/images/about/hero.svg"
+            src="/images/about/hero.jpg"
             alt="A welcoming residential treatment environment with natural light and neutral decor"
             ratio="hero"
             caption="A respectful setting designed for stability and progress."
@@ -44,12 +44,12 @@ export default function AboutPage() {
       <section className="section pt-0">
         <div className="container grid gap-5 md:grid-cols-2">
           <ContentImage
-            src="/images/about/team.svg"
+            src="/images/about/team.jpg"
             alt="Staff members in a collaborative planning discussion"
             caption="Our team approach centers on consistency and dignity."
           />
           <ContentImage
-            src="/images/about/community.svg"
+            src="/images/about/community.jpg"
             alt="A quiet community outdoor space near a residential neighborhood"
             caption="Community connection is part of long-term recovery planning."
           />

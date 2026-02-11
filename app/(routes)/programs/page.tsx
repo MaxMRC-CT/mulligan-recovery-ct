@@ -16,7 +16,7 @@ export default function ProgramsPage() {
       <section className="section pt-0">
         <div className="container">
           <ContentImage
-            src="/images/programs/hero.svg"
+            src="/images/programs/hero.jpg"
             alt="A warm, structured residential treatment setting with shared seating"
             ratio="hero"
             caption="Structured support in a calm and respectful environment."
@@ -42,12 +42,12 @@ export default function ProgramsPage() {
       <section className="section pt-0">
         <div className="container grid gap-5 md:grid-cols-2">
           <ContentImage
-            src="/images/programs/daily-structure.svg"
+            src="/images/programs/daily-structure.jpg"
             alt="A small group session in a bright room with adults listening and participating"
             caption="Daily structure helps people rebuild routines without overwhelm."
           />
           <ContentImage
-            src="/images/programs/group-room.svg"
+            src="/images/programs/group-room.jpg"
             alt="A calm group room prepared for counseling and recovery discussion"
             caption="Shared spaces support accountability and connection."
           />

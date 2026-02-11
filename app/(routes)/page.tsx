@@ -15,7 +15,7 @@ export default function HomePage() {
       <section className="section pt-0">
         <div className="container">
           <ContentImage
-            src="/images/home/hero.svg"
+            src="/images/home/hero.jpg"
             alt="A calm residential setting with natural light and welcoming shared space"
             ratio="hero"
             caption="A calm environment can make difficult decisions feel more manageable."
@@ -78,17 +78,17 @@ export default function HomePage() {
       <section className="section pt-0">
         <div className="container grid gap-5 md:grid-cols-3">
           <ContentImage
-            src="/images/home/support-connection.svg"
+            src="/images/home/support-connection.jpg"
             alt="Two adults in a supportive one-on-one conversation"
             caption="Connection and trust support steady progress."
           />
           <ContentImage
-            src="/images/home/support-environment.svg"
+            src="/images/home/support-environment.jpg"
             alt="A quiet, well-lit common room in a residential care environment"
             caption="Calm spaces help people focus on recovery."
           />
           <ContentImage
-            src="/images/home/support-professional.svg"
+            src="/images/home/support-professional.jpg"
             alt="A counselor meeting with an adult client in a neutral office"
             caption="Professional guidance with clear next steps."
           />
