@@ -21,18 +21,18 @@ export default function HomePage() {
           <div className="max-w-4xl">
             <h1 className="text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
               <span className="block text-white">Real People.</span>
-              <span className="mt-5 block text-white">Real Recovery.</span>
-              <span className="mt-5 block text-primary">
+              <span className="mt-5 block text-primary">Real Recovery.</span>
+              <span className="mt-5 block text-white">
                 Real{" "}
                 <span className="relative inline-block">
                   Simple
                   <svg
                     viewBox="0 0 360 72"
-                    className="pointer-events-none absolute -bottom-6 left-0 h-9 w-[130%]"
+                    className="pointer-events-none absolute -bottom-6 left-0 h-9 w-full"
                     aria-hidden="true"
                   >
                     <path
-                      d="M8 50 C 90 20, 240 22, 350 46"
+                      d="M8 50 C 90 24, 250 22, 352 48"
                       fill="none"
                       stroke="#f28f42"
                       strokeWidth="10"
