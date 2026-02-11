@@ -21,21 +21,21 @@ export default function HomePage() {
           <div className="max-w-4xl">
             <h1 className="text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
               <span className="block text-white">Real People.</span>
-              <span className="mt-3 block text-white">Real Recovery.</span>
-              <span className="mt-3 block text-primary">
+              <span className="mt-5 block text-white">Real Recovery.</span>
+              <span className="mt-5 block text-primary">
                 Real{" "}
                 <span className="relative inline-block">
                   Simple
                   <svg
-                    viewBox="0 0 260 62"
-                    className="pointer-events-none absolute -bottom-5 left-0 h-7 w-[105%]"
+                    viewBox="0 0 360 72"
+                    className="pointer-events-none absolute -bottom-6 left-0 h-9 w-[130%]"
                     aria-hidden="true"
                   >
                     <path
-                      d="M6 44 C 70 16, 170 20, 252 40"
+                      d="M8 50 C 90 20, 240 22, 350 46"
                       fill="none"
                       stroke="#f28f42"
-                      strokeWidth="9"
+                      strokeWidth="10"
                       strokeLinecap="round"
                     />
                   </svg>
@@ -43,12 +43,12 @@ export default function HomePage() {
                 .
               </span>
             </h1>
-            <div className="mt-10 flex flex-wrap gap-3">
-              <Link href="/contact" className="btn-primary">
-                Talk to someone today
-              </Link>
+            <div className="mt-16 flex flex-wrap gap-3 md:mt-24">
               <Link href="/admissions" className="btn-secondary bg-white/90">
                 See if Mulligan is right for you
+              </Link>
+              <Link href="/contact" className="btn-primary">
+                Talk to someone today
               </Link>
             </div>
           </div>
