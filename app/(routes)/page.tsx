@@ -90,14 +90,10 @@ export default function HomePage() {
             </div>
 
             <div className="relative border-l-4 border-primary/80 pl-6 md:pl-8">
-              <h2 className={`${handwritten.className} relative inline-block text-5xl leading-[0.95] text-neutral-900 md:text-7xl`} aria-label="What we do">
-                <span className="relative z-10">What we do</span>
-                <span aria-hidden="true" className="pointer-events-none absolute left-[1.5px] top-[1px] z-0 text-neutral-900/40 blur-[0.35px]">
-                  What we do
-                </span>
-                <span aria-hidden="true" className="pointer-events-none absolute left-[-0.5px] top-[0.5px] z-0 text-neutral-900/30">
-                  What we do
-                </span>
+              <h2
+                className={`${handwritten.className} relative inline-block whitespace-nowrap text-5xl leading-[0.95] text-neutral-900 [text-shadow:0.6px_0.6px_0_rgba(17,17,17,0.22)] md:text-7xl`}
+              >
+                What we do
                 <svg
                   viewBox="0 0 520 90"
                   className="pointer-events-none absolute -bottom-9 left-0 h-10 w-[102%]"

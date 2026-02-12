@@ -1,8 +1,14 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import localFont from "next/font/local";
 import type { StatItem } from "@/lib/stats";
 import { stats } from "@/lib/stats";
+
+const handwritten = localFont({
+  src: "../../app/fonts/Valen Valentine Script.otf",
+  display: "swap"
+});
 
 type ParsedValue = {
   hasNumber: boolean;
@@ -219,9 +225,22 @@ export function StatsCarousel() {
       />
       <div aria-hidden="true" className="pointer-events-none absolute -right-16 top-8 hidden h-52 w-52 rounded-full border border-primary/30 md:block" />
       <div className="container relative">
-        <h2 className="section-heading">Connecticut &amp; New Haven Overdose Context</h2>
-        <p className="section-subheading">A simple snapshot to help families and professionals understand local need.</p>
-        <div aria-hidden="true" className="mt-3 h-1.5 w-28 rounded-full bg-primary/80" />
+        <div className="max-w-3xl pr-6 md:pr-16 lg:pr-24">
+          <h2
+            className={`${handwritten.className} relative inline-block whitespace-nowrap text-5xl leading-[0.95] text-neutral-900 [text-shadow:0.6px_0.6px_0_rgba(17,17,17,0.22)] md:text-7xl`}
+          >
+            Scope of the Issue
+            <svg
+              viewBox="0 0 620 92"
+              className="pointer-events-none absolute -bottom-9 left-0 h-10 w-[101%]"
+              aria-hidden="true"
+            >
+              <path d="M10 56 C 154 18, 438 18, 610 58" fill="none" stroke="#d67c2d" strokeWidth="9" strokeLinecap="round" />
+              <path d="M14 68 C 170 34, 428 34, 606 68" fill="none" stroke="#d67c2d" strokeWidth="3" strokeLinecap="round" opacity="0.9" />
+            </svg>
+          </h2>
+          <p className="mt-10 text-lg text-neutral-700">A simple snapshot to help families and professionals understand local need.</p>
+        </div>
 
         <div className="mt-8 hidden gap-6 md:grid md:grid-cols-3">
           {stats.map((item, index) => (
