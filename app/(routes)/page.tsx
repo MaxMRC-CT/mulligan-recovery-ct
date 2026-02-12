@@ -1,8 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Permanent_Marker } from "next/font/google";
 import { CtaSection } from "@/components/cta-section";
 import { StatsCarousel } from "@/components/sections/stats-carousel";
 import { ContentImage } from "@/components/ui/content-image";
+
+const handwritten = Permanent_Marker({
+  subsets: ["latin"],
+  weight: ["400"]
+});
 
 export default function HomePage() {
   return (
@@ -84,7 +90,7 @@ export default function HomePage() {
             </div>
 
             <div className="relative border-l-4 border-primary/80 pl-6 md:pl-8">
-              <h2 className="text-3xl font-bold leading-tight text-neutral-900 md:text-5xl">What we do</h2>
+              <h2 className={`${handwritten.className} text-5xl leading-[0.95] text-neutral-900 md:text-7xl`}>What we do</h2>
               <svg
                 viewBox="0 0 180 80"
                 className="pointer-events-none mt-3 h-12 w-36 text-neutral-900"
