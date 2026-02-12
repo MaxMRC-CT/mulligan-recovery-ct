@@ -64,23 +64,34 @@ export default function HomePage() {
       </section>
 
       <section className="section pt-0">
-        <div className="container rounded-2xl border border-line bg-neutral-50 p-8">
-          <h2 className="section-heading">What we do</h2>
-          <p className="section-subheading">
-            We help adults who need more support than outpatient care, but not the disruption of high-intensity
-            inpatient treatment.
-          </p>
-          <p className="mt-3 max-w-3xl text-neutral-700">
-            Low-intensity residential care means you live on site, attend scheduled groups and sessions, and build
-            daily structure without hospital-level intensity.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <Link href="/contact" className="btn-primary">
-              Talk to someone today
-            </Link>
-            <Link href="/admissions" className="btn-secondary">
-              See if Mulligan is right for you
-            </Link>
+        <div className="container">
+          <div className="relative md:min-h-[360px]">
+            <div className="rounded-2xl border border-line bg-neutral-50 p-8 md:w-[74%] lg:w-[72%]">
+              <h2 className="section-heading">What we do</h2>
+              <p className="section-subheading">
+                We help adults who need more support than outpatient care, but not the disruption of high-intensity
+                inpatient treatment.
+              </p>
+              <p className="mt-3 max-w-3xl text-neutral-700">
+                Low-intensity residential care means you live on site, attend scheduled groups and sessions, and build
+                daily structure without hospital-level intensity.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Link href="/contact" className="btn-primary">
+                  Talk to someone today
+                </Link>
+                <Link href="/admissions" className="btn-secondary">
+                  See if Mulligan is right for you
+                </Link>
+              </div>
+            </div>
+            <div className="mt-5 md:absolute md:right-0 md:top-7 md:mt-0 md:w-[40%] lg:w-[38%]">
+              <ContentImage
+                src="/images/home/support-connection.jpg"
+                alt="Two adults in a supportive one-on-one conversation"
+                className="md:[&>div]:shadow-card"
+              />
+            </div>
           </div>
         </div>
       </section>
