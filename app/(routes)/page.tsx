@@ -63,29 +63,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section relative bg-[#263241] pt-10">
-        <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-primary/20 to-transparent" />
-        <div className="container">
-          <div className="grid gap-8 md:grid-cols-[1.05fr_1fr] md:items-center md:gap-12">
-            <div className="relative overflow-hidden rounded-[10px] border border-white/15 bg-[#f8f8f6] p-8 shadow-[0_20px_44px_rgba(7,11,18,0.35)] md:min-h-[520px] md:p-10">
-              <div aria-hidden="true" className="absolute inset-x-8 top-0 h-1.5 rounded-full bg-primary/80" />
-              <h2 className="section-heading">What we do</h2>
-              <p className="section-subheading">
-                We help adults who need more support than outpatient care, but not the disruption of high-intensity
-                inpatient treatment.
-              </p>
-              <p className="mt-3 max-w-3xl text-neutral-700">
-                Low-intensity residential care means you live on site, attend scheduled groups and sessions, and build
-                daily structure without hospital-level intensity.
-              </p>
-            </div>
-            <div className="relative md:-translate-y-4">
-              <div aria-hidden="true" className="pointer-events-none absolute -left-5 -top-5 h-20 w-20 rounded-full border border-primary/40" />
+      <section className="section relative overflow-hidden bg-[#f7f6f3] pt-10">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 opacity-40 [background:repeating-linear-gradient(0deg,transparent,transparent_16px,rgba(17,17,17,0.02)_17px)]"
+        />
+        <div aria-hidden="true" className="pointer-events-none absolute -right-20 top-8 hidden h-60 w-60 border border-primary/30 md:block" />
+        <div className="container relative">
+          <div className="grid gap-10 md:grid-cols-[0.92fr_1.08fr] md:items-start">
+            <div className="relative">
               <ContentImage
                 src="/images/home/what-we-do-overlay.jpg"
                 alt="An adult in a counseling session listening and speaking with support staff"
-                className="md:[&>div]:aspect-[4/5] md:[&>div]:rounded-[10px] md:[&>div]:border-white/30 md:[&>div]:shadow-[0_22px_48px_rgba(7,11,18,0.35)]"
+                className="md:[&>div]:aspect-[4/5] md:[&>div]:shadow-[0_20px_40px_rgba(17,17,17,0.18)]"
               />
+              <div className="absolute -bottom-6 right-4 bg-primary px-5 py-4 text-white shadow-[0_14px_28px_rgba(214,124,45,0.42)] md:right-6">
+                <p className="text-xl font-bold leading-tight">Recovery is personal.</p>
+                <p className="mt-1 text-sm font-semibold tracking-wide text-white/90">Support is real. Progress is possible.</p>
+              </div>
+            </div>
+
+            <div className="relative border-l-4 border-primary/80 pl-6 md:pl-8">
+              <h2 className="text-3xl font-bold leading-tight text-neutral-900 md:text-5xl">What we do</h2>
+              <svg
+                viewBox="0 0 180 80"
+                className="pointer-events-none mt-3 h-12 w-36 text-neutral-900"
+                aria-hidden="true"
+              >
+                <path d="M8 8 C 68 14, 82 40, 108 66" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
+                <path d="M95 56 L 108 68 L 95 74" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
+              </svg>
+              <p className="mt-2 max-w-3xl text-lg leading-relaxed text-neutral-800">
+                At Mulligan Recovery Centers of Connecticut, we provide a safe and structured place for people who are
+                ready to step away from the chaos of addiction and focus on rebuilding their lives. Our residential
+                program gives individuals the time, support, and stability needed to reset, surrounded by caring
+                professionals and a community of peers who understand the journey. Recovery here is not rushed. It is
+                strengthened day by day through guidance, accountability, and real human connection.
+              </p>
+              <p className="mt-5 max-w-3xl text-lg leading-relaxed text-neutral-800">
+                We believe lasting change happens in an environment grounded in respect, dignity, and hope. Our team
+                works closely with each person to build healthy routines, practical life skills, and the confidence
+                needed to move forward. This is about more than stopping substance use. It is about rediscovering
+                purpose, repairing relationships, and creating a future that feels meaningful and sustainable. At
+                Mulligan CT, recovery is personal, supportive, and absolutely possible.
+              </p>
             </div>
           </div>
         </div>
