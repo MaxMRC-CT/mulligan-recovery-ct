@@ -13,7 +13,7 @@ export default function CareersPage() {
         subtitle="Join a team committed to clinically sound, respectful, and community-focused residential treatment."
       />
       <section className="section pt-0">
-        <div className="container prose-md rounded-2xl border border-line bg-white p-8 shadow-card">
+        <div className="container prose-md rounded-md border border-line bg-white p-8 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
           <h2>Why work here</h2>
           <p>
             We support staff with structured onboarding, clear clinical expectations, and a culture that values both

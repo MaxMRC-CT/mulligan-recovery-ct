@@ -32,7 +32,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <SiteHeader />
-        <main id="main-content">{children}</main>
+        <main id="main-content" className="bg-[#f5f4f1]">
+          {children}
+        </main>
         <SiteFooter />
       </body>
     </html>

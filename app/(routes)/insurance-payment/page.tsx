@@ -25,7 +25,7 @@ export default function InsurancePaymentPage() {
         </div>
       </section>
       <section className="section pt-0">
-        <div className="container prose-md rounded-2xl border border-line bg-white p-8 shadow-card">
+        <div className="container prose-md rounded-md border border-line bg-white p-8 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
           <h2>Coverage verification</h2>
           <p>
             We can verify many commercial plans and selected public benefits. Coverage depends on policy terms,
@@ -59,16 +59,16 @@ export default function InsurancePaymentPage() {
         </div>
       </section>
       <section className="section bg-white">
-        <div className="container rounded-2xl border border-line bg-neutral-50 p-8">
+        <div className="container rounded-md border border-line bg-neutral-50 p-8">
           <h2 className="text-2xl font-bold text-neutral-900">Payers commonly reviewed (placeholder)</h2>
           <p className="mt-3 text-neutral-700">
             Final payer participation should be confirmed by contract and effective date before public launch.
           </p>
           <div className="mt-6 grid gap-3 md:grid-cols-2">
-            <p className="rounded-xl border border-line bg-white px-4 py-3 text-sm text-neutral-700">Commercial PPO plans</p>
-            <p className="rounded-xl border border-line bg-white px-4 py-3 text-sm text-neutral-700">Select HMO options (authorization required)</p>
-            <p className="rounded-xl border border-line bg-white px-4 py-3 text-sm text-neutral-700">Selected Medicaid pathways by eligibility</p>
-            <p className="rounded-xl border border-line bg-white px-4 py-3 text-sm text-neutral-700">Out-of-network case-by-case review</p>
+            <p className="rounded-md border border-line bg-white px-4 py-3 text-sm text-neutral-700">Commercial PPO plans</p>
+            <p className="rounded-md border border-line bg-white px-4 py-3 text-sm text-neutral-700">Select HMO options (authorization required)</p>
+            <p className="rounded-md border border-line bg-white px-4 py-3 text-sm text-neutral-700">Selected Medicaid pathways by eligibility</p>
+            <p className="rounded-md border border-line bg-white px-4 py-3 text-sm text-neutral-700">Out-of-network case-by-case review</p>
           </div>
         </div>
       </section>

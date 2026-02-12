@@ -48,7 +48,7 @@ export default function ResourcesPage() {
       <section className="section pt-0">
         <div className="container grid gap-5">
           {posts.map((post) => (
-            <article key={post.slug} className="rounded-2xl border border-line bg-white p-6 shadow-card">
+            <article key={post.slug} className="rounded-md border border-line bg-white p-6 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
               <p className="text-xs uppercase tracking-[0.1em] text-primary-dark">{post.date}</p>
               <h2 className="mt-2 text-2xl font-semibold text-neutral-900">
                 <Link href={`/resources/${post.slug}`} className="focus-ring rounded hover:text-primary-dark">

@@ -83,7 +83,7 @@ export default function ForProfessionalsPage() {
               "Known legal/probation coordination requirements",
               "Preferred continuing-care handoff plan"
             ].map((item) => (
-              <div key={item} className="rounded-xl border border-line bg-neutral-50 px-4 py-3 text-sm text-neutral-700">
+              <div key={item} className="rounded-md border border-line bg-neutral-50 px-4 py-3 text-sm text-neutral-700">
                 {item}
               </div>
             ))}

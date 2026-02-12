@@ -83,7 +83,7 @@ function DesktopStatCard({ item, index, triggerKey }: { item: StatItem; index: n
     <article
       data-stat-card
       data-index={index}
-      className="group relative h-full overflow-hidden rounded-[28px] border border-[#e8e3dc] bg-white p-7 shadow-[0_16px_36px_rgba(17,17,17,0.09)] opacity-0 transition-transform duration-500 hover:-translate-y-1"
+      className="group relative h-full overflow-hidden rounded-[10px] border border-[#e8e3dc] bg-white p-7 shadow-[0_16px_36px_rgba(17,17,17,0.09)] opacity-0 transition-transform duration-500 hover:-translate-y-1"
       style={{ transform: "translateY(36px) scale(0.96)", filter: "blur(4px)" }}
     >
       <span className="absolute right-4 top-4 h-2.5 w-2.5 rounded-full bg-primary/70" aria-hidden="true" />
@@ -99,7 +99,7 @@ function DesktopStatCard({ item, index, triggerKey }: { item: StatItem; index: n
 
 function MobileStatCard({ item, triggerKey }: { item: StatItem; triggerKey: number }) {
   return (
-    <article className="relative h-full overflow-hidden rounded-[24px] border border-[#e8e3dc] bg-white p-6 shadow-[0_16px_34px_rgba(17,17,17,0.08)]">
+    <article className="relative h-full overflow-hidden rounded-[10px] border border-[#e8e3dc] bg-white p-6 shadow-[0_16px_34px_rgba(17,17,17,0.08)]">
       <span className="absolute right-4 top-4 h-2.5 w-2.5 rounded-full bg-primary/70" aria-hidden="true" />
       <div className="absolute inset-x-6 bottom-0 h-1 rounded-full bg-primary/80" aria-hidden="true" />
       <p className="text-4xl font-bold tracking-tight text-neutral-900">
@@ -269,19 +269,19 @@ export function StatsCarousel() {
 
       {sourcesOpen ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/45 p-4" role="dialog" aria-modal="true" aria-labelledby="stats-sources-title">
-          <div className="max-h-[80vh] w-full max-w-2xl overflow-auto rounded-2xl bg-white p-6 shadow-card">
+          <div className="max-h-[80vh] w-full max-w-2xl overflow-auto rounded-md bg-white p-6 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
             <div className="flex items-center justify-between gap-3">
               <h3 id="stats-sources-title" className="text-xl font-semibold text-neutral-900">
                 Data Sources
               </h3>
-              <button type="button" onClick={() => setSourcesOpen(false)} className="focus-ring rounded-lg border border-line px-3 py-1.5 text-sm font-semibold text-neutral-700">
+              <button type="button" onClick={() => setSourcesOpen(false)} className="focus-ring rounded-md border border-line px-3 py-1.5 text-sm font-semibold text-neutral-700">
                 Close
               </button>
             </div>
 
             <ul className="mt-5 space-y-4 text-sm text-neutral-700">
               {sources.map((entry) => (
-                <li key={entry.id} className="rounded-xl border border-line bg-neutral-50 p-3">
+                <li key={entry.id} className="rounded-md border border-line bg-neutral-50 p-3">
                   <p className="font-semibold text-neutral-900">{entry.label}</p>
                   <a href={entry.source.link} target="_blank" rel="noreferrer" className="focus-ring mt-1 inline-block rounded text-primary-dark underline">
                     {entry.source.name}

@@ -39,7 +39,7 @@ export default function FamiliesPage() {
               text: "Before discharge, we align on follow-up care and support at home."
             }
           ].map((item) => (
-            <article key={item.title} className="rounded-2xl border border-line bg-white p-6 shadow-card">
+            <article key={item.title} className="rounded-md border border-line bg-white p-6 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
               <h2 className="text-lg font-semibold text-neutral-900">{item.title}</h2>
               <p className="mt-2 text-sm text-neutral-700">{item.text}</p>
             </article>

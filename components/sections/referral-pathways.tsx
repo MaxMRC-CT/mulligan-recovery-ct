@@ -42,7 +42,7 @@ export function ReferralPathways() {
           {pathways.map((item) => (
             <Card key={item.title} title={item.title}>
               <p>{item.body}</p>
-              <Link href={item.href} className="focus-ring mt-4 inline-block rounded-lg text-sm font-semibold text-primary-dark">
+              <Link href={item.href} className="focus-ring mt-4 inline-block rounded-md text-sm font-semibold text-primary-dark">
                 {item.cta} →
               </Link>
             </Card>

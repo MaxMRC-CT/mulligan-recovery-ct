@@ -112,7 +112,7 @@ export function ContactForm() {
           placeholder="General question only. Please avoid private health details."
         />
 
-        <label className="flex items-start gap-3 rounded-xl border border-line bg-neutral-50 p-3 text-sm text-neutral-700">
+        <label className="flex items-start gap-3 rounded-md border border-line bg-neutral-50 p-3 text-sm text-neutral-700">
           <input id="consent" name="consent" type="checkbox" className="mt-1" required />
           <span>
             I understand this is a general contact form and consent to being contacted by Mulligan Recovery Centers of

@@ -39,7 +39,7 @@ export default function ResourcePostPage({ params }: Params) {
 
   return (
     <section className="section pt-16">
-      <article className="container rounded-2xl border border-line bg-white p-8 shadow-card">
+      <article className="container rounded-md border border-line bg-white p-8 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
         <p className="text-xs uppercase tracking-[0.1em] text-primary-dark">{post.date}</p>
         <h1 className="mt-2 text-3xl font-bold text-neutral-900 md:text-4xl">{post.title}</h1>
         <p className="mt-2 text-sm text-neutral-700">By {post.author}</p>

@@ -24,7 +24,7 @@ export default function AboutPage() {
         </div>
       </section>
       <section className="section pt-0">
-        <div className="container prose-md grid gap-6 rounded-2xl border border-line bg-white p-8 shadow-card">
+        <div className="container prose-md grid gap-6 rounded-md border border-line bg-white p-8 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
           <p>
             Mulligan Recovery Centers of CT was built to close a common gap in care: people often need a stable
             residential setting that is less restrictive than hospital-level treatment but more supportive than living

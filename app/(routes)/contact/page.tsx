@@ -28,13 +28,13 @@ export default function ContactPage() {
           <ContactForm />
 
           <div className="space-y-5">
-            <div className="rounded-2xl border border-line bg-white p-6 shadow-card">
+            <div className="rounded-md border border-line bg-white p-6 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
               <h2 className="text-xl font-semibold text-neutral-900">Location</h2>
               <p className="mt-2 text-sm text-neutral-700">123 Recovery Way, New Haven, CT 06510</p>
               <p className="mt-2 text-sm text-neutral-700">Admissions phone: (203) 555-0173</p>
               <p className="mt-1 text-sm text-neutral-700">Referral partners: referrals@mulliganrecoveryct.org</p>
             </div>
-            <div className="overflow-hidden rounded-2xl border border-line bg-white shadow-card">
+            <div className="overflow-hidden rounded-md border border-line bg-white shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
               <iframe
                 title="Map placeholder"
                 src="https://www.google.com/maps?q=New+Haven+CT&output=embed"

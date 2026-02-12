@@ -29,8 +29,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #273140;
-  color: #f4f6f8;
+  background: #f5f4f1;
+  color: #111111;
   font-family: "Atkinson Hyperlegible", "Inter", "Segoe UI", sans-serif;
 }
 
@@ -79,7 +79,7 @@ a {
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center rounded-xl px-5 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center rounded-md px-5 py-3 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-offset-2;
   }
 
   .btn-primary {
@@ -95,11 +95,11 @@ a {
   }
 
   .input-field {
-    @apply w-full rounded-xl border border-line bg-white px-3 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-700 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-20;
+    @apply w-full rounded-md border border-line bg-white px-3 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-700 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-20;
   }
 
   .card {
-    @apply rounded-2xl border border-line bg-white p-6 shadow-card;
+    @apply rounded-md border border-[#e8e3dc] bg-white p-6 shadow-[0_12px_28px_rgba(17,17,17,0.08)];
   }
 
   .section-heading {

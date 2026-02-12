@@ -14,7 +14,7 @@ export function FaqAccordion({ items, className }: FaqAccordionProps) {
   return (
     <div className={cn("space-y-3", className)}>
       {items.map((item) => (
-        <details key={item.question} className="group rounded-xl border border-line bg-white p-4 shadow-card">
+        <details key={item.question} className="group rounded-md border border-line bg-white p-4 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
           <summary className="cursor-pointer list-none pr-8 text-base font-semibold text-neutral-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary">
             {item.question}
             <span className="float-right text-primary-dark transition group-open:rotate-45">+</span>

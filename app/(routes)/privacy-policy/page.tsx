@@ -12,7 +12,7 @@ export default function PrivacyPolicyPage() {
         subtitle="Placeholder policy content for legal review. Replace with finalized counsel-approved language before publishing."
       />
       <section className="section pt-0">
-        <div className="container prose-md rounded-2xl border border-line bg-white p-8 shadow-card">
+        <div className="container prose-md rounded-md border border-line bg-white p-8 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
           <h2>Information collected</h2>
           <p>
             We collect limited website analytics and basic contact details submitted through approved forms. We do not

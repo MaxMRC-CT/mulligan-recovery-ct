@@ -33,7 +33,7 @@ export default function ProgramsPage() {
             "Family involvement when authorized by the resident",
             "Relapse prevention and return-to-work/readiness planning"
           ].map((item) => (
-            <div key={item} className="rounded-2xl border border-line bg-white p-6 shadow-card">
+            <div key={item} className="rounded-md border border-line bg-white p-6 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
               <p className="font-medium text-neutral-700">{item}</p>
             </div>
           ))}
@@ -54,7 +54,7 @@ export default function ProgramsPage() {
         </div>
       </section>
       <section className="section bg-white">
-        <div className="container prose-md rounded-2xl border border-line p-8">
+        <div className="container prose-md rounded-md border border-line p-8">
           <h2>Who is this level of care for?</h2>
           <p>
             ASAM 3.1 may be appropriate for individuals who require a stable living setting and consistent recovery

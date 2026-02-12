@@ -67,7 +67,7 @@ export default function HomePage() {
         <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-10 bg-gradient-to-b from-primary/20 to-transparent" />
         <div className="container">
           <div className="grid gap-8 md:grid-cols-[1.05fr_1fr] md:items-center md:gap-12">
-            <div className="relative overflow-hidden rounded-[30px] border border-white/15 bg-[#f8f8f6] p-8 shadow-[0_20px_44px_rgba(7,11,18,0.35)] md:min-h-[520px] md:p-10">
+            <div className="relative overflow-hidden rounded-[10px] border border-white/15 bg-[#f8f8f6] p-8 shadow-[0_20px_44px_rgba(7,11,18,0.35)] md:min-h-[520px] md:p-10">
               <div aria-hidden="true" className="absolute inset-x-8 top-0 h-1.5 rounded-full bg-primary/80" />
               <h2 className="section-heading">What we do</h2>
               <p className="section-subheading">
@@ -84,7 +84,7 @@ export default function HomePage() {
               <ContentImage
                 src="/images/home/what-we-do-overlay.jpg"
                 alt="An adult in a counseling session listening and speaking with support staff"
-                className="md:[&>div]:aspect-[4/5] md:[&>div]:rounded-[30px] md:[&>div]:border-white/30 md:[&>div]:shadow-[0_22px_48px_rgba(7,11,18,0.35)]"
+                className="md:[&>div]:aspect-[4/5] md:[&>div]:rounded-[10px] md:[&>div]:border-white/30 md:[&>div]:shadow-[0_22px_48px_rgba(7,11,18,0.35)]"
               />
             </div>
           </div>
@@ -95,7 +95,7 @@ export default function HomePage() {
 
       <section className="section bg-white">
         <div className="container grid gap-8 md:grid-cols-2 md:items-start">
-          <div className="relative rounded-[26px] border border-[#ece7df] bg-[#fbfaf8] p-7 shadow-[0_12px_32px_rgba(17,17,17,0.07)]">
+          <div className="relative rounded-[10px] border border-[#ece7df] bg-[#fbfaf8] p-7 shadow-[0_12px_32px_rgba(17,17,17,0.07)]">
             <div aria-hidden="true" className="absolute right-6 top-6 h-2.5 w-2.5 rounded-full bg-primary/70" />
             <h2 className="section-heading">Who we serve</h2>
             <ul className="mt-4 space-y-2 text-neutral-700">
@@ -104,7 +104,7 @@ export default function HomePage() {
               <li>Professionals referring patients who need structure, not acuity</li>
             </ul>
           </div>
-          <div className="card rounded-[26px] border-[#ece7df] bg-[#fbfaf8] shadow-[0_12px_32px_rgba(17,17,17,0.07)]">
+          <div className="card rounded-[10px] border-[#ece7df] bg-[#fbfaf8] shadow-[0_12px_32px_rgba(17,17,17,0.07)]">
             <h3 className="text-xl font-semibold text-neutral-900">Connecticut roots. New Haven focus.</h3>
             <p className="mt-3 text-neutral-700">
               Built by people who understand recovery personally and professionally. We keep next steps clear and
@@ -120,19 +120,19 @@ export default function HomePage() {
             src="/images/home/support-connection.jpg"
             alt="Two adults in a supportive one-on-one conversation"
             caption="Connection and trust support steady progress."
-            className="md:translate-y-4 md:[&>div]:rounded-[24px] md:[&>div]:shadow-[0_12px_26px_rgba(17,17,17,0.1)]"
+            className="md:translate-y-4 md:[&>div]:rounded-[10px] md:[&>div]:shadow-[0_12px_26px_rgba(17,17,17,0.1)]"
           />
           <ContentImage
             src="/images/home/support-environment.jpg"
             alt="A quiet, well-lit common room in a residential care environment"
             caption="Calm spaces help people focus on recovery."
-            className="md:[&>div]:rounded-[24px] md:[&>div]:shadow-[0_12px_26px_rgba(17,17,17,0.1)]"
+            className="md:[&>div]:rounded-[10px] md:[&>div]:shadow-[0_12px_26px_rgba(17,17,17,0.1)]"
           />
           <ContentImage
             src="/images/home/support-professional.jpg"
             alt="A counselor meeting with an adult client in a neutral office"
             caption="Professional guidance with clear next steps."
-            className="md:translate-y-6 md:[&>div]:rounded-[24px] md:[&>div]:shadow-[0_12px_26px_rgba(17,17,17,0.1)]"
+            className="md:translate-y-6 md:[&>div]:rounded-[10px] md:[&>div]:shadow-[0_12px_26px_rgba(17,17,17,0.1)]"
           />
         </div>
       </section>

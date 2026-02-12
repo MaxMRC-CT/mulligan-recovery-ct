@@ -12,7 +12,7 @@ export default function TermsPage() {
         subtitle="Placeholder terms for legal review and operational policy approval."
       />
       <section className="section pt-0">
-        <div className="container prose-md rounded-2xl border border-line bg-white p-8 shadow-card">
+        <div className="container prose-md rounded-md border border-line bg-white p-8 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
           <h2>Use of this site</h2>
           <p>
             Content is provided for general informational use. Accessing this website does not establish a treatment

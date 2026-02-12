@@ -65,7 +65,7 @@ export default function AdmissionsPage() {
       <section className="section pt-0">
         <div className="container grid gap-5 md:grid-cols-2">
           {steps.map((step) => (
-            <article key={step.title} className="rounded-2xl border border-line bg-white p-6 shadow-card">
+            <article key={step.title} className="rounded-md border border-line bg-white p-6 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
               <h2 className="text-xl font-semibold text-neutral-900">{step.title}</h2>
               <p className="mt-3 text-neutral-700">{step.body}</p>
             </article>
