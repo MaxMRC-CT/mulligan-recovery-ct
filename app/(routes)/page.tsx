@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Nothing_You_Could_Do } from "next/font/google";
+import localFont from "next/font/local";
 import { CtaSection } from "@/components/cta-section";
 import { StatsCarousel } from "@/components/sections/stats-carousel";
 import { ContentImage } from "@/components/ui/content-image";
 
-const handwritten = Nothing_You_Could_Do({
-  subsets: ["latin"],
-  weight: ["400"]
+const handwritten = localFont({
+  src: "../fonts/Valen Valentine Script.otf",
+  display: "swap"
 });
 
 export default function HomePage() {
