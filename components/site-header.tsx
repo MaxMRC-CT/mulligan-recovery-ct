@@ -58,14 +58,14 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-[#3b4657] bg-[#263241]/95 text-neutral-100 backdrop-blur">
-      <div className="container py-3">
-        <div className="flex min-h-16 items-center justify-between gap-3">
+      <div className="container py-4">
+        <div className="flex min-h-20 items-center justify-between gap-4">
           <Link href="/" className="focus-ring flex items-center gap-3 rounded-lg">
-            <Image src="/logo-circle.png" alt="Mulligan Recovery Centers of CT" width={40} height={40} priority />
+            <Image src="/logo-circle.png" alt="Mulligan Recovery Centers of CT" width={46} height={46} priority />
             <div>
               <p className="hidden text-[11px] uppercase tracking-[0.14em] text-primary-dark sm:block">Mulligan Recovery Centers of CT</p>
               <p className="text-[11px] uppercase tracking-[0.14em] text-primary-dark sm:hidden">Mulligan Recovery</p>
-              <p className="text-sm font-semibold text-neutral-200">Real People, Real Recovery, Real Simple.</p>
+              <p className="text-base font-semibold text-neutral-200">Real People, Real Recovery, Real Simple.</p>
             </div>
           </Link>
 
@@ -84,7 +84,7 @@ export function SiteHeader() {
           </button>
 
           <nav aria-label="Primary Navigation" className="hidden lg:block">
-            <ul className="flex items-center gap-5 text-sm font-medium text-neutral-200">
+            <ul className="flex items-center gap-6 text-base font-medium text-neutral-200">
               {primaryItems.map((item) => {
                 const active = isPathActive(pathname, item.href);
 
