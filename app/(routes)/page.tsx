@@ -87,8 +87,8 @@ export default function HomePage() {
             </div>
             <div className="mt-5 md:absolute md:right-0 md:top-7 md:mt-0 md:w-[40%] lg:w-[38%]">
               <ContentImage
-                src="/images/home/support-connection.jpg"
-                alt="Two adults in a supportive one-on-one conversation"
+                src="/images/home/what-we-do-overlay.jpg"
+                alt="An adult in a counseling session listening and speaking with support staff"
                 className="md:[&>div]:shadow-card"
               />
             </div>
