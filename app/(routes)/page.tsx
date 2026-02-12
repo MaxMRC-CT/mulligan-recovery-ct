@@ -76,14 +76,6 @@ export default function HomePage() {
                 Low-intensity residential care means you live on site, attend scheduled groups and sessions, and build
                 daily structure without hospital-level intensity.
               </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Link href="/contact" className="btn-primary">
-                  Talk to someone today
-                </Link>
-                <Link href="/admissions" className="btn-secondary">
-                  See if Mulligan is right for you
-                </Link>
-              </div>
             </div>
             <div className="mt-5 md:absolute md:right-0 md:top-7 md:mt-0 md:w-[40%] lg:w-[38%]">
               <ContentImage
@@ -114,14 +106,6 @@ export default function HomePage() {
               Built by people who understand recovery personally and professionally. We keep next steps clear and
               practical.
             </p>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="/contact" className="btn-primary">
-                Talk to someone today
-              </Link>
-              <Link href="/admissions" className="btn-secondary">
-                See if Mulligan is right for you
-              </Link>
-            </div>
           </div>
         </div>
       </section>
