@@ -7,7 +7,7 @@ import { ContentImage } from "@/components/ui/content-image";
 export default function HomePage() {
   return (
     <>
-      <section className="relative min-h-[calc(100svh-90px)] overflow-hidden">
+      <section className="relative min-h-[calc(100svh-112px)] overflow-hidden">
         <Image
           src="/images/home/hero.jpg"
           alt="A calm residential setting with natural light and welcoming shared space"
@@ -17,7 +17,7 @@ export default function HomePage() {
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-black/45" />
-        <div className="container relative flex min-h-[calc(100svh-90px)] items-center py-12">
+        <div className="container relative flex min-h-[calc(100svh-112px)] items-center py-14">
           <div className="max-w-4xl">
             <h1 className="text-5xl font-extrabold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
               <span className="block text-white">Real People.</span>

@@ -58,14 +58,14 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-[#3b4657] bg-[#263241]/95 text-neutral-100 backdrop-blur">
-      <div className="container py-4">
-        <div className="flex min-h-20 items-center justify-between gap-4">
-          <Link href="/" className="focus-ring flex items-center gap-3 rounded-lg">
-            <Image src="/logo-circle.png" alt="Mulligan Recovery Centers of CT" width={46} height={46} priority />
-            <div>
-              <p className="hidden text-[11px] uppercase tracking-[0.14em] text-primary-dark sm:block">Mulligan Recovery Centers of CT</p>
-              <p className="text-[11px] uppercase tracking-[0.14em] text-primary-dark sm:hidden">Mulligan Recovery</p>
-              <p className="text-base font-semibold text-neutral-200">Real People, Real Recovery, Real Simple.</p>
+      <div className="container py-5">
+        <div className="flex min-h-24 items-center justify-between gap-4">
+          <Link href="/" className="focus-ring flex w-[420px] shrink-0 items-center gap-3 rounded-lg">
+            <Image src="/logo-circle.png" alt="Mulligan Recovery Centers of CT" width={50} height={50} priority />
+            <div className="space-y-0.5">
+              <p className="hidden text-sm font-semibold uppercase tracking-[0.12em] text-primary xl:block">Mulligan Recovery Centers of CT</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary xl:hidden">Mulligan Recovery CT</p>
+              <p className="whitespace-nowrap text-xs font-medium text-neutral-200 sm:text-sm">Real People. Real Recovery. Real Simple.</p>
             </div>
           </Link>
 
@@ -83,8 +83,8 @@ export function SiteHeader() {
             Menu
           </button>
 
-          <nav aria-label="Primary Navigation" className="hidden lg:block">
-            <ul className="flex items-center gap-6 text-base font-medium text-neutral-200">
+          <nav aria-label="Primary Navigation" className="hidden flex-1 lg:block">
+            <ul className="flex items-center justify-start gap-7 pl-8 text-base font-medium text-neutral-200 xl:gap-9">
               {primaryItems.map((item) => {
                 const active = isPathActive(pathname, item.href);
 
@@ -93,7 +93,7 @@ export function SiteHeader() {
                     <Link
                       href={item.href}
                       className={cn(
-                        "focus-ring rounded-md px-1.5 py-1 hover:text-primary",
+                        "focus-ring whitespace-nowrap rounded-md px-1.5 py-1 hover:text-primary",
                         active && "text-primary underline decoration-2 underline-offset-8"
                       )}
                     >
@@ -113,7 +113,7 @@ export function SiteHeader() {
                   <button
                     type="button"
                     className={cn(
-                      "focus-ring rounded-md px-1.5 py-1 hover:text-primary",
+                      "focus-ring whitespace-nowrap rounded-md px-1.5 py-1 hover:text-primary",
                       resourcesActive && "text-primary underline decoration-2 underline-offset-8"
                     )}
                     aria-haspopup="menu"
