@@ -65,8 +65,8 @@ export default function HomePage() {
 
       <section className="section pt-0">
         <div className="container">
-          <div className="relative md:min-h-[360px]">
-            <div className="rounded-2xl border border-line bg-neutral-50 p-8 md:w-[74%] lg:w-[72%]">
+          <div className="grid gap-8 md:grid-cols-2 md:items-center md:gap-24">
+            <div className="rounded-2xl border border-line bg-neutral-50 p-8 md:min-h-[520px]">
               <h2 className="section-heading">What we do</h2>
               <p className="section-subheading">
                 We help adults who need more support than outpatient care, but not the disruption of high-intensity
@@ -77,7 +77,7 @@ export default function HomePage() {
                 daily structure without hospital-level intensity.
               </p>
             </div>
-            <div className="mt-5 md:absolute md:right-0 md:top-7 md:mt-0 md:w-[40%] lg:w-[38%]">
+            <div>
               <ContentImage
                 src="/images/home/what-we-do-overlay.jpg"
                 alt="An adult in a counseling session listening and speaking with support staff"
