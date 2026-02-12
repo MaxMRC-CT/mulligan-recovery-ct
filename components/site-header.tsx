@@ -58,7 +58,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-[#3b4657] bg-[#263241]/95 text-neutral-100 backdrop-blur">
-      <div className="container py-5">
+      <div className="w-full px-4 py-5 sm:px-6 lg:px-8">
         <div className="flex min-h-24 items-center justify-between gap-4">
           <Link href="/" className="focus-ring flex w-[420px] shrink-0 items-center gap-3 rounded-lg">
             <Image src="/logo-circle.png" alt="Mulligan Recovery Centers of CT" width={50} height={50} priority />
@@ -84,7 +84,7 @@ export function SiteHeader() {
           </button>
 
           <nav aria-label="Primary Navigation" className="hidden flex-1 lg:block">
-            <ul className="flex items-center justify-start gap-7 pl-8 text-base font-medium text-neutral-200 xl:gap-9">
+            <ul className="flex items-center justify-end gap-6 pr-4 text-base font-medium text-neutral-200 xl:gap-8 xl:pr-5">
               {primaryItems.map((item) => {
                 const active = isPathActive(pathname, item.href);
 

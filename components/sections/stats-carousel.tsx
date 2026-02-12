@@ -80,24 +80,33 @@ function CountUpValue({ rawValue, triggerKey }: { rawValue: string; triggerKey: 
 
 function DesktopStatCard({ item, index, triggerKey }: { item: StatItem; index: number; triggerKey: number }) {
   return (
-    <article data-stat-card data-index={index} className="card h-full opacity-0 [transform:translateY(36px)_scale(0.96)] [filter:blur(4px)]">
-      <p className="mt-3 text-3xl font-bold text-neutral-900">
+    <article
+      data-stat-card
+      data-index={index}
+      className="group relative h-full overflow-hidden rounded-[28px] border border-[#e8e3dc] bg-white p-7 shadow-[0_16px_36px_rgba(17,17,17,0.09)] opacity-0 transition-transform duration-500 hover:-translate-y-1"
+      style={{ transform: "translateY(36px) scale(0.96)", filter: "blur(4px)" }}
+    >
+      <span className="absolute right-4 top-4 h-2.5 w-2.5 rounded-full bg-primary/70" aria-hidden="true" />
+      <div className="absolute inset-x-7 bottom-0 h-1 rounded-full bg-primary/80" aria-hidden="true" />
+      <p className="text-4xl font-bold tracking-tight text-neutral-900">
         <CountUpValue rawValue={item.value} triggerKey={triggerKey} />
       </p>
-      <p className="mt-2 text-base font-semibold text-neutral-900">{item.label}</p>
-      <p className="mt-2 text-sm text-neutral-700">{item.subtext}</p>
+      <p className="mt-3 text-[1.35rem] font-semibold leading-tight text-neutral-900">{item.label}</p>
+      <p className="mt-3 pr-2 text-sm leading-relaxed text-neutral-700">{item.subtext}</p>
     </article>
   );
 }
 
 function MobileStatCard({ item, triggerKey }: { item: StatItem; triggerKey: number }) {
   return (
-    <article className="card h-full">
-      <p className="mt-3 text-3xl font-bold text-neutral-900">
+    <article className="relative h-full overflow-hidden rounded-[24px] border border-[#e8e3dc] bg-white p-6 shadow-[0_16px_34px_rgba(17,17,17,0.08)]">
+      <span className="absolute right-4 top-4 h-2.5 w-2.5 rounded-full bg-primary/70" aria-hidden="true" />
+      <div className="absolute inset-x-6 bottom-0 h-1 rounded-full bg-primary/80" aria-hidden="true" />
+      <p className="text-4xl font-bold tracking-tight text-neutral-900">
         <CountUpValue rawValue={item.value} triggerKey={triggerKey} />
       </p>
-      <p className="mt-2 text-base font-semibold text-neutral-900">{item.label}</p>
-      <p className="mt-2 text-sm text-neutral-700">{item.subtext}</p>
+      <p className="mt-3 text-[1.3rem] font-semibold leading-tight text-neutral-900">{item.label}</p>
+      <p className="mt-3 text-sm leading-relaxed text-neutral-700">{item.subtext}</p>
     </article>
   );
 }
@@ -203,10 +212,16 @@ export function StatsCarousel() {
   }
 
   return (
-    <section ref={sectionRef} className="section bg-white">
-      <div className="container">
+    <section ref={sectionRef} className="section relative overflow-hidden bg-[#f7f6f3]">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 opacity-40 [background:linear-gradient(to_right,transparent_95%,rgba(214,124,45,0.12)_100%),repeating-linear-gradient(0deg,transparent,transparent_18px,rgba(17,17,17,0.02)_19px)]"
+      />
+      <div aria-hidden="true" className="pointer-events-none absolute -right-16 top-8 hidden h-52 w-52 rounded-full border border-primary/30 md:block" />
+      <div className="container relative">
         <h2 className="section-heading">Connecticut &amp; New Haven Overdose Context</h2>
         <p className="section-subheading">A simple snapshot to help families and professionals understand local need.</p>
+        <div aria-hidden="true" className="mt-3 h-1.5 w-28 rounded-full bg-primary/80" />
 
         <div className="mt-8 hidden gap-6 md:grid md:grid-cols-3">
           {stats.map((item, index) => (
