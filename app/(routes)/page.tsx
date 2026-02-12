@@ -90,7 +90,7 @@ export default function HomePage() {
             </div>
 
             <div className="relative border-l-4 border-primary/80 pl-6 md:pl-8">
-              <h2 className={`${handwritten.className} relative text-5xl leading-[0.95] text-neutral-900 md:text-7xl`} aria-label="What we do">
+              <h2 className={`${handwritten.className} relative inline-block text-5xl leading-[0.95] text-neutral-900 md:text-7xl`} aria-label="What we do">
                 <span className="relative z-10">What we do</span>
                 <span aria-hidden="true" className="pointer-events-none absolute left-[1.5px] top-[1px] z-0 text-neutral-900/40 blur-[0.35px]">
                   What we do
@@ -98,16 +98,29 @@ export default function HomePage() {
                 <span aria-hidden="true" className="pointer-events-none absolute left-[-0.5px] top-[0.5px] z-0 text-neutral-900/30">
                   What we do
                 </span>
+                <svg
+                  viewBox="0 0 520 90"
+                  className="pointer-events-none absolute -bottom-9 left-0 h-10 w-[102%]"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M10 55 C 130 20, 360 20, 510 58"
+                    fill="none"
+                    stroke="#d67c2d"
+                    strokeWidth="9"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M14 66 C 142 34, 350 34, 505 67"
+                    fill="none"
+                    stroke="#d67c2d"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    opacity="0.9"
+                  />
+                </svg>
               </h2>
-              <svg
-                viewBox="0 0 180 80"
-                className="pointer-events-none mt-3 h-12 w-36 text-neutral-900"
-                aria-hidden="true"
-              >
-                <path d="M8 8 C 68 14, 82 40, 108 66" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
-                <path d="M95 56 L 108 68 L 95 74" fill="none" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
-              </svg>
-              <p className="mt-2 max-w-3xl text-lg leading-relaxed text-neutral-800">
+              <p className="mt-10 max-w-3xl text-lg leading-relaxed text-neutral-800">
                 At Mulligan Recovery Centers of Connecticut, we provide a safe and structured place for people who are
                 ready to step away from the chaos of addiction and focus on rebuilding their lives. Our residential
                 program gives individuals the time, support, and stability needed to reset, surrounded by caring
