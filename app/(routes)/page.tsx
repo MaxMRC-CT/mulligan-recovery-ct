@@ -89,7 +89,7 @@ export default function HomePage() {
               <ContentImage
                 src="/images/home/what-we-do-overlay.jpg"
                 alt="An adult in a counseling session listening and speaking with support staff"
-                className="md:[&>div]:shadow-card"
+                className="md:[&>div]:aspect-[4/5] md:[&>div]:shadow-card"
               />
             </div>
           </div>
