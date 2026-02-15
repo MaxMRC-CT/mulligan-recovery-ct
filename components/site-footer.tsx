@@ -1,16 +1,12 @@
 import Link from "next/link";
 
 const quickLinks = [
-  { href: "/programs", label: "Programs" },
+  { href: "/", label: "Home" },
+  { href: "/programs", label: "Residential Program" },
   { href: "/admissions", label: "Admissions" },
-  { href: "/families", label: "Families" },
-  { href: "/for-professionals", label: "For Professionals" },
   { href: "/insurance-payment", label: "Insurance & Payment" },
-  { href: "/crisis-support", label: "Crisis & Support" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/resources", label: "Blog" },
-  { href: "/privacy-policy", label: "Privacy Policy" },
-  { href: "/terms", label: "Terms" }
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" }
 ];
 
 export function SiteFooter() {
