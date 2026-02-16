@@ -42,17 +42,22 @@ export default function ProgramsPage() {
                 </svg>
               </h2>
               <p className="mt-10 max-w-3xl text-lg leading-relaxed text-neutral-800">
-                Mulligan’s residential program is a structured, 24-hour staffed recovery residence for adults who no
-                longer need inpatient care but still need daily support. It gives people a safe place to stabilize,
-                reset, and keep moving forward with confidence. We are a 12-bed facility serving males ages 18+.
+                Mulligan’s Residential Program is a structured, 24-hour staffed recovery residence for adults who no
+                longer need inpatient care but still benefit from daily support and accountability. As a 12-bed program
+                serving men ages 18 and older, we provide a safe, stable environment where individuals can reset,
+                strengthen their recovery, and move forward with confidence.
               </p>
               <p className="mt-5 max-w-3xl text-lg leading-relaxed text-neutral-800">
-                We focus on building independence, strengthening relapse prevention skills, and helping each person
-                reconnect to community life in Connecticut at a steady, realistic pace.
+                Our focus is on building independence, developing practical relapse prevention skills, and helping each
+                resident reconnect with work, family, and community life at a steady, realistic pace.
               </p>
               <p className="mt-5 max-w-3xl text-lg leading-relaxed text-neutral-800">
-                Whether you are a loved one searching for the right next step or a discharge planner coordinating care,
-                this program offers clear structure with room for real growth.
+                Whether you are a loved one searching for the right next step or a discharge planner coordinating
+                continued care, this program offers the structure people need — with room for real, lasting growth.
+              </p>
+              <p className="mt-5 max-w-3xl text-lg leading-relaxed text-neutral-800">
+                We are located in New Haven, just minutes from downtown and Yale New Haven Hospital, with convenient
+                access to public bus transportation.
               </p>
             </div>
 
