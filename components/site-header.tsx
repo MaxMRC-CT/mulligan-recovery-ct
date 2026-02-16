@@ -198,7 +198,7 @@ export function SiteHeader() {
           </nav>
         ) : null}
       </div>
-      <div className="h-1 w-full bg-[#383535]" />
+      <div className="h-1 w-full bg-primary" />
     </header>
   );
 }
