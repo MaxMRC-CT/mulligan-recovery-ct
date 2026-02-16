@@ -16,8 +16,9 @@ export default function ProgramsPage() {
   return (
     <>
       <PageHero
-        title="ASAM Level 3.1: Low-Intensity Residential"
-        subtitle="A supportive residential environment for adults who need structure, recovery coaching, and coordinated care while strengthening independence."
+        title="Low-Intensity Residential Program"
+        subtitle="A structured, 24-hour staffed recovery residence in Connecticut for people who need steady support while preparing for independent living."
+        showEyebrow={false}
       />
       <section className="section relative overflow-hidden bg-[#f7f6f3] pt-10">
         <div
@@ -42,14 +43,17 @@ export default function ProgramsPage() {
                 </svg>
               </h2>
               <p className="mt-10 max-w-3xl text-lg leading-relaxed text-neutral-800">
-                Our residential program is built for adults who need steady structure and meaningful support while
-                strengthening independent recovery. Residents live in a calm environment with clear routines, scheduled
-                groups, and focused clinical guidance.
+                Mulligan’s residential program is a structured, 24-hour staffed recovery residence for adults who no
+                longer need inpatient care but still need daily support. It gives people a safe place to stabilize,
+                reset, and keep moving forward with confidence.
               </p>
               <p className="mt-5 max-w-3xl text-lg leading-relaxed text-neutral-800">
-                Care emphasizes accountability, practical life skills, and coordinated planning for what comes next.
-                The goal is not just short-term stability, but a durable path forward that can be sustained in daily
-                life.
+                We focus on building independence, strengthening relapse prevention skills, and helping each person
+                reconnect to community life in Connecticut at a steady, realistic pace.
+              </p>
+              <p className="mt-5 max-w-3xl text-lg leading-relaxed text-neutral-800">
+                Whether you are a loved one searching for the right next step or a discharge planner coordinating care,
+                this program offers clear structure with room for real growth.
               </p>
             </div>
 
@@ -69,74 +73,53 @@ export default function ProgramsPage() {
         </div>
       </section>
       <section className="section pt-0">
-        <div className="container grid gap-5 md:grid-cols-2">
-          {[
-            "Daily schedule with clinical groups and recovery skill-building",
-            "Case management and discharge planning with community handoff",
-            "Medication coordination with external prescribers",
-            "Peer-based recovery engagement and accountability planning",
-            "Family involvement when authorized by the resident",
-            "Relapse prevention and return-to-work/readiness planning"
-          ].map((item) => (
-            <div key={item} className="rounded-md border border-line bg-white p-6 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
-              <p className="font-medium text-neutral-700">{item}</p>
-            </div>
-          ))}
+        <div className="container grid gap-6 md:grid-cols-2">
+          <article className="rounded-md border border-line bg-white p-6 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
+            <h2 className="text-2xl font-semibold text-neutral-900">Who This Is For</h2>
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-neutral-700">
+              <li>People stepping down from detox or residential treatment</li>
+              <li>People whose home environment is not supportive of recovery</li>
+              <li>People who need consistent structure to maintain sobriety</li>
+            </ul>
+          </article>
+          <article className="rounded-md border border-line bg-white p-6 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
+            <h2 className="text-2xl font-semibold text-neutral-900">Location &amp; Program Details</h2>
+            <p className="mt-4 text-neutral-700">
+              Current location: Connecticut (New Haven area). As we grow, this page will include additional locations.
+            </p>
+            <p className="mt-3 text-neutral-700">
+              24-hour staffed residential setting with structured schedules, community accountability, and step-by-step
+              transition planning.
+            </p>
+          </article>
         </div>
       </section>
       <section className="section pt-0">
-        <div className="container grid gap-5 md:grid-cols-2">
-          <ContentImage
-            src="/images/programs/daily-structure.jpg"
-            alt="A small group session in a bright room with adults listening and participating"
-            caption="Daily structure helps people rebuild routines without overwhelm."
-          />
-          <ContentImage
-            src="/images/programs/group-room.jpg"
-            alt="A calm group room prepared for counseling and recovery discussion"
-            caption="Shared spaces support accountability and connection."
-          />
-        </div>
-      </section>
-      <section className="section bg-white">
-        <div className="container prose-md rounded-md border border-line p-8">
-          <h2>Who is this level of care for?</h2>
-          <p>
-            ASAM 3.1 may be appropriate for individuals who require a stable living setting and consistent recovery
-            support but do not need 24-hour nursing or acute medical services.
+        <div className="container rounded-md border border-line bg-white p-8 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
+          <h2 className="text-2xl font-semibold text-neutral-900">What to Expect</h2>
+          <ul className="mt-4 grid list-disc gap-2 pl-5 text-neutral-700 md:grid-cols-2 md:gap-x-8">
+            <li>24/7 staff support</li>
+            <li>Weekly individual and group counseling</li>
+            <li>Medication management support</li>
+            <li>Peer support and recovery meetings</li>
+            <li>Life skills and vocational support</li>
+            <li>Family involvement when appropriate</li>
+            <li>Discharge planning from day one</li>
+          </ul>
+          <p className="mt-6 text-neutral-700">
+            Recovery is built through stability, structure, and hope. Our team helps each resident prepare for
+            independent living with practical support, clear expectations, and a community that believes long-term
+            change is possible.
           </p>
-          <p>
-            Final placement is based on screening, referral documentation, and clinical appropriateness.
-          </p>
-        </div>
-      </section>
-      <section className="section pt-0">
-        <div className="container grid gap-5 md:grid-cols-3">
-          <article className="card">
-            <h2 className="text-lg font-semibold text-neutral-900">Length of Stay Planning</h2>
-            <p className="mt-3 text-neutral-700">
-              Duration is individualized based on engagement, stability goals, and referral-team coordination.
-            </p>
-          </article>
-          <article className="card">
-            <h2 className="text-lg font-semibold text-neutral-900">Continuing Care Handoff</h2>
-            <p className="mt-3 text-neutral-700">
-              Discharge plans include outpatient linkage, support meetings, and accountable follow-up recommendations.
-            </p>
-          </article>
-          <article className="card">
-            <h2 className="text-lg font-semibold text-neutral-900">Referral Communication</h2>
-            <p className="mt-3 text-neutral-700">
-              With consent and applicable releases, care updates can be coordinated with external providers.
-            </p>
-          </article>
         </div>
       </section>
       <CtaSection
-        heading="Need help deciding if this level of care fits?"
-        body="Our team can review needs and recommend the clearest next step."
+        heading="Need help deciding if this is the right next step?"
+        body="We can walk you through fit, timing, and the admissions process with clear, practical guidance."
         primaryHref="/admissions"
-        primaryLabel="See if Mulligan is right for you"
+        primaryLabel="Start admissions"
+        secondaryHref="/contact"
+        secondaryLabel="Talk to someone today"
       />
     </>
   );
