@@ -17,7 +17,6 @@ export default function ProgramsPage() {
     <>
       <PageHero
         title="Low-Intensity Residential Program"
-        subtitle="A structured, 24-hour staffed recovery residence in Connecticut for people who need steady support while preparing for independent living. We are a 12-bed facility for males ages 18+."
         showEyebrow={false}
       />
       <section className="section relative overflow-hidden bg-[#f7f6f3] pt-10">
@@ -45,7 +44,7 @@ export default function ProgramsPage() {
               <p className="mt-10 max-w-3xl text-lg leading-relaxed text-neutral-800">
                 Mulligan’s residential program is a structured, 24-hour staffed recovery residence for adults who no
                 longer need inpatient care but still need daily support. It gives people a safe place to stabilize,
-                reset, and keep moving forward with confidence.
+                reset, and keep moving forward with confidence. We are a 12-bed facility serving males ages 18+.
               </p>
               <p className="mt-5 max-w-3xl text-lg leading-relaxed text-neutral-800">
                 We focus on building independence, strengthening relapse prevention skills, and helping each person
