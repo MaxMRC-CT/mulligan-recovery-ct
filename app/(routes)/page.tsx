@@ -192,36 +192,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section pt-2">
-        <div className="container grid gap-5 md:grid-cols-3">
-          <ContentImage
-            src="/images/home/support-connection.jpg"
-            alt="Two adults in a supportive one-on-one conversation"
-            caption="Connection and trust support steady progress."
-            className="md:translate-y-4 md:[&>div]:rounded-[10px] md:[&>div]:shadow-[0_12px_26px_rgba(17,17,17,0.1)]"
-          />
-          <ContentImage
-            src="/images/home/support-environment.jpg"
-            alt="A quiet, well-lit common room in a residential care environment"
-            caption="Calm spaces help people focus on recovery."
-            className="md:[&>div]:rounded-[10px] md:[&>div]:shadow-[0_12px_26px_rgba(17,17,17,0.1)]"
-          />
-          <ContentImage
-            src="/images/home/support-professional.jpg"
-            alt="A counselor meeting with an adult client in a neutral office"
-            caption="Professional guidance with clear next steps."
-            className="md:translate-y-6 md:[&>div]:rounded-[10px] md:[&>div]:shadow-[0_12px_26px_rgba(17,17,17,0.1)]"
-          />
-        </div>
-      </section>
-
       <CtaSection
-        heading="You do not have to figure this out alone"
-        body="Share only basic contact details. Do not submit diagnosis details, medications, or other private medical information through online forms."
-        primaryHref="/contact"
-        primaryLabel="Talk to someone today"
+        heading="Choose the clearest next step"
+        body="Learn how our residential program works, or go straight to admissions if you are ready now."
+        primaryHref="/programs"
+        primaryLabel="Learn about our residential program"
         secondaryHref="/admissions"
-        secondaryLabel="See if Mulligan is right for you"
+        secondaryLabel="Go straight to admissions"
       />
     </>
   );
