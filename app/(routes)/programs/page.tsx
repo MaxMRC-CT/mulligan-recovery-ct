@@ -17,7 +17,7 @@ export default function ProgramsPage() {
     <>
       <PageHero
         title="Low-Intensity Residential Program"
-        subtitle="A structured, 24-hour staffed recovery residence in Connecticut for people who need steady support while preparing for independent living."
+        subtitle="A structured, 24-hour staffed recovery residence in Connecticut for people who need steady support while preparing for independent living. We are a 12-bed facility for males ages 18+."
         showEyebrow={false}
       />
       <section className="section relative overflow-hidden bg-[#f7f6f3] pt-10">
@@ -73,30 +73,30 @@ export default function ProgramsPage() {
         </div>
       </section>
       <section className="section pt-0">
-        <div className="container grid gap-6 md:grid-cols-2">
-          <article className="rounded-md border border-line bg-white p-6 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
-            <h2 className="text-2xl font-semibold text-neutral-900">Who This Is For</h2>
-            <ul className="mt-4 list-disc space-y-2 pl-5 text-neutral-700">
-              <li>People stepping down from detox or residential treatment</li>
-              <li>People whose home environment is not supportive of recovery</li>
-              <li>People who need consistent structure to maintain sobriety</li>
-            </ul>
-          </article>
-          <article className="rounded-md border border-line bg-white p-6 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
-            <h2 className="text-2xl font-semibold text-neutral-900">Location &amp; Program Details</h2>
-            <p className="mt-4 text-neutral-700">
-              Current location: Connecticut (New Haven area). As we grow, this page will include additional locations.
-            </p>
-            <p className="mt-3 text-neutral-700">
-              24-hour staffed residential setting with structured schedules, community accountability, and step-by-step
-              transition planning.
-            </p>
-          </article>
-        </div>
-      </section>
-      <section className="section pt-0">
         <div className="container rounded-md border border-line bg-white p-8 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
-          <h2 className="text-2xl font-semibold text-neutral-900">What to Expect</h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            <article>
+              <h2 className="text-2xl font-semibold text-neutral-900">Who This Is For</h2>
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-neutral-700">
+                <li>People stepping down from detox or residential treatment</li>
+                <li>People whose home environment is not supportive of recovery</li>
+                <li>People who need consistent structure to maintain sobriety</li>
+              </ul>
+            </article>
+            <article>
+              <h2 className="text-2xl font-semibold text-neutral-900">Location &amp; Program Details</h2>
+              <p className="mt-4 text-neutral-700">
+                We are located in New Haven, just minutes from downtown and Yale New Haven Hospital, with easy access
+                to public bus transportation.
+              </p>
+              <p className="mt-3 text-neutral-700">
+                24-hour staffed residential setting with structured schedules, community accountability, and step-by-step
+                transition planning.
+              </p>
+            </article>
+          </div>
+
+          <h2 className="mt-8 text-2xl font-semibold text-neutral-900">What to Expect</h2>
           <ul className="mt-4 grid list-disc gap-2 pl-5 text-neutral-700 md:grid-cols-2 md:gap-x-8">
             <li>24/7 staff support</li>
             <li>Weekly individual and group counseling</li>
