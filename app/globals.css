@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --primary: #d67c2d;
-  --primary-dark: #b9651f;
-  --primary-soft: #fdf3ea;
-  --secondary: #242424;
-  --secondary-dark: #111111;
+  --primary: #f0b62f;
+  --primary-dark: #d9782b;
+  --primary-soft: #fff4e2;
+  --secondary: #111111;
+  --secondary-dark: #000000;
   --secondary-soft: #f5f5f5;
   --surface: #ffffff;
-  --accent: #d67c2d;
-  --accent-soft: #fdf3ea;
+  --accent: #d9782b;
+  --accent-soft: #fff4e2;
   --neutral-50: #fafafa;
   --neutral-100: #f4f4f4;
   --neutral-200: #e6e6e6;
@@ -65,7 +65,7 @@ a {
 }
 
 .focus-ring:focus-visible {
-  outline: 3px solid #d67c2d;
+  outline: 3px solid #d9782b;
   outline-offset: 2px;
 }
 

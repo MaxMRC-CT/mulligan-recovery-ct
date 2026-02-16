@@ -6,7 +6,7 @@ type PageHeroProps = {
 
 export function PageHero({ title, subtitle, showEyebrow = true }: PageHeroProps) {
   return (
-    <section className="section relative overflow-hidden bg-[#263241] pb-10 pt-16">
+    <section className="section relative overflow-hidden bg-black pb-10 pt-16">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 opacity-25 [background:radial-gradient(circle_at_75%_20%,rgba(214,124,45,0.35),transparent_45%),repeating-linear-gradient(0deg,transparent,transparent_15px,rgba(255,255,255,0.04)_16px)]"

@@ -36,7 +36,7 @@ export function SiteHeader() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-[#3b4657] bg-[#263241]/95 text-neutral-100 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-[#2a2a2a] bg-black/95 text-neutral-100 backdrop-blur">
       <div className="w-full px-4 py-5 sm:px-6 lg:px-8">
         <div className="flex min-h-24 items-center justify-between gap-3">
           <Link href="/" className="focus-ring flex w-[390px] shrink-0 items-center gap-3 rounded-md">
@@ -48,13 +48,13 @@ export function SiteHeader() {
             </div>
           </Link>
 
-          <a href="tel:+12035550173" className="focus-ring rounded-md border border-[#48566c] px-2.5 py-2 text-xs font-semibold text-primary lg:hidden">
+          <a href="tel:+12035550173" className="focus-ring rounded-md border border-[#2f2f2f] px-2.5 py-2 text-xs font-semibold text-primary lg:hidden">
             Call (203) 555-0173
           </a>
 
           <button
             type="button"
-            className="focus-ring rounded-md border border-[#48566c] px-3 py-2 text-sm font-semibold text-neutral-100 lg:hidden"
+            className="focus-ring rounded-md border border-[#2f2f2f] px-3 py-2 text-sm font-semibold text-neutral-100 lg:hidden"
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
@@ -87,15 +87,15 @@ export function SiteHeader() {
                           <ul
                             id="admissions-menu"
                             role="menu"
-                            className="absolute left-0 top-9 z-50 min-w-56 rounded-md border border-[#48566c] bg-[#2c394a] p-2 shadow-[0_12px_28px_rgba(17,17,17,0.08)]"
+                            className="absolute left-0 top-9 z-50 min-w-56 rounded-md border border-[#2f2f2f] bg-[#121212] p-2 shadow-[0_12px_28px_rgba(17,17,17,0.08)]"
                           >
                             <li role="none">
                               <Link
                                 href="/insurance-payment"
                                 role="menuitem"
                                 className={cn(
-                                  "focus-ring block rounded-md px-3 py-2 text-sm text-neutral-100 hover:bg-[#36465d] hover:text-primary",
-                                  isPathActive(pathname, "/insurance-payment") && "bg-[#36465d] text-primary"
+                                  "focus-ring block rounded-md px-3 py-2 text-sm text-neutral-100 hover:bg-[#1c1c1c] hover:text-primary",
+                                  isPathActive(pathname, "/insurance-payment") && "bg-[#1c1c1c] text-primary"
                                 )}
                               >
                                 Insurance &amp; Payment
@@ -133,7 +133,7 @@ export function SiteHeader() {
         </div>
 
         {mobileMenuOpen ? (
-          <nav id="mobile-menu" aria-label="Mobile Navigation" className="mt-3 rounded-md border border-[#48566c] bg-[#2c394a] p-4 lg:hidden">
+          <nav id="mobile-menu" aria-label="Mobile Navigation" className="mt-3 rounded-md border border-[#2f2f2f] bg-[#121212] p-4 lg:hidden">
             <ul className="space-y-2">
               {primaryItems.map((item) => {
                 if (item.href === "/admissions") {
@@ -143,7 +143,7 @@ export function SiteHeader() {
                         type="button"
                         className={cn(
                           "focus-ring flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-sm font-medium text-neutral-100",
-                          admissionsActive && "bg-[#36465d] text-primary"
+                          admissionsActive && "bg-[#1c1c1c] text-primary"
                         )}
                         aria-expanded={mobileAdmissionsOpen}
                         aria-controls="mobile-admissions"
@@ -160,7 +160,7 @@ export function SiteHeader() {
                               href="/insurance-payment"
                               className={cn(
                                 "focus-ring block rounded-md px-3 py-2 text-sm text-neutral-100",
-                                isPathActive(pathname, "/insurance-payment") && "bg-[#36465d] text-primary"
+                                isPathActive(pathname, "/insurance-payment") && "bg-[#1c1c1c] text-primary"
                               )}
                             >
                               Insurance &amp; Payment
@@ -180,7 +180,7 @@ export function SiteHeader() {
                       href={item.href}
                       className={cn(
                         "focus-ring block rounded-md px-3 py-2 text-sm font-medium text-neutral-100",
-                        active && "bg-[#36465d] text-primary"
+                        active && "bg-[#1c1c1c] text-primary"
                       )}
                     >
                       {item.label}
