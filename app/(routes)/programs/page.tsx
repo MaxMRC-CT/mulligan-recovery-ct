@@ -71,10 +71,17 @@ export default function ProgramsPage() {
           </div>
         </div>
       </section>
-      <section className="section pt-0">
-        <div className="container rounded-md border border-line bg-white p-8 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
-          <div className="grid gap-6 md:grid-cols-2">
-            <article>
+      <section className="section relative overflow-hidden bg-[#f2efe9] pt-0">
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 1200 420"
+          className="pointer-events-none absolute inset-x-0 top-16 h-[420px] w-full opacity-[0.05]"
+        >
+          <path d="M0 260 C 200 140, 360 140, 560 250 C 760 360, 940 360, 1200 180" fill="none" stroke="#111111" strokeWidth="64" />
+        </svg>
+        <div className="container relative">
+          <div className="grid gap-6 md:grid-cols-3 md:items-start">
+            <article className="rounded-[24px] bg-white p-8 shadow-[0_14px_34px_rgba(17,17,17,0.09)] md:translate-y-0">
               <h2 className="text-2xl font-semibold text-neutral-900">Who This Is For</h2>
               <ul className="mt-4 list-disc space-y-2 pl-5 text-neutral-700">
                 <li>People stepping down from detox or residential treatment</li>
@@ -82,30 +89,30 @@ export default function ProgramsPage() {
                 <li>People who need consistent structure to maintain sobriety</li>
               </ul>
             </article>
-            <article>
-              <h2 className="text-2xl font-semibold text-neutral-900">Location &amp; Program Details</h2>
+
+            <article className="rounded-[24px] bg-white p-8 shadow-[0_14px_34px_rgba(17,17,17,0.09)] md:translate-y-8">
+              <h2 className="text-2xl font-semibold text-neutral-900">What to Expect</h2>
+              <ul className="mt-4 grid list-disc gap-y-2 pl-5 text-neutral-700 md:grid-cols-2 md:gap-x-8">
+                <li>24/7 staff support</li>
+                <li>Weekly individual and group counseling</li>
+                <li>Medication management support</li>
+                <li>Peer support and recovery meetings</li>
+                <li>Life skills and vocational support</li>
+                <li>Family involvement when appropriate</li>
+                <li>Discharge planning from day one</li>
+              </ul>
+            </article>
+
+            <article className="rounded-[24px] bg-white p-8 shadow-[0_14px_34px_rgba(17,17,17,0.09)] md:translate-y-16">
+              <h2 className="text-2xl font-semibold text-neutral-900">Location</h2>
               <p className="mt-4 text-neutral-700">
                 We are located in New Haven, just minutes from downtown and Yale New Haven Hospital, with easy access
                 to public bus transportation.
               </p>
-              <p className="mt-3 text-neutral-700">
-                24-hour staffed residential setting with structured schedules, community accountability, and step-by-step
-                transition planning.
-              </p>
             </article>
           </div>
 
-          <h2 className="mt-8 text-2xl font-semibold text-neutral-900">What to Expect</h2>
-          <ul className="mt-4 grid list-disc gap-2 pl-5 text-neutral-700 md:grid-cols-2 md:gap-x-8">
-            <li>24/7 staff support</li>
-            <li>Weekly individual and group counseling</li>
-            <li>Medication management support</li>
-            <li>Peer support and recovery meetings</li>
-            <li>Life skills and vocational support</li>
-            <li>Family involvement when appropriate</li>
-            <li>Discharge planning from day one</li>
-          </ul>
-          <p className="mt-6 text-neutral-700">
+          <p className="mt-10 text-neutral-700">
             Recovery is built through stability, structure, and hope. Our team helps each resident prepare for
             independent living with practical support, clear expectations, and a community that believes long-term
             change is possible.
