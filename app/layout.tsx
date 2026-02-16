@@ -34,7 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <SiteHeader />
         <main id="main-content" className="relative overflow-hidden bg-[#f5f4f1]">
-          <div aria-hidden="true" className="pointer-events-none absolute -right-40 top-20 h-[920px] w-[920px] opacity-[0.06]">
+          <div aria-hidden="true" className="pointer-events-none absolute -right-52 top-[560px] h-[1160px] w-[1160px] opacity-[0.06]">
             <Image src="/logo-circle.png" alt="" fill sizes="920px" className="object-contain" />
           </div>
           <div className="relative z-10">{children}</div>
