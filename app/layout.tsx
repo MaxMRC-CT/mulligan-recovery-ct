@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -32,8 +33,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Skip to content
         </a>
         <SiteHeader />
-        <main id="main-content" className="bg-[#f5f4f1]">
-          {children}
+        <main id="main-content" className="relative overflow-hidden bg-[#f5f4f1]">
+          <div aria-hidden="true" className="pointer-events-none absolute -right-40 top-20 h-[920px] w-[920px] opacity-[0.06]">
+            <Image src="/logo-circle.png" alt="" fill sizes="920px" className="object-contain" />
+          </div>
+          <div className="relative z-10">{children}</div>
         </main>
         <SiteFooter />
       </body>
