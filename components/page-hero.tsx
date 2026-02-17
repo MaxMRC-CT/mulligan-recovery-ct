@@ -7,7 +7,7 @@ type PageHeroProps = {
 export function PageHero({ title }: PageHeroProps) {
   return (
     <section className="relative bg-[#F4F1EC] py-12">
-      <div className="container">
+      <div className="container relative z-10">
         {title ? <h1 className="text-center text-3xl font-bold leading-tight text-neutral-900 md:text-5xl">{title}</h1> : null}
       </div>
     </section>

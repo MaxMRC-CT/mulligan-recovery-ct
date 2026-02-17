@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { GlobalWatermark } from "@/components/global-watermark";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.mulliganrecoveryct.org"),
@@ -34,10 +34,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <SiteHeader />
         <main id="main-content" className="relative overflow-hidden bg-[#f5f4f1]">
-          <div aria-hidden="true" className="pointer-events-none absolute -right-52 top-[560px] z-20 h-[1160px] w-[1160px] opacity-[0.06]">
-            <Image src="/logo-circle.png" alt="" fill sizes="920px" className="object-contain" />
-          </div>
-          <div className="relative z-0">{children}</div>
+          <GlobalWatermark />
+          <div className="relative z-10">{children}</div>
         </main>
         <SiteFooter />
       </body>
