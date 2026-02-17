@@ -1,83 +1,63 @@
-import { CtaSection } from "@/components/cta-section";
+import Image from "next/image";
+import Link from "next/link";
 import { PageHero } from "@/components/page-hero";
-import { PayerClarity } from "@/components/sections/payer-clarity";
-import { ContentImage } from "@/components/ui/content-image";
 
 export const metadata = {
-  title: "Insurance and Payment"
+  title: "Insurance & Payment"
 };
 
 export default function InsurancePaymentPage() {
   return (
     <>
-      <PageHero
-        title="Insurance and payment options"
-        subtitle="We work to make coverage and financial expectations clear before admission whenever possible."
-      />
-      <section className="section pt-0">
+      <PageHero title="Insurance & Payment" />
+
+      <section className="section bg-[#f7f5f1]">
         <div className="container">
-          <ContentImage
-            src="/images/insurance-payment/hero.jpg"
-            alt="Two adults reviewing paperwork together in a calm office setting"
-            ratio="hero"
-            caption="Clear financial conversations can reduce stress and support better decisions."
-          />
-        </div>
-      </section>
-      <section className="section pt-0">
-        <div className="container prose-md rounded-md border border-line bg-white p-8 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
-          <h2>Coverage verification</h2>
-          <p>
-            We can verify many commercial plans and selected public benefits. Coverage depends on policy terms,
-            clinical authorization, and eligibility on the date of service.
-          </p>
-          <h2>Private-pay support</h2>
-          <p>
-            If insurance is not available, we provide transparent private-pay information and discuss practical
-            alternatives when appropriate.
-          </p>
-          <h2>What we need</h2>
-          <p>
-            Please share only basic insurance details through the admissions process. Avoid sending diagnoses,
-            medication lists, or full treatment history through unsecured web forms.
-          </p>
-        </div>
-      </section>
-      <PayerClarity />
-      <section className="section pt-0">
-        <div className="container grid gap-5 md:grid-cols-2">
-          <ContentImage
-            src="/images/insurance-payment/review.jpg"
-            alt="Insurance specialist reviewing benefits details on a laptop"
-            caption="Benefit reviews are handled with practical, plain-language guidance."
-          />
-          <ContentImage
-            src="/images/insurance-payment/consultation.jpg"
-            alt="A supportive consultation between an admissions team member and family member"
-            caption="Families and referral partners receive clear explanations of options."
-          />
-        </div>
-      </section>
-      <section className="section bg-white">
-        <div className="container rounded-md border border-line bg-neutral-50 p-8">
-          <h2 className="text-2xl font-bold text-neutral-900">Payers commonly reviewed (placeholder)</h2>
-          <p className="mt-3 text-neutral-700">
-            Final payer participation should be confirmed by contract and effective date before public launch.
-          </p>
-          <div className="mt-6 grid gap-3 md:grid-cols-2">
-            <p className="rounded-md border border-line bg-white px-4 py-3 text-sm text-neutral-700">Commercial PPO plans</p>
-            <p className="rounded-md border border-line bg-white px-4 py-3 text-sm text-neutral-700">Select HMO options (authorization required)</p>
-            <p className="rounded-md border border-line bg-white px-4 py-3 text-sm text-neutral-700">Selected Medicaid pathways by eligibility</p>
-            <p className="rounded-md border border-line bg-white px-4 py-3 text-sm text-neutral-700">Out-of-network case-by-case review</p>
+          <div className="mx-auto max-w-4xl rounded-2xl border border-line bg-white p-7 shadow-[0_12px_28px_rgba(17,17,17,0.06)] sm:p-10">
+            <p className="max-w-3xl text-base leading-8 text-neutral-700 sm:text-lg">
+              We are committed to making treatment accessible for people and families across Connecticut. We currently
+              accept Connecticut Medicaid (HUSKY Health) and self-pay options. Our team can help explain eligibility
+              and next steps.
+            </p>
+
+            <div className="mt-10 border-t border-line pt-8">
+              <h2 className="text-2xl font-semibold tracking-tight text-neutral-900">Accepted Coverage</h2>
+
+              <div className="mt-6 grid items-start gap-8 md:grid-cols-[minmax(0,1fr)_auto]">
+                <div>
+                  <ul className="list-disc space-y-4 pl-6 text-lg text-neutral-900 marker:text-primary">
+                    <li>Connecticut Medicaid (HUSKY Health)</li>
+                    <li>Self Pay</li>
+                  </ul>
+                </div>
+                <div className="inline-flex p-1">
+                  <Image
+                    src="/images/insurance-payment/husky-health-logo.png"
+                    alt="HUSKY Health Connecticut logo"
+                    width={300}
+                    height={166}
+                    className="h-auto w-[210px] sm:w-[250px]"
+                  />
+                </div>
+              </div>
+
+              <p className="mt-6 max-w-3xl text-base leading-8 text-neutral-700">
+                If you&apos;re unsure about your coverage or eligibility, our team can walk you through your options
+                and answer any questions.
+              </p>
+
+              <div className="mt-8">
+                <Link
+                  href="/admissions"
+                  className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-base font-semibold text-black transition hover:bg-primary-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                >
+                  Contact Admissions
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
-      <CtaSection
-        heading="Verify benefits before admission"
-        body="Our team can help clarify likely coverage and next steps with your referral source."
-        primaryHref="/contact"
-        primaryLabel="Contact Billing and Admissions"
-      />
     </>
   );
 }
