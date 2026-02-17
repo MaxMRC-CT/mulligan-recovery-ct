@@ -90,7 +90,7 @@ export function SiteHeader() {
                           <ul
                             id="admissions-menu"
                             role="menu"
-                            className="absolute left-0 top-9 z-50 min-w-56 rounded-md border border-[#2f2f2f] bg-[#121212] p-2 shadow-[0_12px_28px_rgba(17,17,17,0.08)]"
+                            className="absolute left-0 top-[calc(100%-2px)] z-50 min-w-56 rounded-md border border-[#2f2f2f] bg-[#121212] p-2 shadow-[0_12px_28px_rgba(17,17,17,0.08)]"
                           >
                             <li role="none">
                               <Link
