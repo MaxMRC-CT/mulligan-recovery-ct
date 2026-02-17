@@ -68,9 +68,13 @@ export function SiteHeader() {
                 if (item.href === "/admissions") {
                   return (
                     <li key={item.href}>
-                      <div className="relative" onMouseEnter={() => setAdmissionsOpen(true)} onMouseLeave={() => setAdmissionsOpen(false)}>
-                        <button
-                          type="button"
+                      <div
+                        className="relative"
+                        onMouseEnter={() => setAdmissionsOpen(true)}
+                        onMouseLeave={() => setAdmissionsOpen(false)}
+                      >
+                        <Link
+                          href="/admissions"
                           className={cn(
                             "focus-ring whitespace-nowrap rounded-md px-1.5 py-1 hover:text-primary",
                             admissionsActive && "text-primary underline decoration-[3px] underline-offset-8"
@@ -78,10 +82,9 @@ export function SiteHeader() {
                           aria-haspopup="menu"
                           aria-expanded={admissionsOpen}
                           aria-controls="admissions-menu"
-                          onClick={() => setAdmissionsOpen((prev) => !prev)}
                         >
                           {item.label}
-                        </button>
+                        </Link>
 
                         {admissionsOpen ? (
                           <ul

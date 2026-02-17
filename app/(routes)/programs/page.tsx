@@ -1,5 +1,6 @@
 import { CtaSection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
+import { AdmissionOverviewCard } from "@/components/sections/admission-overview-card";
 import { ContentImage } from "@/components/ui/content-image";
 
 export const metadata = {
@@ -184,6 +185,7 @@ export default function ProgramsPage() {
           </div>
         </div>
       </section>
+      <AdmissionOverviewCard />
       <CtaSection
         heading="Need help deciding if this is the right next step?"
         body="We can walk you through fit, timing, and the admissions process with clear, practical guidance."
