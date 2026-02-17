@@ -35,7 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main id="main-content" className="relative overflow-hidden bg-[#f5f4f1]">
           <GlobalWatermark />
-          <div className="relative z-10">{children}</div>
+          <div className="relative">{children}</div>
         </main>
         <SiteFooter />
       </body>

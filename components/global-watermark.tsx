@@ -11,7 +11,7 @@ export function GlobalWatermark() {
     <div
       aria-hidden="true"
       className={[
-        "pointer-events-none absolute -right-44 z-0 h-[1040px] w-[1040px] opacity-[0.06]",
+        "pointer-events-none absolute -right-44 z-[5] h-[1040px] w-[1040px] opacity-[0.06]",
         isHome ? "top-[980px]" : "top-[620px]"
       ].join(" ")}
     >
