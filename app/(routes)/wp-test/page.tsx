@@ -1,5 +1,7 @@
 import { fetchWP } from "@/lib/wp";
 
+export const dynamic = "force-dynamic";
+
 type PageQuery = {
   page: {
     title: string;
@@ -9,20 +11,27 @@ type PageQuery = {
 };
 
 export default async function WPTestPage() {
-  const data = await fetchWP<PageQuery>(
-    `
-    query WPTestPage($uri: ID!) {
-      page(id: $uri, idType: URI) {
-        title
-        content
-        uri
-      }
-    }
-    `,
-    { uri: "/resources/" }
-  );
+  let data: PageQuery | null = null;
+  let errorMessage: string | null = null;
 
-  if (!data.page) {
+  try {
+    data = await fetchWP<PageQuery>(
+      `
+      query WPTestPage($uri: ID!) {
+        page(id: $uri, idType: URI) {
+          title
+          content
+          uri
+        }
+      }
+      `,
+      { uri: "/resources/" }
+    );
+  } catch (error) {
+    errorMessage = error instanceof Error ? error.message : "Unknown WordPress fetch error";
+  }
+
+  if (!data?.page) {
     return (
       <main className="mx-auto max-w-3xl p-6">
         <h1 className="text-2xl font-semibold">WP Test</h1>
@@ -30,6 +39,7 @@ export default async function WPTestPage() {
           Could not find a WordPress page at <code>/resources/</code>.
           Confirm it exists and is published in WordPress.
         </p>
+        {errorMessage ? <p className="mt-2 text-sm opacity-70">Error: {errorMessage}</p> : null}
       </main>
     );
   }
@@ -47,4 +57,3 @@ export default async function WPTestPage() {
     </main>
   );
 }
-
