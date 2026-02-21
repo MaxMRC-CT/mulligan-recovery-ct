@@ -1,14 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import localFont from "next/font/local";
 import { CtaSection } from "@/components/cta-section";
 import { StatsCarousel } from "@/components/sections/stats-carousel";
 import { ContentImage } from "@/components/ui/content-image";
-
-const handwritten = localFont({
-  src: "../fonts/Valen Valentine Script.otf",
-  display: "swap"
-});
 
 export default function HomePage() {
   return (
@@ -90,33 +84,10 @@ export default function HomePage() {
             </div>
 
             <div className="relative border-l-4 border-primary/80 pl-6 md:pl-8">
-              <h2
-                className={`${handwritten.className} relative inline-block whitespace-nowrap text-5xl leading-[0.95] text-neutral-900 [text-shadow:0.6px_0.6px_0_rgba(17,17,17,0.22)] md:text-7xl`}
-              >
-                What we do
-                <svg
-                  viewBox="0 0 520 90"
-                  className="pointer-events-none absolute -bottom-9 left-0 h-10 w-[102%]"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M10 55 C 130 20, 360 20, 510 58"
-                    fill="none"
-                    stroke="#d67c2d"
-                    strokeWidth="9"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M14 66 C 142 34, 350 34, 505 67"
-                    fill="none"
-                    stroke="#d67c2d"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                    opacity="0.9"
-                  />
-                </svg>
-              </h2>
-              <p className="mt-10 max-w-3xl text-lg leading-relaxed text-neutral-800">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary-dark">What we do</p>
+              <h2 className="mt-2 text-3xl font-bold leading-tight text-neutral-900 md:text-4xl">Real Support, Day by Day</h2>
+              <div aria-hidden="true" className="mt-3 h-[2px] w-20 bg-primary-dark/70" />
+              <p className="mt-6 max-w-3xl text-lg leading-relaxed text-neutral-800">
                 At Mulligan Recovery Centers of Connecticut, we provide a safe and structured place for people who are
                 ready to step away from the chaos of addiction and focus on rebuilding their lives. Our residential
                 program gives individuals the time, support, and stability needed to reset, surrounded by caring
@@ -146,20 +117,10 @@ export default function HomePage() {
         <div className="container relative">
           <div className="grid gap-10 md:grid-cols-[0.92fr_1.08fr] md:items-start">
             <div className="relative border-l-4 border-primary/80 pl-6 md:pl-8">
-              <h2
-                className={`${handwritten.className} relative inline-block whitespace-nowrap text-5xl leading-[0.95] text-neutral-900 [text-shadow:0.6px_0.6px_0_rgba(17,17,17,0.22)] md:text-7xl`}
-              >
-                Who We Serve
-                <svg
-                  viewBox="0 0 620 92"
-                  className="pointer-events-none absolute -bottom-9 left-0 h-10 w-[101%]"
-                  aria-hidden="true"
-                >
-                  <path d="M10 56 C 154 18, 438 18, 610 58" fill="none" stroke="#d67c2d" strokeWidth="9" strokeLinecap="round" />
-                  <path d="M14 68 C 170 34, 428 34, 606 68" fill="none" stroke="#d67c2d" strokeWidth="3" strokeLinecap="round" opacity="0.9" />
-                </svg>
-              </h2>
-              <p className="mt-10 max-w-3xl text-lg leading-relaxed text-neutral-800">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary-dark">Who we serve</p>
+              <h2 className="mt-2 text-3xl font-bold leading-tight text-neutral-900 md:text-4xl">Men Ready for Meaningful Change</h2>
+              <div aria-hidden="true" className="mt-3 h-[2px] w-20 bg-primary-dark/70" />
+              <p className="mt-6 max-w-3xl text-lg leading-relaxed text-neutral-800">
                 At Mulligan Recovery Centers of Connecticut, we currently serve adult men ages 18 to 65 who are ready
                 to commit to meaningful change. Many arrive at a crossroads — tired of instability, ready for
                 structure, and willing to do the work required to rebuild their lives. Our residential setting offers

@@ -1,16 +1,81 @@
+import type { Metadata } from "next";
 import { CtaSection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
 import { AdmissionOverviewCard } from "@/components/sections/admission-overview-card";
 import { ContentImage } from "@/components/ui/content-image";
 
-export const metadata = {
-  title: "Programs"
+export const metadata: Metadata = {
+  title: "Men’s Residential Treatment in New Haven | Mulligan CT",
+  description: "Men’s residential treatment in New Haven. We accept Connecticut Medicaid (HUSKY Health). Contact admissions today.",
+  alternates: {
+    canonical: "/programs"
+  },
+  openGraph: {
+    title: "Men’s Residential Treatment in New Haven | Mulligan CT",
+    description: "12-bed men’s residential treatment in New Haven, CT. Connecticut Medicaid (HUSKY Health) accepted.",
+    url: "https://www.mulliganrecoveryct.org/programs",
+    images: [
+      {
+        url: "/images/programs/hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Men's residential treatment home in New Haven, Connecticut"
+      }
+    ],
+    type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Men’s Residential Treatment in New Haven | Mulligan CT",
+    description: "12-bed men’s residential treatment in New Haven, CT. Connecticut Medicaid (HUSKY Health) accepted.",
+    images: ["/images/programs/hero.jpg"]
+  }
 };
 
 export default function ProgramsPage() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        name: "Mulligan Recovery Centers of CT",
+        url: "https://www.mulliganrecoveryct.org",
+        telephone: "+1-203-555-0173",
+        areaServed: "Connecticut",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "New Haven",
+          addressRegion: "CT",
+          addressCountry: "US"
+        }
+      },
+      {
+        "@type": "MedicalBusiness",
+        name: "Mulligan Recovery Centers of CT",
+        medicalSpecialty: "Addiction Medicine",
+        areaServed: "Connecticut",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "New Haven",
+          addressRegion: "CT",
+          addressCountry: "US"
+        },
+        availableService: {
+          "@type": "MedicalTherapy",
+          name: "Residential Treatment"
+        },
+        healthCondition: {
+          "@type": "MedicalCondition",
+          name: "Substance Use Disorder"
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <PageHero title="Residential Treatment" />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <section className="section relative overflow-hidden bg-[#f7f6f3] pt-10">
         <div
           aria-hidden="true"
@@ -20,6 +85,9 @@ export default function ProgramsPage() {
         <div className="container relative">
           <div className="grid gap-10 md:grid-cols-[0.92fr_1.08fr] md:items-start">
             <div className="relative border-l-4 border-primary/80 pl-6 md:pl-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary-dark">Program overview</p>
+              <h2 className="mt-2 text-3xl font-bold leading-tight text-neutral-900 md:text-4xl">Structured Residential Care</h2>
+              <div aria-hidden="true" className="mt-3 h-[2px] w-20 bg-primary-dark/70" />
               <p className="mt-2 max-w-3xl text-lg leading-relaxed text-neutral-800">
                 Mulligan’s Residential Program is a structured, 24-hour staffed recovery residence for adults who no
                 longer need inpatient care but still benefit from daily support and accountability. As a 12-bed program
@@ -35,15 +103,15 @@ export default function ProgramsPage() {
                 continued care, this program offers the structure people need — with room for real, lasting growth.
               </p>
               <p className="mt-5 max-w-3xl text-lg leading-relaxed text-neutral-800">
-                We are located in New Haven, just minutes from downtown and Yale New Haven Hospital, with convenient
-                access to public bus transportation.
+                We are located in New Haven, just minutes from downtown and Yale New Haven Hospital, and on a bus line
+                with convenient access to public transportation.
               </p>
             </div>
 
             <div className="relative">
               <ContentImage
                 src="/images/programs/hero.jpg"
-                alt="A warm, structured residential treatment setting with shared seating"
+                alt="Men's residential treatment home in New Haven with a calm, structured setting"
                 ratio="portrait"
                 className="md:[&>div]:shadow-[0_20px_40px_rgba(17,17,17,0.18)]"
               />
@@ -58,7 +126,7 @@ export default function ProgramsPage() {
       <section className="section relative overflow-hidden bg-[#f2efe9] pt-0">
         <div className="container relative">
           <div className="rounded-[24px] border border-line bg-white p-8 shadow-[0_14px_34px_rgba(17,17,17,0.09)] md:p-12">
-            <h2 className="text-center text-4xl font-bold text-[#0c1a3a]">Program Features</h2>
+            <h2 className="text-center text-4xl font-bold text-[#0c1a3a]">What to Expect in Residential Care</h2>
             <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-7">
               <article className="flex flex-col items-center text-center">
                 <div className="h-12 w-12 text-[#0c1a3a]">
@@ -148,7 +216,7 @@ export default function ProgramsPage() {
             <div className="relative">
               <ContentImage
                 src="/images/programs/group-room.jpg"
-                alt="Residents meeting with a counselor in a calm living-room style setting"
+                alt="Peer support residential addiction program meeting in Connecticut"
                 ratio="portrait"
                 className="md:[&>div]:shadow-[0_20px_40px_rgba(17,17,17,0.18)]"
               />
@@ -159,6 +227,9 @@ export default function ProgramsPage() {
             </div>
 
             <div className="relative border-r-4 border-primary/80 pr-6 md:pr-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary-dark">Who we serve</p>
+              <h2 className="mt-2 text-3xl font-bold leading-tight text-neutral-900 md:text-4xl">Men Ready for Change</h2>
+              <div aria-hidden="true" className="mt-3 h-[2px] w-20 bg-primary-dark/70" />
               <p className="mt-2 max-w-3xl text-lg leading-relaxed text-neutral-800">
                 Men in our residential program live together in our 12-bed home in New Haven, where structure,
                 accountability, and support are part of daily life. The setting is small by design, allowing each
@@ -190,7 +261,7 @@ export default function ProgramsPage() {
         heading="Need help deciding if this is the right next step?"
         body="We can walk you through fit, timing, and the admissions process with clear, practical guidance."
         primaryHref="/admissions"
-        primaryLabel="Start admissions"
+        primaryLabel="Speak With Admissions"
         secondaryHref="/contact"
         secondaryLabel="Talk to someone today"
       />
