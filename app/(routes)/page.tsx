@@ -34,14 +34,14 @@ export default function HomePage() {
                     <path
                       d="M6 60 C 170 14, 430 14, 594 60"
                       fill="none"
-                      stroke="#f28f42"
+                      stroke="#fb6222"
                       strokeWidth="12"
                       strokeLinecap="round"
                     />
                     <path
                       d="M12 72 C 185 32, 422 32, 588 70"
                       fill="none"
-                      stroke="#f28f42"
+                      stroke="#fb6222"
                       strokeWidth="4"
                       strokeLinecap="round"
                       opacity="0.9"

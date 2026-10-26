@@ -36,25 +36,27 @@ export function SiteHeader() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-[#2a2a2a] bg-black/95 text-neutral-100 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-line bg-[#faf7f2]/95 text-neutral-900 backdrop-blur">
       <div className="w-full px-4 py-5 sm:px-6 lg:px-8">
         <div className="flex min-h-24 items-center justify-between gap-3">
-          <Link href="/" className="focus-ring flex w-[390px] shrink-0 items-center gap-3 rounded-md">
-            <Image src="/logo-circle.png" alt="Mulligan Recovery Centers of CT" width={50} height={50} priority />
-            <div className="space-y-0.5">
-              <p className="hidden text-sm font-semibold uppercase tracking-[0.12em] text-primary xl:block">Mulligan Recovery Centers of CT</p>
-              <p className="text-sm font-semibold uppercase tracking-[0.12em] text-primary xl:hidden">Mulligan Recovery CT</p>
-              <p className="whitespace-nowrap text-xs font-medium text-neutral-200 sm:text-sm">Real People. Real Recovery. Real Simple.</p>
-            </div>
+          <Link href="/" className="focus-ring shrink-0 rounded-md">
+            <Image
+              src="/images/brand/MRC-CT_Lockup-Descriptor_GradientM_for-light-bg.png"
+              alt="Mulligan Recovery Centers of Connecticut"
+              width={800}
+              height={205}
+              priority
+              className="h-14 w-auto sm:h-20"
+            />
           </Link>
 
-          <Link href="/contact" className="focus-ring rounded-md border border-[#2f2f2f] px-2.5 py-2 text-xs font-semibold text-primary lg:hidden">
+          <Link href="/contact" className="focus-ring whitespace-nowrap rounded-md border border-line px-2.5 py-2 text-xs font-semibold text-primary-dark lg:hidden">
             Contact us
           </Link>
 
           <button
             type="button"
-            className="focus-ring rounded-md border border-[#2f2f2f] px-3 py-2 text-sm font-semibold text-neutral-100 lg:hidden"
+            className="focus-ring rounded-md border border-line px-3 py-2 text-sm font-semibold text-neutral-900 lg:hidden"
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-menu"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
@@ -63,7 +65,7 @@ export function SiteHeader() {
           </button>
 
           <nav aria-label="Primary Navigation" className="hidden flex-1 lg:ml-4 lg:block">
-            <ul className="flex items-center justify-start gap-5 text-[17px] font-semibold text-neutral-100 xl:gap-7">
+            <ul className="flex items-center justify-start gap-5 text-[17px] font-semibold text-neutral-900 xl:gap-7">
               {primaryItems.map((item) => {
                 if (item.href === "/admissions") {
                   return (
@@ -76,8 +78,8 @@ export function SiteHeader() {
                         <Link
                           href="/admissions"
                           className={cn(
-                            "focus-ring whitespace-nowrap rounded-md px-1.5 py-1 hover:text-primary",
-                            admissionsActive && "text-primary underline decoration-[3px] underline-offset-8"
+                            "focus-ring whitespace-nowrap rounded-md px-1.5 py-1 hover:text-primary-dark",
+                            admissionsActive && "text-primary-dark underline decoration-[3px] underline-offset-8"
                           )}
                           aria-haspopup="menu"
                           aria-expanded={admissionsOpen}
@@ -90,15 +92,15 @@ export function SiteHeader() {
                           <ul
                             id="admissions-menu"
                             role="menu"
-                            className="absolute left-0 top-[calc(100%-2px)] z-50 min-w-56 rounded-md border border-[#2f2f2f] bg-[#121212] p-2 shadow-[0_12px_28px_rgba(17,17,17,0.08)]"
+                            className="absolute left-0 top-[calc(100%-2px)] z-50 min-w-56 rounded-md border border-line bg-white p-2 shadow-[0_12px_28px_rgba(17,17,17,0.08)]"
                           >
                             <li role="none">
                               <Link
                                 href="/insurance-payment"
                                 role="menuitem"
                                 className={cn(
-                                  "focus-ring block rounded-md px-3 py-2 text-sm text-neutral-100 hover:bg-[#1c1c1c] hover:text-primary",
-                                  isPathActive(pathname, "/insurance-payment") && "bg-[#1c1c1c] text-primary"
+                                  "focus-ring block rounded-md px-3 py-2 text-sm text-neutral-900 hover:bg-primary-soft hover:text-primary-dark",
+                                  isPathActive(pathname, "/insurance-payment") && "bg-primary-soft text-primary-dark"
                                 )}
                               >
                                 Insurance &amp; Payment
@@ -118,8 +120,8 @@ export function SiteHeader() {
                     <Link
                       href={item.href}
                       className={cn(
-                        "focus-ring whitespace-nowrap rounded-md px-1.5 py-1 hover:text-primary",
-                        active && "text-primary underline decoration-[3px] underline-offset-8"
+                        "focus-ring whitespace-nowrap rounded-md px-1.5 py-1 hover:text-primary-dark",
+                        active && "text-primary-dark underline decoration-[3px] underline-offset-8"
                       )}
                     >
                       {item.label}
@@ -136,7 +138,7 @@ export function SiteHeader() {
         </div>
 
         {mobileMenuOpen ? (
-          <nav id="mobile-menu" aria-label="Mobile Navigation" className="mt-3 rounded-md border border-[#2f2f2f] bg-[#121212] p-4 lg:hidden">
+          <nav id="mobile-menu" aria-label="Mobile Navigation" className="mt-3 rounded-md border border-line bg-white p-4 lg:hidden">
             <ul className="space-y-2">
               {primaryItems.map((item) => {
                 if (item.href === "/admissions") {
@@ -145,8 +147,8 @@ export function SiteHeader() {
                       <button
                         type="button"
                         className={cn(
-                          "focus-ring flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-sm font-medium text-neutral-100",
-                          admissionsActive && "bg-[#1c1c1c] text-primary"
+                          "focus-ring flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-sm font-medium text-neutral-900",
+                          admissionsActive && "bg-primary-soft text-primary-dark"
                         )}
                         aria-expanded={mobileAdmissionsOpen}
                         aria-controls="mobile-admissions"
@@ -162,8 +164,8 @@ export function SiteHeader() {
                             <Link
                               href="/insurance-payment"
                               className={cn(
-                                "focus-ring block rounded-md px-3 py-2 text-sm text-neutral-100",
-                                isPathActive(pathname, "/insurance-payment") && "bg-[#1c1c1c] text-primary"
+                                "focus-ring block rounded-md px-3 py-2 text-sm text-neutral-900",
+                                isPathActive(pathname, "/insurance-payment") && "bg-primary-soft text-primary-dark"
                               )}
                             >
                               Insurance &amp; Payment
@@ -182,8 +184,8 @@ export function SiteHeader() {
                     <Link
                       href={item.href}
                       className={cn(
-                        "focus-ring block rounded-md px-3 py-2 text-sm font-medium text-neutral-100",
-                        active && "bg-[#1c1c1c] text-primary"
+                        "focus-ring block rounded-md px-3 py-2 text-sm font-medium text-neutral-900",
+                        active && "bg-primary-soft text-primary-dark"
                       )}
                     >
                       {item.label}
@@ -201,7 +203,7 @@ export function SiteHeader() {
           </nav>
         ) : null}
       </div>
-      <div className="h-1 w-full bg-primary" />
+      <div className="h-1 w-full bg-gradient-to-r from-[#ef4336] via-primary to-[#faab3f]" />
     </header>
   );
 }

@@ -129,10 +129,10 @@ export default function ProgramsPage() {
       <section className="section relative overflow-hidden bg-[#f2efe9] pt-0">
         <div className="container relative">
           <div className="rounded-[24px] border border-line bg-white p-8 shadow-[0_14px_34px_rgba(17,17,17,0.09)] md:p-12">
-            <h2 className="text-center text-4xl font-bold text-[#0c1a3a]">What to Expect in Residential Care</h2>
+            <h2 className="text-center text-4xl font-bold text-neutral-900">What to Expect in Residential Care</h2>
             <div className="mt-8 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-7">
               <article className="flex flex-col items-center text-center">
-                <div className="h-12 w-12 text-[#0c1a3a]">
+                <div className="h-12 w-12 text-neutral-900">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
                     <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm8 0a3 3 0 1 1 0-6 3 3 0 0 1 0 6ZM3 20v-1a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v1M13 20v-1a4 4 0 0 1 4-4h1a3 3 0 0 1 3 3v2" />
                   </svg>
@@ -142,7 +142,7 @@ export default function ProgramsPage() {
               </article>
 
               <article className="flex flex-col items-center text-center">
-                <div className="h-12 w-12 text-[#0c1a3a]">
+                <div className="h-12 w-12 text-neutral-900">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
                     <rect x="3" y="5" width="18" height="14" rx="2" />
                     <path d="M8 10h8M8 14h8" />
@@ -152,7 +152,7 @@ export default function ProgramsPage() {
               </article>
 
               <article className="flex flex-col items-center text-center">
-                <div className="h-12 w-12 text-[#0c1a3a]">
+                <div className="h-12 w-12 text-neutral-900">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
                     <path d="M12 4a5 5 0 0 1 5 5v1a5 5 0 0 1-10 0V9a5 5 0 0 1 5-5Z" />
                     <path d="M4 20a8 8 0 0 1 16 0" />
@@ -162,7 +162,7 @@ export default function ProgramsPage() {
               </article>
 
               <article className="flex flex-col items-center text-center">
-                <div className="h-12 w-12 text-[#0c1a3a]">
+                <div className="h-12 w-12 text-neutral-900">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
                     <rect x="4" y="3" width="16" height="18" rx="2" />
                     <path d="M8 8h8M8 12h8M8 16h5" />
@@ -173,7 +173,7 @@ export default function ProgramsPage() {
               </article>
 
               <article className="flex flex-col items-center text-center">
-                <div className="h-12 w-12 text-[#0c1a3a]">
+                <div className="h-12 w-12 text-neutral-900">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
                     <path d="M4 17c2-3 4-4 8-4s6 1 8 4" />
                     <circle cx="8" cy="9" r="2.5" />
@@ -184,7 +184,7 @@ export default function ProgramsPage() {
               </article>
 
               <article className="flex flex-col items-center text-center">
-                <div className="h-12 w-12 text-[#0c1a3a]">
+                <div className="h-12 w-12 text-neutral-900">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
                     <path d="M4 20h16M8 20v-8m8 8v-4M12 20V8" />
                     <circle cx="8" cy="9" r="2" />
@@ -196,7 +196,7 @@ export default function ProgramsPage() {
               </article>
 
               <article className="flex flex-col items-center text-center">
-                <div className="h-12 w-12 text-[#0c1a3a]">
+                <div className="h-12 w-12 text-neutral-900">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
                     <rect x="5" y="3" width="14" height="18" rx="2" />
                     <path d="M9 3v3h6V3M8 11h8M8 15h8" />

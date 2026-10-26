@@ -28,12 +28,20 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,700&family=Source+Sans+3:wght@400;600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className="min-h-screen text-ink antialiased">
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 focus:bg-white focus:px-3 focus:py-2">
           Skip to content
         </a>
         <SiteHeader />
-        <main id="main-content" className="relative overflow-hidden bg-[#f5f4f1]">
+        <main id="main-content" className="relative overflow-hidden bg-[#faf7f2]">
           <GlobalWatermark />
           <div className="relative">{children}</div>
         </main>

@@ -40,7 +40,7 @@ const config: Config = {
         line: "var(--line)"
       },
       fontFamily: {
-        sans: ["Atkinson Hyperlegible", "Inter", "Segoe UI", "system-ui", "sans-serif"]
+        sans: ["Source Sans 3", "Calibri", "Arial", "sans-serif"]
       },
       spacing: {
         18: "4.5rem",
