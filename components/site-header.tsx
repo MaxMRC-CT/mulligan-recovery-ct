@@ -41,10 +41,10 @@ export function SiteHeader() {
         <div className="flex min-h-24 items-center justify-between gap-3">
           <Link href="/" className="focus-ring shrink-0 rounded-md">
             <Image
-              src="/images/brand/MRC-CT_Lockup-Descriptor_GradientM_for-light-bg.png"
+              src="/images/brand/MRC-CT_Lockup-Descriptor_GradientM_for-light-bg.webp"
               alt="Mulligan Recovery Centers of Connecticut"
-              width={800}
-              height={205}
+              width={2000}
+              height={514}
               priority
               className="h-14 w-auto sm:h-20"
             />
