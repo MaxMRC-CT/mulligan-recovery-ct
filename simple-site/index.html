@@ -6,16 +6,24 @@
   <title>Mulligan Recovery Centers of CT</title>
   <meta name="description" content="Men's residential recovery program in New Haven, CT. 24/7 staffed, 12 beds. Connecticut Medicaid (HUSKY Health) and self-pay accepted." />
   <link rel="icon" href="images/logo-circle.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,700;0,800;1,700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --primary: #f0b62f;
-      --primary-dark: #d9782b;
-      --primary-soft: #fff4e2;
-      --ink: #111111;
-      --muted: #3f3f3f;
-      --line: #e8e8e8;
-      --bg: #f5f4f1;
+      /* Mulligan CT brand kit */
+      --primary: #fb6222;      /* Mulligan Orange: mark, buttons, rules, headlines 24px+ */
+      --primary-dark: #c2410c; /* Deep Orange: small orange text and labels */
+      --ember: #ef4336;        /* Ember Red: gradient start */
+      --amber: #faab3f;        /* Sunrise Amber: gradient end */
+      --gradient: linear-gradient(90deg, var(--ember), var(--primary), var(--amber));
+      --primary-soft: #fff1e8;
+      --ink: #1f1f22;          /* Charcoal: body text, dark ground */
+      --muted: #3d3d42;
+      --line: #e9e4dc;
+      --bg: #faf7f2;           /* Warm White: light ground */
       --surface: #ffffff;
+      --heading: "Montserrat", Arial, sans-serif;
     }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 88px; }
@@ -24,7 +32,7 @@
       margin: 0;
       background: var(--bg);
       color: var(--ink);
-      font-family: "Atkinson Hyperlegible", "Inter", "Segoe UI", system-ui, sans-serif;
+      font-family: "Source Sans 3", Calibri, Arial, sans-serif;
       font-size: 1.0625rem;
       line-height: 1.65;
     }
@@ -34,6 +42,7 @@
       outline-offset: 3px;
       border-radius: 4px;
     }
+    h1, h2, h3, summary, .btn, .eyebrow, nav.primary a { font-family: var(--heading); }
     img { max-width: 100%; height: auto; display: block; }
     .container { width: min(1080px, calc(100% - 2rem)); margin: 0 auto; }
     .skip { position: absolute; left: -9999px; }
@@ -42,44 +51,42 @@
     /* Header */
     header.site {
       position: sticky; top: 0; z-index: 50;
-      background: rgba(0, 0, 0, 0.96); color: #f4f4f4;
-      border-bottom: 4px solid var(--primary);
+      background: var(--bg); color: var(--ink);
+      box-shadow: 0 1px 0 var(--line);
     }
+    header.site::after { content: ""; display: block; height: 3px; background: var(--gradient); }
     .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.75rem 0; }
     .brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
-    .brand img { width: 44px; height: 44px; }
-    .brand strong { display: block; color: var(--primary); font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; }
-    .brand span { display: block; font-size: 0.8rem; color: #ddd; }
+    .brand img { width: auto; height: 56px; }
     nav.primary ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
     nav.primary a { text-decoration: none; font-weight: 600; font-size: 0.95rem; }
-    nav.primary a:hover { color: var(--primary); }
+    nav.primary a:hover { color: var(--primary-dark); }
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
       padding: 0.75rem 1.25rem; border-radius: 6px; font-weight: 700; text-decoration: none;
       border: 2px solid transparent; white-space: nowrap;
     }
-    .btn-primary { background: var(--primary); color: #111; }
-    .btn-primary:hover { background: #e3a81f; }
+    .btn-primary { background: var(--primary); color: var(--ink); }
+    .btn-primary:hover { background: #e9551a; }
     .btn-outline { border-color: #fff; color: #fff; }
     .btn-outline:hover { background: rgba(255, 255, 255, 0.12); }
     .bar { flex-wrap: wrap; }
-    .brand strong { white-space: nowrap; }
-    nav.primary { order: 3; width: 100%; overflow-x: auto; border-top: 1px solid #2f2f2f; padding-top: 0.6rem; }
+    nav.primary { order: 3; width: 100%; overflow-x: auto; border-top: 1px solid var(--line); padding-top: 0.6rem; }
     nav.primary ul { flex-wrap: nowrap; padding-bottom: 0.25rem; }
     nav.primary a { white-space: nowrap; }
     @media (max-width: 600px) {
       header.site { position: static; }
       html { scroll-padding-top: 0; }
-      .brand strong { white-space: normal; }
+      .brand img { height: 44px; }
       .bar .btn { padding: 0.5rem 0.9rem; font-size: 0.95rem; }
       nav.primary a { font-size: 0.9rem; }
     }
 
     /* Hero */
-    .hero { position: relative; color: #fff; background: #111; }
+    .hero { position: relative; color: #fff; background: var(--ink); }
     .hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.45; }
     .hero .container { position: relative; padding: 5rem 0 4.5rem; }
-    .hero h1 { margin: 0; font-size: clamp(2.5rem, 7vw, 4.75rem); line-height: 1; font-weight: 800; letter-spacing: -0.02em; }
+    .hero h1 { margin: 0; font-size: clamp(2.5rem, 7vw, 4.75rem); line-height: 1; font-weight: 700; font-style: italic; letter-spacing: -0.02em; }
     .hero h1 span { display: block; margin-top: 0.35rem; }
     .hero h1 .accent { color: var(--primary); }
     .hero p.lead { max-width: 640px; font-size: 1.2rem; margin: 1.75rem 0 0; color: #f1f1f1; }
@@ -92,7 +99,7 @@
     section.block.alt { background: var(--surface); }
     .eyebrow { margin: 0; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--primary-dark); }
     h2 { margin: 0.35rem 0 0; font-size: clamp(1.75rem, 3.5vw, 2.25rem); line-height: 1.2; }
-    h2::after { content: ""; display: block; width: 72px; height: 3px; margin-top: 0.75rem; background: var(--primary-dark); }
+    h2::after { content: ""; display: block; width: 72px; height: 3px; margin-top: 0.75rem; background: var(--gradient); }
     h3 { margin: 0; font-size: 1.15rem; }
     .intro { max-width: 760px; color: var(--muted); }
     .grid { display: grid; gap: 1.25rem; margin-top: 2rem; }
@@ -122,13 +129,12 @@
     details p { margin: 0.75rem 0 0; color: var(--muted); }
 
     /* Contact */
-    .contact { background: #111; color: #f4f4f4; }
-    .contact h2::after { background: var(--primary); }
-    .contact .eyebrow { color: var(--primary); }
-    .contact .card { background: #1b1b1b; border-color: #2f2f2f; box-shadow: none; }
+    .contact { background: var(--ink); color: #f4f4f4; }
+    .contact .eyebrow { color: var(--amber); }
+    .contact .card { background: #2a2a2e; border-color: #3a3a40; box-shadow: none; }
     .contact .card p, .contact .intro { color: #d6d6d6; }
     .contact a.big { display: inline-block; margin-top: 0.5rem; font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; }
-    .crisis { border: 2px solid var(--primary-dark); }
+    .crisis { border: 2px solid var(--primary); }
     .crisis ul { margin: 0.75rem 0 0; padding-left: 1.2rem; color: #d6d6d6; }
 
     footer.site { padding: 2rem 0; font-size: 0.85rem; color: var(--muted); text-align: center; }
@@ -141,11 +147,7 @@
   <header class="site">
     <div class="container bar">
       <a class="brand" href="#top">
-        <img src="images/logo-circle.png" alt="" width="44" height="44" />
-        <div>
-          <strong>Mulligan Recovery Centers of CT</strong>
-          <span>Real People. Real Recovery. Real Simple.</span>
-        </div>
+        <img src="images/MRC-CT_Lockup-Descriptor_GradientM_for-light-bg.png" alt="Mulligan Recovery Centers of Connecticut" width="800" height="205" />
       </a>
       <nav class="primary" aria-label="Page sections">
         <ul>
@@ -153,8 +155,6 @@
           <li><a href="#program">Program</a></li>
           <li><a href="#admissions">Admissions</a></li>
           <li><a href="#insurance">Insurance</a></li>
-          <li><a href="#families">Families</a></li>
-          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
@@ -214,6 +214,50 @@
             accountability, and effort. In return, we provide structure, support, and a community that believes lasting
             change is possible.
           </p>
+        </div>
+      </div>
+      <div class="container" id="faq">
+        <h3 style="margin-top: 3rem;">Frequently asked questions</h3>
+        <div style="margin-top: 0.75rem; max-width: 820px;">
+          <details>
+            <summary>Who is the program for?</summary>
+            <p>
+              Adult men, 18 and older, who are ready to commit to recovery and benefit from a structured, supportive
+              home while they build healthy routines.
+            </p>
+          </details>
+          <details>
+            <summary>How quickly will someone get back to me?</summary>
+            <p>
+              Most inquiries hear back the same business day. Final timing depends on paperwork and coverage
+              requirements.
+            </p>
+          </details>
+          <details>
+            <summary>What does it cost?</summary>
+            <p>
+              We accept Connecticut Medicaid (HUSKY Health) and self-pay. Call us and we will help you understand your
+              options.
+            </p>
+          </details>
+          <details>
+            <summary>Can families be involved?</summary>
+            <p>
+              Yes. With the resident's permission, family members can take part in communication and in planning for
+              what comes after the program.
+            </p>
+          </details>
+          <details>
+            <summary>Can providers refer someone directly?</summary>
+            <p>Yes. Providers can call us or email our referral team to start the conversation.</p>
+          </details>
+          <details>
+            <summary>Should I share medical details online?</summary>
+            <p>
+              No. Please share only general contact information by email or web message. We will talk through
+              anything personal by phone.
+            </p>
+          </details>
         </div>
       </div>
     </section>
@@ -369,54 +413,6 @@
             <h3>Planning ahead</h3>
             <p>Before someone leaves our program, we work together on follow-up care and support at home.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="block alt" id="faq">
-      <div class="container">
-        <p class="eyebrow">Questions</p>
-        <h2>Frequently asked questions</h2>
-        <div style="margin-top: 1.5rem; max-width: 820px;">
-          <details>
-            <summary>Who is the program for?</summary>
-            <p>
-              Adult men, 18 and older, who are ready to commit to recovery and benefit from a structured, supportive
-              home while they build healthy routines.
-            </p>
-          </details>
-          <details>
-            <summary>How quickly will someone get back to me?</summary>
-            <p>
-              Most inquiries hear back the same business day. Final timing depends on paperwork and coverage
-              requirements.
-            </p>
-          </details>
-          <details>
-            <summary>What does it cost?</summary>
-            <p>
-              We accept Connecticut Medicaid (HUSKY Health) and self-pay. Call us and we will help you understand your
-              options.
-            </p>
-          </details>
-          <details>
-            <summary>Can families be involved?</summary>
-            <p>
-              Yes. With the resident's permission, family members can take part in communication and in planning for
-              what comes after the program.
-            </p>
-          </details>
-          <details>
-            <summary>Can providers refer someone directly?</summary>
-            <p>Yes. Providers can call us or email our referral team to start the conversation.</p>
-          </details>
-          <details>
-            <summary>Should I share medical details online?</summary>
-            <p>
-              No. Please share only general contact information by email or web message. We will talk through
-              anything personal by phone.
-            </p>
-          </details>
         </div>
       </div>
     </section>
