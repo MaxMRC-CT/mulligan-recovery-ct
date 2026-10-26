@@ -121,7 +121,7 @@ export default function HomePage() {
               <h2 className="mt-2 text-3xl font-bold leading-tight text-neutral-900 md:text-4xl">Men Ready for Meaningful Change</h2>
               <div aria-hidden="true" className="mt-3 h-[2px] w-20 bg-primary-dark/70" />
               <p className="mt-6 max-w-3xl text-lg leading-relaxed text-neutral-800">
-                At Mulligan Recovery Centers of Connecticut, we currently serve adult men ages 18 to 65 who are ready
+                At Mulligan Recovery Centers of Connecticut, we currently serve adult men ages 18 and older who are ready
                 to commit to meaningful change. Many arrive at a crossroads — tired of instability, ready for
                 structure, and willing to do the work required to rebuild their lives. Our residential setting offers
                 more than just a place to stay. It is a safe, comfortable, and home-like environment designed to
