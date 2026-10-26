@@ -33,7 +33,7 @@ export default function CareersPage() {
       </section>
       <CtaSection
         heading="Interested in joining our team?"
-        body="Send a resume and short introduction to careers@mulliganrecoveryct.org."
+        body="Send a resume and short introduction to careers@mulliganrecoveryct.com."
         primaryHref="/contact"
         primaryLabel="General Contact"
       />

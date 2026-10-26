@@ -20,7 +20,7 @@ export function SiteFooter() {
           </p>
           <p className="mt-4 text-sm text-neutral-700">
             351 Winthrop Ave, New Haven, CT 06511<br />
-            admissions@mulliganrecoveryct.org
+            admissions@mulliganrecoveryct.com
           </p>
         </section>
 
