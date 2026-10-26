@@ -61,7 +61,7 @@ export function ContactForm() {
     } catch {
       setStatus({
         kind: "error",
-        message: "Unable to send your request right now. Please call (203) 555-0173."
+        message: "Unable to send your request right now. Please try again in a few minutes."
       });
     } finally {
       setIsSubmitting(false);

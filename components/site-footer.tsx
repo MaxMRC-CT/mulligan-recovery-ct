@@ -19,7 +19,7 @@ export function SiteFooter() {
             Low-intensity residential treatment grounded in dignity, structure, and community-based recovery.
           </p>
           <p className="mt-4 text-sm text-neutral-700">
-            Contact: (203) 555-0173<br />
+            351 Winthrop Ave, New Haven, CT 06511<br />
             admissions@mulliganrecoveryct.org
           </p>
         </section>

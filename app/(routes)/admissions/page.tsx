@@ -36,7 +36,7 @@ const admissionsFaq = [
   {
     question: "Can providers submit referrals directly?",
     answer:
-      "Yes. Providers can call or use the contact pathway and include only minimum necessary referral context for initial coordination."
+      "Yes. Providers can use our contact page and include only minimum necessary referral context for initial coordination."
   },
   {
     question: "What should families prepare before intake?",

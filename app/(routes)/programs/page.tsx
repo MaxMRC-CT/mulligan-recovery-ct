@@ -40,12 +40,13 @@ export default function ProgramsPage() {
         "@type": "Organization",
         name: "Mulligan Recovery Centers of CT",
         url: "https://www.mulliganrecoveryct.org",
-        telephone: "+1-203-555-0173",
         areaServed: "Connecticut",
         address: {
           "@type": "PostalAddress",
+          streetAddress: "351 Winthrop Ave",
           addressLocality: "New Haven",
           addressRegion: "CT",
+          postalCode: "06511",
           addressCountry: "US"
         }
       },
@@ -56,8 +57,10 @@ export default function ProgramsPage() {
         areaServed: "Connecticut",
         address: {
           "@type": "PostalAddress",
+          streetAddress: "351 Winthrop Ave",
           addressLocality: "New Haven",
           addressRegion: "CT",
+          postalCode: "06511",
           addressCountry: "US"
         },
         availableService: {

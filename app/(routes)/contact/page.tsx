@@ -30,14 +30,13 @@ export default function ContactPage() {
           <div className="space-y-5">
             <div className="rounded-md border border-line bg-white p-6 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
               <h2 className="text-xl font-semibold text-neutral-900">Location</h2>
-              <p className="mt-2 text-sm text-neutral-700">123 Recovery Way, New Haven, CT 06510</p>
-              <p className="mt-2 text-sm text-neutral-700">Admissions phone: (203) 555-0173</p>
+              <p className="mt-2 text-sm text-neutral-700">351 Winthrop Ave, New Haven, CT 06511</p>
               <p className="mt-1 text-sm text-neutral-700">Referral partners: referrals@mulliganrecoveryct.org</p>
             </div>
             <div className="overflow-hidden rounded-md border border-line bg-white shadow-[0_12px_28px_rgba(17,17,17,0.08)]">
               <iframe
-                title="Map placeholder"
-                src="https://www.google.com/maps?q=New+Haven+CT&output=embed"
+                title="Map of 351 Winthrop Ave, New Haven, CT"
+                src="https://www.google.com/maps?q=351+Winthrop+Ave,+New+Haven,+CT+06511&output=embed"
                 className="h-[360px] w-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

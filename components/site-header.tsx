@@ -48,9 +48,9 @@ export function SiteHeader() {
             </div>
           </Link>
 
-          <a href="tel:+12035550173" className="focus-ring rounded-md border border-[#2f2f2f] px-2.5 py-2 text-xs font-semibold text-primary lg:hidden">
-            Call (203) 555-0173
-          </a>
+          <Link href="/contact" className="focus-ring rounded-md border border-[#2f2f2f] px-2.5 py-2 text-xs font-semibold text-primary lg:hidden">
+            Contact us
+          </Link>
 
           <button
             type="button"
