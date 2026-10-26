@@ -51,16 +51,15 @@
     /* Header */
     header.site {
       position: sticky; top: 0; z-index: 50;
-      background: var(--bg); color: var(--ink);
-      box-shadow: 0 1px 0 var(--line);
+      background: var(--ink); color: #f4f4f4;
     }
     header.site::after { content: ""; display: block; height: 3px; background: var(--gradient); }
     .bar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.75rem 0; }
     .brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
-    .brand img { width: auto; height: 56px; }
+    .brand img { width: auto; height: 72px; }
     nav.primary ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
     nav.primary a { text-decoration: none; font-weight: 600; font-size: 0.95rem; }
-    nav.primary a:hover { color: var(--primary-dark); }
+    nav.primary a:hover { color: var(--amber); }
     .btn {
       display: inline-flex; align-items: center; justify-content: center;
       padding: 0.75rem 1.25rem; border-radius: 6px; font-weight: 700; text-decoration: none;
@@ -71,13 +70,13 @@
     .btn-outline { border-color: #fff; color: #fff; }
     .btn-outline:hover { background: rgba(255, 255, 255, 0.12); }
     .bar { flex-wrap: wrap; }
-    nav.primary { order: 3; width: 100%; overflow-x: auto; border-top: 1px solid var(--line); padding-top: 0.6rem; }
+    nav.primary { order: 3; width: 100%; overflow-x: auto; border-top: 1px solid #3a3a40; padding-top: 0.6rem; }
     nav.primary ul { flex-wrap: nowrap; padding-bottom: 0.25rem; }
     nav.primary a { white-space: nowrap; }
     @media (max-width: 600px) {
       header.site { position: static; }
       html { scroll-padding-top: 0; }
-      .brand img { height: 44px; }
+      .brand img { height: 52px; }
       .bar .btn { padding: 0.5rem 0.9rem; font-size: 0.95rem; }
       nav.primary a { font-size: 0.9rem; }
     }
@@ -147,7 +146,7 @@
   <header class="site">
     <div class="container bar">
       <a class="brand" href="#top">
-        <img src="images/MRC-CT_Lockup-Descriptor_GradientM_for-light-bg.png" alt="Mulligan Recovery Centers of Connecticut" width="800" height="205" />
+        <img src="images/MRC-CT_Lockup-Descriptor_GradientM_for-dark-bg.png" alt="Mulligan Recovery Centers of Connecticut" width="800" height="172" />
       </a>
       <nav class="primary" aria-label="Page sections">
         <ul>
