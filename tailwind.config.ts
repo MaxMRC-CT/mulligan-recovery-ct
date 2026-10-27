@@ -10,9 +10,9 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "var(--primary)",
-          dark: "var(--primary-dark)",
-          soft: "var(--primary-soft)"
+          DEFAULT: "rgb(var(--primary-rgb) / <alpha-value>)",
+          dark: "rgb(var(--primary-dark-rgb) / <alpha-value>)",
+          soft: "rgb(var(--primary-soft-rgb) / <alpha-value>)"
         },
         secondary: {
           DEFAULT: "var(--secondary)",
@@ -31,9 +31,9 @@ const config: Config = {
           900: "var(--neutral-900)"
         },
         brand: {
-          DEFAULT: "var(--primary)",
-          dark: "var(--primary-dark)",
-          soft: "var(--primary-soft)"
+          DEFAULT: "rgb(var(--primary-rgb) / <alpha-value>)",
+          dark: "rgb(var(--primary-dark-rgb) / <alpha-value>)",
+          soft: "rgb(var(--primary-soft-rgb) / <alpha-value>)"
         },
         ink: "var(--ink)",
         surface: "var(--surface)",
