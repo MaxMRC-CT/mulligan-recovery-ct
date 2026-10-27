@@ -5,18 +5,20 @@ import remarkGfm from "remark-gfm";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
 
 type Params = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
 }
 
-export function generateMetadata({ params }: Params): Metadata {
+export async function generateMetadata({ params }: Params): Promise<Metadata> {
+  const { slug } = await params;
+
   try {
-    const post = getPostBySlug(params.slug);
+    const post = getPostBySlug(slug);
     return {
       title: post.title,
       description: post.description
@@ -28,11 +30,12 @@ export function generateMetadata({ params }: Params): Metadata {
   }
 }
 
-export default function ResourcePostPage({ params }: Params) {
+export default async function ResourcePostPage({ params }: Params) {
+  const { slug } = await params;
   let post;
 
   try {
-    post = getPostBySlug(params.slug);
+    post = getPostBySlug(slug);
   } catch {
     notFound();
   }
