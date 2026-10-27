@@ -15,7 +15,7 @@ const steps = [
   },
   {
     title: "2. Screening Review",
-    body: "Our team reviews referral and clinical context to confirm alignment with ASAM 3.1 criteria."
+    body: "Our team reviews the referral and current needs to make sure our program is the right level of support."
   },
   {
     title: "3. Benefits and Logistics",
@@ -77,7 +77,7 @@ export default function AdmissionsPage() {
           <SectionHeading
             eyebrow="Admissions Readiness"
             title="What helps us move quickly"
-            subtitle="Clean referral details and complete payer information reduce preventable delays."
+            subtitle="Clear referral details and complete coverage information help avoid delays."
           />
           <div className="mt-8 grid gap-5 md:grid-cols-3">
             <article className="card">
@@ -85,8 +85,8 @@ export default function AdmissionsPage() {
               <p className="mt-3 text-neutral-700">General inquiry review, appropriateness screening, and first callback planning.</p>
             </article>
             <article className="card">
-              <h3 className="text-lg font-semibold text-neutral-900">Clinical Fit Check</h3>
-              <p className="mt-3 text-neutral-700">ASAM 3.1 alignment review with referral source and current support context.</p>
+              <h3 className="text-lg font-semibold text-neutral-900">Program Fit Check</h3>
+              <p className="mt-3 text-neutral-700">A review with the referral source of current needs and support to confirm our program is the right fit.</p>
             </article>
             <article className="card">
               <h3 className="text-lg font-semibold text-neutral-900">Coverage and Intake Plan</h3>

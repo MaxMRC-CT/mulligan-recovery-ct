@@ -215,7 +215,7 @@ export function StatsCarousel() {
     <section ref={sectionRef} className="section relative overflow-hidden bg-[#f7f6f3]">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-40 [background:linear-gradient(to_right,transparent_95%,rgba(214,124,45,0.12)_100%),repeating-linear-gradient(0deg,transparent,transparent_18px,rgba(17,17,17,0.02)_19px)]"
+        className="pointer-events-none absolute inset-0 opacity-40 [background:linear-gradient(to_right,transparent_95%,rgba(251,98,34,0.12)_100%),repeating-linear-gradient(0deg,transparent,transparent_18px,rgba(17,17,17,0.02)_19px)]"
       />
       <div aria-hidden="true" className="pointer-events-none absolute -right-16 top-8 hidden h-52 w-52 rounded-full border border-primary/30 md:block" />
       <div className="container relative">

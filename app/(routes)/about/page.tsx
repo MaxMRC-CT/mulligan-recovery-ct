@@ -1,6 +1,9 @@
 import { CtaSection } from "@/components/cta-section";
 import { PageHero } from "@/components/page-hero";
 import { ContentImage } from "@/components/ui/content-image";
+import { FaqAccordion } from "@/components/ui/faq-accordion";
+import { SectionHeading } from "@/components/ui/section-heading";
+import { faqItems } from "@/lib/faq";
 
 export const metadata = {
   title: "About"
@@ -31,8 +34,8 @@ export default function AboutPage() {
             alone too early.
           </p>
           <p>
-            Our ASAM Level 3.1 program combines recovery structure, clinical oversight, and coordinated referrals for
-            continued care. We focus on measurable progress, reliable communication, and respect for each resident’s
+            Our residential program combines daily structure, guidance from our clinical team, and coordinated
+            referrals for continued care. We focus on measurable progress, reliable communication, and respect for each resident’s
             goals.
           </p>
           <p>
@@ -55,9 +58,15 @@ export default function AboutPage() {
           />
         </div>
       </section>
+      <section id="faq" className="section pt-0">
+        <div className="container">
+          <SectionHeading eyebrow="Questions" title="Frequently asked questions" />
+          <FaqAccordion items={faqItems} className="mt-8" />
+        </div>
+      </section>
       <CtaSection
         heading="Questions about fit?"
-        body="Our admissions team can help determine whether ASAM 3.1 is appropriate and discuss alternatives if another level of care may be better."
+        body="Our admissions team can help you figure out whether our program is the right fit, and point you to other options if a different kind of care would serve you better."
         primaryHref="/contact"
         primaryLabel="Speak With Admissions"
       />

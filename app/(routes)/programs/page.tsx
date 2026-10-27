@@ -98,7 +98,7 @@ export default function ProgramsPage() {
                 strengthen their recovery, and move forward with confidence.
               </p>
               <p className="mt-5 max-w-3xl text-lg leading-relaxed text-neutral-800">
-                Our focus is on building independence, developing practical relapse prevention skills, and helping each
+                Our focus is on building independence, developing practical skills to prevent a return to use, and helping each
                 resident reconnect with work, family, and community life at a steady, realistic pace.
               </p>
               <p className="mt-5 max-w-3xl text-lg leading-relaxed text-neutral-800">
@@ -118,7 +118,7 @@ export default function ProgramsPage() {
                 ratio="portrait"
                 className="md:[&>div]:shadow-[0_20px_40px_rgba(17,17,17,0.18)]"
               />
-              <div className="absolute -bottom-6 right-4 bg-primary px-5 py-4 text-white shadow-[0_14px_28px_rgba(214,124,45,0.42)] md:right-6">
+              <div className="absolute -bottom-6 right-4 bg-primary px-5 py-4 text-white shadow-[0_14px_28px_rgba(251,98,34,0.42)] md:right-6">
                 <p className="text-xl font-bold leading-tight">Structure without overwhelm.</p>
                 <p className="mt-1 text-sm font-semibold tracking-wide text-white/90">Real support, day by day.</p>
               </div>
@@ -223,7 +223,7 @@ export default function ProgramsPage() {
                 ratio="portrait"
                 className="md:[&>div]:shadow-[0_20px_40px_rgba(17,17,17,0.18)]"
               />
-              <div className="absolute -bottom-6 right-4 bg-primary px-5 py-4 text-white shadow-[0_14px_28px_rgba(214,124,45,0.42)] md:right-6">
+              <div className="absolute -bottom-6 right-4 bg-primary px-5 py-4 text-white shadow-[0_14px_28px_rgba(251,98,34,0.42)] md:right-6">
                 <p className="text-xl font-bold leading-tight">Steady structure. Real support.</p>
                 <p className="mt-1 text-sm font-semibold tracking-wide text-white/90">One day at a time.</p>
               </div>

@@ -1,22 +1,22 @@
 ---
-title: "Understanding ASAM Level 3.1 Residential Care"
+title: "Understanding Low-Intensity Residential Care"
 description: "A plain-language overview of what low-intensity residential treatment includes and who may benefit."
 date: "2026-02-07"
 author: "Clinical Leadership Team"
 ---
 
-Choosing the right treatment setting can feel overwhelming. ASAM Level 3.1 is designed for people who need **consistent recovery structure** and a sober environment without intensive medical monitoring.
+Choosing the right treatment setting can feel overwhelming. Low-intensity residential care is designed for people who need **consistent recovery structure** and a sober environment without intensive medical monitoring.
 
 ## What this level typically includes
 
 - A stable residential setting
 - Scheduled counseling and recovery groups
-- Life-skills and relapse-prevention planning
+- Life skills and planning to prevent a return to use
 - Coordination with outpatient or community care providers
 
 ## Who may benefit
 
-ASAM 3.1 may be appropriate for adults who are medically stable but need daily accountability and support while building independent routines.
+This kind of care may be a good fit for adults who are medically stable but need daily accountability and support while building independent routines.
 
 ## Why transitions matter
 

@@ -77,7 +77,7 @@ export default function HomePage() {
                 alt="An adult in a counseling session listening and speaking with support staff"
                 className="md:[&>div]:aspect-[4/5] md:[&>div]:shadow-[0_20px_40px_rgba(17,17,17,0.18)]"
               />
-              <div className="absolute -bottom-6 right-4 bg-primary px-5 py-4 text-white shadow-[0_14px_28px_rgba(214,124,45,0.42)] md:right-6">
+              <div className="absolute -bottom-6 right-4 bg-primary px-5 py-4 text-white shadow-[0_14px_28px_rgba(251,98,34,0.42)] md:right-6">
                 <p className="text-xl font-bold leading-tight">Recovery is personal.</p>
                 <p className="mt-1 text-sm font-semibold tracking-wide text-white/90">Support is real. Progress is possible.</p>
               </div>
@@ -144,7 +144,7 @@ export default function HomePage() {
                 alt="A counselor speaking with an adult in a calm residential setting"
                 className="md:[&>div]:aspect-[4/5] md:[&>div]:shadow-[0_20px_40px_rgba(17,17,17,0.18)]"
               />
-              <div className="absolute -bottom-6 right-4 bg-primary px-5 py-4 text-white shadow-[0_14px_28px_rgba(214,124,45,0.42)] md:right-6">
+              <div className="absolute -bottom-6 right-4 bg-primary px-5 py-4 text-white shadow-[0_14px_28px_rgba(251,98,34,0.42)] md:right-6">
                 <p className="text-xl font-bold leading-tight">Change starts with commitment.</p>
                 <p className="mt-1 text-sm font-semibold tracking-wide text-white/90">Structure supports growth.</p>
               </div>

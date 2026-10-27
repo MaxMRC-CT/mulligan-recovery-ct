@@ -7,11 +7,11 @@ import { GlobalWatermark } from "@/components/global-watermark";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.mulliganrecoveryct.org"),
   title: {
-    default: "Mulligan Recovery Centers of CT | ASAM 3.1 Residential",
+    default: "Mulligan Recovery Centers of CT | Men's Residential Recovery in New Haven",
     template: "%s | Mulligan Recovery Centers of CT"
   },
   description:
-    "ASAM Level 3.1 low-intensity residential treatment in Connecticut supporting adults building stable recovery routines.",
+    "A structured, 24/7 staffed residential recovery home for men in New Haven, Connecticut. Connecticut Medicaid (HUSKY Health) accepted.",
   openGraph: {
     title: "Mulligan Recovery Centers of CT",
     description:
