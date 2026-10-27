@@ -9,7 +9,7 @@ export default function TermsPage() {
     <>
       <PageHero
         title="Terms of use"
-        subtitle="Placeholder terms for legal review and operational policy approval."
+        subtitle="The basics of using this website."
       />
       <section className="section pt-0">
         <div className="container prose-md rounded-md border border-line bg-white p-8 shadow-[0_12px_28px_rgba(17,17,17,0.08)]">

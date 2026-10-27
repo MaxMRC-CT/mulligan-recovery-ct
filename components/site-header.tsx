@@ -37,8 +37,8 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-[#faf7f2]/95 text-neutral-900 backdrop-blur">
-      <div className="w-full px-4 py-5 sm:px-6 lg:px-8">
-        <div className="flex min-h-24 items-center justify-between gap-3">
+      <div className="w-full px-4 py-3 sm:px-6 lg:px-8">
+        <div className="flex min-h-16 items-center justify-between gap-2 sm:gap-3">
           <Link href="/" className="focus-ring shrink-0 rounded-md">
             <Image
               src="/images/brand/MRC-CT_Lockup-Descriptor_GradientM_for-light-bg.webp"
@@ -46,7 +46,7 @@ export function SiteHeader() {
               width={2000}
               height={514}
               priority
-              className="h-14 w-auto sm:h-20"
+              className="h-10 w-auto sm:h-16"
             />
           </Link>
 
